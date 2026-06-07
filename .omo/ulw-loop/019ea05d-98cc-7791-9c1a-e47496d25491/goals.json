@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T07:59:57.834Z",
+  "updatedAt": "2026-06-07T08:03:57.886Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -630,6 +630,45 @@
       "createdAt": "2026-06-07T07:58:02.381Z",
       "updatedAt": "2026-06-07T07:59:57.834Z",
       "evidence": "The user asked for actual plugin usage and a Korean mock page. The static mock page exists; a Korean plugin-run output example will show the textual result Codex should produce when the skill is used."
+    },
+    {
+      "id": "G017",
+      "title": "Submission summary includes Korean demo assets",
+      "objective": "Expose the Korean mock page and Korean plugin-run output paths in Show-SubmissionSummary.ps1 and validate them, so the latest demo assets are discoverable from one PowerShell command.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Expose the Korean mock page and Korean plugin-run output paths in Show-Submis...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 17.",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G017-C001-summary-assets.txt: Show-SubmissionSummary outputs KoreanMockPage and KoreanPluginOutput with expected paths | cleanup: no spawned process; no tmux session; no temp dir",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:03:40.647Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Expose the Korean mock page and Korean plugin-run output paths in Show-Submis....",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G017-C002-summary-docs.txt: submission checklist and Korean quickstart both document Show-SubmissionSummary with KoreanMockPage and KoreanPluginOutput | cleanup: no spawned process; no tmux session; no temp dir",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:03:47.101Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Expose the Korean mock page and Korean plugin-run output paths in Show-Submis....",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G017-C003-summary-validator.txt: validator happy path passes and negative fixture without KoreanMockPage fails with expected message; fixture removed | cleanup: no spawned process; no tmux session; fixture removed",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:03:57.886Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T08:00:55.927Z",
+      "updatedAt": "2026-06-07T08:03:57.886Z",
+      "evidence": "G015 and G016 added Korean demo assets, but Show-SubmissionSummary.ps1 still lists only screenshot, skill, and validator paths."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl as the audit trail.",

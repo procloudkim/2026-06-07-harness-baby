@@ -1,0 +1,31 @@
+Criterion: G017-C001 submission summary Korean demo asset fields
+ExitCode: 0
+CriteriaPass: True
+
+Checks:
+ExitZero: True
+Ready: True
+KoreanMockPageField: True
+KoreanPluginOutputField: True
+
+
+Output:
+
+[32;1mStatus              : [0mREADY
+[32;1mProject             : [0mBabyGear Risk Radar Codex Plugin
+[32;1mPluginName          : [0mbabygear-risk-radar
+[32;1mGitHubUrl           : [0mhttps://github.com/procloudkim/2026-06-07-harness-baby
+[32;1mBranch              : [0mmain
+[32;1mHeadCommit          : [0mf0c4d09
+[32;1mCommitCount         : [0m21
+[32;1mMarketplacePath     : [0m./
+[32;1mSkillPath           : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mDemoScreenshot      : [0massets/demo-screenshot.svg
+[32;1mKoreanMockPage      : [0mmockups/korean-parent-risk-radar.html
+[32;1mKoreanPluginOutput  : [0mexamples/korean-plugin-run-output.md
+[32;1mValidatorCommand    : [0mpwsh -NoProfile -File .\scripts\validate-plugin.ps1
+[32;1mRegressionCommand   : [0mpwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1
+[32;1mSubmissionChecklist : [0mdocs/SUBMISSION_CHECKLIST.md
+[32;1mGhFallback          : [0mgh unavailable; pushed to user-provided origin
+
+

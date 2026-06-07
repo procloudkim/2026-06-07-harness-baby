@@ -27,6 +27,8 @@ Fields reported by the command:
 - Plugin name.
 - Screenshot path.
 - Skill path.
+- KoreanMockPage.
+- KoreanPluginOutput.
 - Validator command.
 
 ## Acceptance Status

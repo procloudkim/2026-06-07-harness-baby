@@ -31,3 +31,7 @@ The evidence replay verifier checks canonical PASS evidence across the initial d
 ### Wrapper-first local tool
 
 The local tool entry point is `tools\Invoke-ParentPickGuard.ps1`. It delegates to `scripts\New-ParentPickReport.ps1`, which remains the generator implementation detail, and the main verifier now checks the wrapper output directly so documentation and executable behavior stay aligned.
+
+### One-command Korean demo discoverability
+
+`scripts\Show-SubmissionSummary.ps1` now reports both `KoreanMockPage` and `KoreanPluginOutput`. This keeps the Korean mock page and actual plugin-run example discoverable from the same PowerShell summary command judges can use for commit count, branch, GitHub URL, validator command, and core plugin paths.

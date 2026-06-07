@@ -150,6 +150,16 @@ foreach ($scriptRelativePath in @('scripts\validate-plugin.ps1', 'scripts\Show-S
     }
 }
 
+$summaryScript = Get-Content -LiteralPath (Join-Path $root 'scripts\Show-SubmissionSummary.ps1') -Raw
+foreach ($needle in @(
+    'KoreanMockPage',
+    'mockups/korean-parent-risk-radar.html',
+    'KoreanPluginOutput',
+    'examples/korean-plugin-run-output.md'
+)) {
+    Assert-TextContains -Text $summaryScript -Needle $needle -Label 'Show-SubmissionSummary'
+}
+
 $marketplacePath = Join-Path $root '.agents\plugins\marketplace.json'
 $marketplace = Get-Content -LiteralPath $marketplacePath -Raw | ConvertFrom-Json -Depth 32
 $entry = @($marketplace.plugins) | Where-Object { $_.name -eq 'babygear-risk-radar' } | Select-Object -First 1
@@ -284,6 +294,8 @@ foreach ($needle in @(
     'Public URL',
     'HEAD commit',
     'Commit count',
+    'KoreanMockPage',
+    'KoreanPluginOutput',
     'assets/demo-screenshot.svg',
     'scripts\Show-SubmissionSummary.ps1',
     'scripts\Test-ContentSafety.ps1',

@@ -1,0 +1,31 @@
+Criterion: G017-C003 summary validator regression and negative fixture
+CriteriaPass: True
+HappyExitCode: 0
+NegativeExitCode: 1
+
+Checks:
+HappyExitZero: True
+HappyOutputPass: True
+NegativeExitNonZero: True
+NegativeCaughtMissingKoreanMockPage: True
+FixtureCreated: True
+FixtureRemoved: True
+
+Happy validator output:
+[32;1mStatus            : [0mPASS
+[32;1mPluginName        : [0mbabygear-risk-radar
+[32;1mMarketplacePath   : [0m./
+[32;1mScreenshot        : [0m./assets/demo-screenshot.svg
+[32;1mSkillPath         : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mGitHubUrl         : [0mhttps://github.com/procloudkim/2026-06-07-harness-baby
+[32;1mRequiredFileCount : [0m29
+
+Negative validator output:
+Exception: D:\KLab\workspace\2026-06-07-harness\scripts\validate-plugin.ps1:66
+Line |
+  66 |          throw "$Label missing expected text: $Needle"
+     |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Show-SubmissionSummary missing expected text: KoreanMockPage
+
+FixtureRoot: D:\KLab\workspace\2026-06-07-harness\.omo\ulw-loop\fixtures\g017-summary-missing-korean-mock-page
+cleanup: no spawned process; no tmux session; fixture removed

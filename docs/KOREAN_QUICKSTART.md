@@ -38,6 +38,8 @@ pwsh -NoProfile -File .\scripts\Test-ContentSafety.ps1
 pwsh -NoProfile -File .\scripts\Show-SubmissionSummary.ps1
 ```
 
+`Show-SubmissionSummary.ps1` 출력에는 `KoreanMockPage`와 `KoreanPluginOutput` 경로가 포함됩니다.
+
 기대 상태:
 
 ```text

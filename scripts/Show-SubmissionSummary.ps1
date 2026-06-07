@@ -33,6 +33,8 @@ function Invoke-GitText {
     MarketplacePath = './'
     SkillPath = 'skills/babygear-risk-radar/SKILL.md'
     DemoScreenshot = 'assets/demo-screenshot.svg'
+    KoreanMockPage = 'mockups/korean-parent-risk-radar.html'
+    KoreanPluginOutput = 'examples/korean-plugin-run-output.md'
     ValidatorCommand = 'pwsh -NoProfile -File .\scripts\validate-plugin.ps1'
     RegressionCommand = 'pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1'
     SubmissionChecklist = 'docs/SUBMISSION_CHECKLIST.md'
