@@ -1,0 +1,7 @@
+scenario: G003 C002 unsafe URL rejection
+fixture: .omo\ulw-loop\fixtures\g003-unsafe-url.json
+command: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\New-ParentPickReport.ps1 -InputPath .\.omo\ulw-loop\fixtures\g003-unsafe-url.json -OutputPath .\.omo\ulw-loop\evidence\G003-C002-unsafe-url-should-not-exist.html
+error: Input JSON source URL uses unsupported scheme: javascript
+assertion: output HTML absent
+result: PASS
+cleanup: no spawned process; no tmux session; output HTML absent

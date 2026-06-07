@@ -1,0 +1,14 @@
+scenario: G003 C003 verifier regression
+command: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1
+verifierOutput:
+Status              : PASS
+PluginRoot          : D:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard
+ReportPath          : D:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard\generated\sample-report.html
+ScreenshotPath      : D:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard\assets\demo-screenshot.png
+ValidationTempPath  : D:\KLab\workspace\2026-06-07-harness\.codex-temp\parentpick-guard-validation
+RequiredFileCount   : 16
+CheckedScriptCount  : 5
+CheckedFailureCases : {blank-report-title, empty-sources, unsafe-url, null-sources}
+assertion: Status PASS, CheckedScriptCount present, unsafe-url and null-sources checked, .codex-temp absent
+result: PASS
+cleanup: no spawned process; no tmux session; .codex-temp absent

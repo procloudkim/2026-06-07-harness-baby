@@ -1,0 +1,17 @@
+criterion: G002 cleanup RED
+command: remove .codex-temp, run Test-ParentPickGuard.ps1, check .codex-temp absence
+exitCode: 0
+stdout:
+
+[32;1mStatus             : [0mPASS
+[32;1mPluginRoot         : [0mD:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard
+[32;1mReportPath         : [0mD:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard\generated\sample-report.html
+[32;1mScreenshotPath     : [0mD:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard\assets\demo-screenshot.png
+[32;1mValidationTempPath : [0mD:\KLab\workspace\2026-06-07-harness\.codex-temp\parentpick-guard-validation
+[32;1mRequiredFileCount  : [0m16
+[32;1mCheckedScriptCount : [0m5
+
+
+codexTempExistsAfterVerifier: True
+result: RED
+cleanup: .codex-temp removed before run; worker cleanup_fix still open

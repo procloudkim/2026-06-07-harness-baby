@@ -1,0 +1,27 @@
+{
+  "reportTitle": "Malformed input fixture",
+  "productName": "Fixture product",
+  "sources": [
+    {
+      "type": "Fixture",
+      "use": "Test only",
+      "tier": "1",
+      "claim": "Fixture",
+      "date": "2026-06-07",
+      "name": "Fixture source",
+      "url": "https://example.invalid"
+    }
+  ],
+  "meceSections": [
+    {
+      "notes": [
+        "note"
+      ],
+      "parentActions": [
+        "action"
+      ],
+      "status": "Fixture",
+      "name": "Fixture section"
+    }
+  ]
+}

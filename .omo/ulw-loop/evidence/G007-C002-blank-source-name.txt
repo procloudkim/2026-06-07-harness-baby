@@ -1,0 +1,8 @@
+Result: PASS
+Command: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\New-ParentPickReport.ps1 -InputPath .\.omo\ulw-loop\fixtures\g007-blank-source-name.json -OutputPath .\.omo\ulw-loop\evidence\G007-C002-blank-source-name-should-not-exist.html
+Fixture: .\.omo\ulw-loop\fixtures\g007-blank-source-name.json
+Failed: True
+ExpectedMessage: Input JSON source field must be a non-empty string: sources[0].name
+ActualMessage: Input JSON source field must be a non-empty string: sources[0].name
+OutputExists: False
+Cleanup: cleanup: no spawned process; no tmux session; output HTML absent

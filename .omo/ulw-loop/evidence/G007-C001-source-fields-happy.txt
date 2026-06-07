@@ -1,0 +1,8 @@
+Result: PASS
+Command: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\New-ParentPickReport.ps1 -InputPath .\plugins\parentpick-guard\examples\avent-pacifier-case.json -OutputPath .\.omo\ulw-loop\evidence\G007-C001-source-fields-happy.html
+ExitCode: 
+SourceCount: 9
+ContainsPhilipsAventSupportPage: True
+ContainsUnnamedSource: False
+OutputExists: True
+Cleanup: cleanup: no spawned process; no tmux session; no temp dir

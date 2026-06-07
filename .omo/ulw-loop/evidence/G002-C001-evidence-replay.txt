@@ -1,0 +1,12 @@
+criterion: G002 C001 evidence replay happy path
+command: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuardEvidence.ps1
+exitCode: 0
+stdoutAndStderr:
+
+[32;1mStatus[0m[32;1m EvidenceRoot                                               [0m[32;1m CheckedEvidenceCount[0m
+[32;1m------[0m [32;1m------------                                               [0m [32;1m--------------------[0m
+PASS   D:\KLab\workspace\2026-06-07-harness\.omo\ulw-loop\evidence                    3
+
+
+result: PASS
+cleanup: no spawned process; no tmux session; no temp dir

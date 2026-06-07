@@ -1,0 +1,12 @@
+criterion: G002 C002 missing evidence edge case
+command: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuardEvidence.ps1 -EvidenceRoot .\.omo\ulw-loop\evidence-missing
+exitCode: 1
+stdoutAndStderr:
+Exception: D:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard\scripts\Test-ParentPickGuardEvidence.ps1:20
+Line |
+  20 |          throw "Evidence file missing: $fileName"
+     |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Evidence file missing: C001-happy-path.txt
+
+result: PASS
+cleanup: no spawned process; no tmux session; no temp dir

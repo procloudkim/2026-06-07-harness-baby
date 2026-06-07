@@ -1,0 +1,7 @@
+scenario: G004 C002 missing expanded evidence
+command: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuardEvidence.ps1 -EvidenceRoot .\.omo\ulw-loop\evidence-g004-missing
+omitted: G003-C002-unsafe-url.txt
+error: Evidence file missing: G003-C002-unsafe-url.txt
+assertion: temp evidence root removed
+result: PASS
+cleanup: no spawned process; no tmux session; .omo\ulw-loop\evidence-g004-missing removed

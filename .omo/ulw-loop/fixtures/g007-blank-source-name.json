@@ -1,0 +1,198 @@
+{
+  "reportTitle": "Avent Pacifier BPA Public-Source Case Note",
+  "generatedFor": "Mini-Ralphthon ParentPick Guard Demo",
+  "productName": "Philips Avent Ultra Air SCF085/60 public-source case note",
+  "productCategory": "Pacifier / soother",
+  "infantStage": "Newborn and infant care",
+  "decisionNeed": "A parent trusted a familiar baby brand, then found public reports about BPA detection claims. The parent needs a structured way to decide whether to verify, monitor, replace, or seek official guidance.",
+  "evidenceGrade": "Mixed public-source evidence: official manufacturer response plus secondary summaries of a consumer-test claim.",
+  "claimBoundary": "This demo does not independently claim the product is dangerous. It records public-source case notes and source conflict for parent decision support.",
+  "summary": [
+    "Treat the product as a source-conflict case, not a one-line safe-or-dangerous verdict.",
+    "Confirm exact model, batch, country of purchase, purchase date, and current manufacturer guidance before acting.",
+    "If confidence remains low, select alternatives by transparent material claims, age fit, recall status, and caregiver acceptance rather than by brand trust alone."
+  ],
+  "sources": [
+    {
+      "tier": "1",
+      "type": "Official manufacturer response",
+      "name": "   ",
+      "url": "https://www.usa.philips.com/c-f/XC000022169/i-ve-read-news-about-pacifiers-and-bpa-how-do-you-validate-philips-avent-pacifiers-are-bpa-free",
+      "date": "2026-05-28",
+      "claim": "Philips states all Avent pacifier ranges are BPA-free and says DEKRA follow-up tests found no detectable BPA, including the discussed sample.",
+      "use": "Highest-priority source for the manufacturer's position; not an independent regulator finding."
+    },
+    {
+      "tier": "1",
+      "type": "Official manufacturer safety page",
+      "name": "Philips Avent pacifier safety FAQ",
+      "url": "https://www.philips.ca/c-f/XC000022123/are-philips-avent-pacifiers-safe-for-my-baby",
+      "date": "2026-05-28",
+      "claim": "Philips states Avent pacifiers meet or exceed international safety standards, are BPA-free throughout manufacturing, and are quality-checked by batch.",
+      "use": "Official safety and batch-quality framing; still a manufacturer source."
+    },
+    {
+      "tier": "1",
+      "type": "Official public safety regulator guidance",
+      "name": "U.S. CPSC Pacifiers Business Guidance",
+      "url": "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Pacifiers",
+      "date": "Current public guidance checked 2026-06-07",
+      "claim": "CPSC says pacifiers must comply with 16 CFR part 1511 and children's product requirements, including testing, certification, tracking labels, and restrictions on ribbons or similar attachments.",
+      "use": "Regulator context for physical pacifier safety checks and batch or tracking-label documentation."
+    },
+    {
+      "tier": "1",
+      "type": "Official food-contact regulator guidance",
+      "name": "U.S. FDA BPA food-contact application page",
+      "url": "https://www.fda.gov/food/food-packaging-other-substances-come-contact-food-information-consumers/bisphenol-bpa-use-food-contact-application",
+      "date": "Current public guidance checked 2026-06-07",
+      "claim": "FDA explains BPA food-contact context and says regulations were amended to no longer provide for BPA-based materials in baby bottles, sippy cups, and infant formula packaging because those uses were abandoned.",
+      "use": "Regulatory context for BPA discussion; not a pacifier-specific finding."
+    },
+    {
+      "tier": "3",
+      "type": "Secondary health-news summary",
+      "name": "Kormedi article",
+      "url": "https://kormedi.com/2758325/",
+      "date": "2025-10-22",
+      "claim": "Article reports dTest found BPA in several pacifier products and reports Philips Avent Ultra Air at 2 ug/kg while noting Philips disputed the result.",
+      "use": "Useful case trigger and summary; verify against primary test data when available."
+    },
+    {
+      "tier": "3",
+      "type": "Secondary science-news summary",
+      "name": "DongA Science English-translated article",
+      "url": "https://m.dongascience.com/en/news/74614",
+      "date": "2025-10-19",
+      "claim": "Article summarizes dTest-reported findings and notes manufacturer responses.",
+      "use": "Corroborating context only; machine-translated page warns it may contain inaccuracies."
+    },
+    {
+      "tier": "4",
+      "type": "Persona anchor",
+      "name": "Momddok_TV",
+      "url": "https://www.youtube.com/channel/UC-FZjF-oF0Cvq699UNcG5Tg",
+      "date": "User-provided",
+      "claim": "Used as a practical parent-operations persona anchor.",
+      "use": "Lens only, not factual evidence for the case."
+    },
+    {
+      "tier": "4",
+      "type": "Persona anchor",
+      "name": "Ha Jung-hoon's BbiBboBbiBbo 119 Pediatrics",
+      "url": "https://www.youtube.com/channel/UC6t0ees15Lp0gyrLrAyLeJQ",
+      "date": "User-provided",
+      "claim": "Used as a pediatric evidence-caution persona anchor.",
+      "use": "Lens only, not factual evidence for the case."
+    },
+    {
+      "tier": "4",
+      "type": "Persona anchor",
+      "name": "O2 Brothers TV",
+      "url": "https://www.youtube.com/@o2brothersTV",
+      "date": "User-provided",
+      "claim": "Used as a family logistics and caregiver-communication persona anchor.",
+      "use": "Lens only, not factual evidence for the case."
+    }
+  ],
+  "personas": [
+    {
+      "name": "Practical parent operator",
+      "anchor": "Momddok_TV",
+      "focus": [
+        "What to check on the package and product",
+        "How to keep purchase, model, and batch evidence",
+        "How to choose a fallback without panic buying"
+      ]
+    },
+    {
+      "name": "Pediatric evidence caution",
+      "anchor": "Ha Jung-hoon's BbiBboBbiBbo 119 Pediatrics",
+      "focus": [
+        "Avoid medical diagnosis or unsupported danger claims",
+        "Separate chemical-risk concern from actual exposure assessment",
+        "Escalate to clinician or regulator when symptoms, recall, or product defect is involved"
+      ]
+    },
+    {
+      "name": "Family logistics explainer",
+      "anchor": "O2 Brothers TV",
+      "focus": [
+        "Explain the decision to all caregivers",
+        "Keep a single replacement and cleaning policy",
+        "Reduce repeated debate during nighttime care"
+      ]
+    }
+  ],
+  "meceSections": [
+    {
+      "name": "Product identity",
+      "status": "Must verify",
+      "notes": [
+        "Match exact model number, age range, package language, country of purchase, batch or lot code, and purchase channel.",
+        "The public case mentions Avent Ultra Air and SCF085/60; parents should not generalize to unrelated models without evidence."
+      ],
+      "parentActions": [
+        "Photograph packaging, product, batch code, and receipt.",
+        "Check the latest official support page for the exact model."
+      ]
+    },
+    {
+      "name": "Chemical-risk signal",
+      "status": "Source conflict",
+      "notes": [
+        "Secondary summaries report dTest detected BPA in several pacifiers.",
+        "Philips states follow-up DEKRA tests found no detectable BPA across its pacifier ranges."
+      ],
+      "parentActions": [
+        "Do not convert a source conflict into a diagnosis or panic claim.",
+        "Use the conflict to decide whether replacement improves parental confidence."
+      ]
+    },
+    {
+      "name": "Regulatory and standards context",
+      "status": "Official context added",
+      "notes": [
+        "CPSC guidance emphasizes physical pacifier safety requirements, testing, certification, tracking labels, and attachment restrictions.",
+        "FDA's BPA page gives baby bottle, sippy cup, and infant formula packaging context; it is not a pacifier-specific BPA verdict.",
+        "Secondary summaries discuss differences between baby bottle BPA restrictions and pacifier rules, which should be treated as context until checked against the applicable jurisdiction."
+      ],
+      "parentActions": [
+        "Record which jurisdiction applies to the purchased product.",
+        "Check for tracking labels, batch identifiers, physical damage, and prohibited attachments.",
+        "If a recall appears, follow regulator or manufacturer instructions first."
+      ]
+    },
+    {
+      "name": "Alternatives",
+      "status": "Criteria-based",
+      "notes": [
+        "A replacement should be selected by material disclosure, age fit, shape acceptance, recall status, and cleaning instructions.",
+        "Brand familiarity alone is not enough evidence."
+      ],
+      "parentActions": [
+        "Prepare two candidate alternatives that meet the criteria.",
+        "Test acceptance gradually if the child strongly prefers the current shape."
+      ]
+    }
+  ],
+  "unknowns": [
+    "Primary dTest full report details were not available in this demo.",
+    "Batch-specific information for the user's actual product is unknown.",
+    "Current local regulator guidance for the purchase country must be checked before final action.",
+    "FDA BPA guidance cited here is food-contact context and does not resolve the pacifier-specific source conflict."
+  ],
+  "decisionCriteria": [
+    "Replace immediately if an official recall, product breakage, choking hazard, or clinician/regulator instruction applies.",
+    "Replace for confidence if source conflict creates unacceptable caregiver anxiety and a suitable alternative is available.",
+    "Monitor and verify if there is no recall, the exact product differs from the public case, and caregivers can document official guidance.",
+    "Avoid claims such as 'dangerous product' unless a cited authority directly supports that wording."
+  ],
+  "nextActions": [
+    "Record exact model, batch, country, purchase date, and seller.",
+    "Check manufacturer support and local regulator recall pages for the exact product.",
+    "Choose alternatives using material, age, recall, fit, and cleaning criteria.",
+    "Share one caregiver note summarizing the decision and uncertainty."
+  ],
+  "footerNote": "ParentPick Guard is an evidence-organization aid for caregivers. It is not medical advice, legal advice, a product endorsement, or a recall authority."
+}

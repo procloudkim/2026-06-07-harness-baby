@@ -1,0 +1,15 @@
+result: PASS
+criterion: G006 C001 evidence replay through G005
+command: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuardEvidence.ps1
+exitCode: 0
+containsCheckedEvidenceCount12: True
+containsG005C003: True
+stdout: [32;1mStatus                    : [0mPASS
+[32;1mEvidenceRoot              : [0mD:\KLab\workspace\2026-06-07-harness\.omo\ulw-loop\evidence
+[32;1mCheckedEvidenceCount      : [0m12
+[32;1mCheckedEvidenceReplayFile : [0mG005-C003-tool-wrapper-regression.txt
+[32;1mCheckedEvidenceFileList   : [0mC001-happy-path.txt, C002-malformed-input.txt, C003-regression-consistency.txt, G002-C001-evidence-replay.txt, G002-C002-missing-evidence.txt, G002-C003-verifier-regression.txt, G00
+                            3-C001-safe-links-happy.txt, G003-C002-unsafe-url.txt, G003-C003-verifier-regression.txt, G005-C001-tool-wrapper.txt, G005-C002-wrapper-malformed.txt, G005-C003-tool-wrapper-regress
+                            ion.txt
+[32;1mCheckedEvidenceFiles      : [0m{C001-happy-path.txt, C002-malformed-input.txt, C003-regression-consistency.txt, G002-C001-evidence-replay.txt…}
+cleanup: no spawned process; no tmux session; no temp dir

@@ -1,0 +1,12 @@
+result: PASS
+criterion: G006 C002 missing G005 evidence negative replay
+command: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuardEvidence.ps1 -EvidenceRoot .\.omo\ulw-loop\evidence-g006-missing
+exitCode: 1
+containsExpectedMissingMessage: True
+temporaryRootRemoved: True
+stdoutStderr: Exception: D:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard\scripts\Test-ParentPickGuardEvidence.ps1:29
+Line |
+  29 |          throw "Evidence file missing: $fileName"
+     |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Evidence file missing: G005-C003-tool-wrapper-regression.txt
+cleanup: no spawned process; no tmux session; .omo\ulw-loop\evidence-g006-missing removed

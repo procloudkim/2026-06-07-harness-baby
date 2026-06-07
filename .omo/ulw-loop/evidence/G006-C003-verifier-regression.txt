@@ -1,0 +1,28 @@
+result: PASS
+criterion: G006 C003 verifier regression after replay expansion
+command1: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1
+command1ExitCode: 0
+command2: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuardEvidence.ps1
+command2ExitCode: 0
+mainContainsCheckedToolCount: True
+replayContains12: True
+runLogMentionsG005WrapperEvidenceReplay: True
+codexTempAbsent: True
+mainVerifierStdout: [32;1mStatus              : [0mPASS
+[32;1mPluginRoot          : [0mD:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard
+[32;1mReportPath          : [0mD:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard\generated\sample-report.html
+[32;1mScreenshotPath      : [0mD:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard\assets\demo-screenshot.png
+[32;1mValidationTempPath  : [0mD:\KLab\workspace\2026-06-07-harness\.codex-temp\parentpick-guard-validation
+[32;1mRequiredFileCount   : [0m16
+[32;1mCheckedScriptCount  : [0m5
+[32;1mCheckedToolCount    : [0m1
+[32;1mCheckedFailureCases : [0m{blank-report-title, empty-sources, unsafe-url, null-sources}
+evidenceReplayStdout: [32;1mStatus                    : [0mPASS
+[32;1mEvidenceRoot              : [0mD:\KLab\workspace\2026-06-07-harness\.omo\ulw-loop\evidence
+[32;1mCheckedEvidenceCount      : [0m12
+[32;1mCheckedEvidenceReplayFile : [0mG005-C003-tool-wrapper-regression.txt
+[32;1mCheckedEvidenceFileList   : [0mC001-happy-path.txt, C002-malformed-input.txt, C003-regression-consistency.txt, G002-C001-evidence-replay.txt, G002-C002-missing-evidence.txt, G002-C003-verifier-regression.txt, G00
+                            3-C001-safe-links-happy.txt, G003-C002-unsafe-url.txt, G003-C003-verifier-regression.txt, G005-C001-tool-wrapper.txt, G005-C002-wrapper-malformed.txt, G005-C003-tool-wrapper-regress
+                            ion.txt
+[32;1mCheckedEvidenceFiles      : [0m{C001-happy-path.txt, C002-malformed-input.txt, C003-regression-consistency.txt, G002-C001-evidence-replay.txt…}
+cleanup: no spawned process; no tmux session; .codex-temp absent
