@@ -1,41 +1,47 @@
-# ParentPick Guard Demo Script
+# Demo Script
 
-## Setup
+## Goal
 
-Repository: https://github.com/procloudkim/2026-06-07-harness-baby
+Show that BabyGear Risk Radar is a Codex CLI plugin package, not an app, and that it helps Codex turn an uncertain baby-product safety controversy into a structured parent decision report.
 
-Run from the repository root with PowerShell 7:
+## Local Validation
 
 ```powershell
-pwsh -NoProfile -File .\plugins\parentpick-guard\tools\Invoke-ParentPickGuard.ps1 `
-  -InputPath .\plugins\parentpick-guard\examples\avent-pacifier-case.json `
-  -OutputPath .\plugins\parentpick-guard\generated\sample-report.html
-pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1
-pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuardEvidence.ps1
+pwsh -NoProfile -File .\scripts\validate-plugin.ps1
 ```
 
-## Demo Flow
+Expected result:
 
-1. Open `plugins/parentpick-guard/examples/avent-pacifier-case.json`.
-2. Point out that the example is a public-source case note, not a medical diagnosis or product-danger verdict.
-3. Run `tools\Invoke-ParentPickGuard.ps1` to generate the report, then run the verification commands above.
-4. Open `plugins/parentpick-guard/generated/sample-report.html`.
-5. Show the report sections:
-   - Source map.
-   - MAS persona lens.
-   - MECE risk map.
-   - Unknowns.
-   - Decision criteria.
-   - Next smallest safe actions.
-6. Open `plugins/parentpick-guard/assets/demo-screenshot.png` as the demo screenshot asset.
+```text
+Status          : PASS
+PluginName      : babygear-risk-radar
+MarketplacePath : ./
+Screenshot      : ./assets/demo-screenshot.svg
+SkillPath       : skills/babygear-risk-radar/SKILL.md
+```
 
-## Expected Result
+## Demo Prompt
 
-The script reports success, regenerates the sample HTML report, regenerates the PNG screenshot asset, and confirms the local plugin deliverables required by AGENTS.md.
+```text
+Use the babygear-risk-radar skill.
 
-## Presenter Notes
+Evaluate this public-source case note:
+A parent trusted a well-known pacifier brand because the product was marketed as BPA-free. Later reporting described a consumer-test finding that allegedly detected BPA in some pacifiers, while the manufacturer disputed the finding and cited additional testing. Produce a parent-friendly MECE report with evidence tiers, risk matrix, alternatives, MAS debate, MAS-QA, and a final parent action card.
+```
 
-- Do not say the example product is dangerous.
-- Say: "This plugin organizes cited public-source information and source conflicts so parents can make a better follow-up checklist."
-- Use the Philips and Kormedi entries as a source-conflict example.
-- The next smallest safe move after the demo is to add more official product sources to a new JSON input and regenerate the report.
+## Expected Output Shape
+
+- Product and usage context.
+- Parent concern summary.
+- MECE evidence map.
+- Evidence tier table.
+- Safety and regulatory risk matrix.
+- Brand-claim skepticism review.
+- Alternative selection criteria.
+- MAS debate and MAS-QA checklist.
+- Final parent action card.
+- Uncertainty and citation gaps.
+
+## Screenshot
+
+![Demo screenshot](../assets/demo-screenshot.svg)

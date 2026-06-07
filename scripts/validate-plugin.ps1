@@ -84,6 +84,8 @@ $requiredFiles = @(
     'docs\MAS_DECISIONS.md',
     'docs\ACCEPTANCE_CRITERIA.md',
     'docs\COMMIT_LOG.md',
+    'docs\FINAL_REPORT.md',
+    'docs\DEMO_SCRIPT.md',
     'reports\MAS_QA_REPORT.md',
     'reports\FINAL_REPORT.md',
     'README.md',
@@ -176,4 +178,3 @@ if ((Split-Path -Leaf $root) -eq (Split-Path -Leaf (Get-Location))) {
     GitHubUrl = $manifest.repository
     RequiredFileCount = $requiredFiles.Count
 }
-

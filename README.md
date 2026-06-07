@@ -1,52 +1,93 @@
-# ParentPick Guard Codex Plugin
+# BabyGear Risk Radar Codex Plugin
 
-Public GitHub URL: https://github.com/procloudkim/2026-06-07-harness-baby
+BabyGear Risk Radar is a Codex plugin that helps parents and builders evaluate baby-product safety claims using MECE evidence mapping, risk reasoning, brand-claim skepticism, alternative criteria, and MAS-QA. It was built for a 90-minute mini-Ralphthon after the Philips Avent pacifier BPA controversy showed that trusted-brand claims, consumer-test reports, manufacturer responses, and regulatory context can conflict in a real purchase decision.
 
-ParentPick Guard is a Codex Plugin for newborn parents who need to organize baby-product trust and safety-risk information into a structured MECE report. It is built as a local, reproducible PowerShell workflow so the demo does not require crawling, login, paid APIs, browser automation, or medical/safety overclaims.
+![Demo screenshot](./assets/demo-screenshot.svg)
 
-## What It Produces
+## What Problem It Solves
 
-- Codex Plugin package: `plugins/parentpick-guard/`
-- Plugin manifest: `plugins/parentpick-guard/.codex-plugin/plugin.json`
-- Skill instructions: `plugins/parentpick-guard/skills/parentpick-guard/SKILL.md`
-- Local tool wrapper: `plugins/parentpick-guard/tools/Invoke-ParentPickGuard.ps1`
-- PowerShell report generator: `plugins/parentpick-guard/scripts/New-ParentPickReport.ps1`
-- Local verifier: `plugins/parentpick-guard/scripts/Test-ParentPickGuard.ps1`
-- Example input: `plugins/parentpick-guard/examples/avent-pacifier-case.json`
-- Generated sample HTML report: `plugins/parentpick-guard/generated/sample-report.html`
-- Demo screenshot asset: `plugins/parentpick-guard/assets/demo-screenshot.png`
-- Demo script: `docs/DEMO_SCRIPT.md`
-- Final report: `docs/FINAL_REPORT.md`
+Parents often have to decide before evidence is perfectly resolved. A famous brand, a "BPA-free" claim, a public article, a manufacturer response, and regulator guidance may all point in different directions. This plugin makes Codex separate those claims instead of collapsing them into fear or false certainty.
 
-## Run Locally
+## Plugin Structure
 
-From the repository root with PowerShell 7:
+```text
+.
+├── .codex-plugin/plugin.json
+├── skills/babygear-risk-radar/SKILL.md
+├── .agents/plugins/marketplace.json
+├── assets/demo-screenshot.svg
+├── examples/avent-pacifier-risk-brief.md
+├── examples/sample-output.md
+├── scripts/validate-plugin.ps1
+├── reports/MAS_QA_REPORT.md
+└── reports/FINAL_REPORT.md
+```
+
+## Install From Local Marketplace
+
+The repository-scoped marketplace points to the root plugin path:
+
+```json
+{
+  "name": "babygear-risk-radar",
+  "source": {
+    "source": "local",
+    "path": "./"
+  }
+}
+```
+
+In a Codex environment that supports repo marketplaces, install or enable the plugin from `.agents/plugins/marketplace.json`.
+
+## Usage Prompt Examples
+
+```text
+Use BabyGear Risk Radar to evaluate this pacifier safety concern.
+```
+
+```text
+Create a MECE evidence map and parent action card for this baby product.
+```
+
+```text
+Run MAS-QA on these baby-product safety claims and separate manufacturer claims from regulator guidance.
+```
+
+## Validation
+
+Run from the repository root in PowerShell 7:
 
 ```powershell
-pwsh -NoProfile -File .\plugins\parentpick-guard\tools\Invoke-ParentPickGuard.ps1 `
-  -InputPath .\plugins\parentpick-guard\examples\avent-pacifier-case.json `
-  -OutputPath .\plugins\parentpick-guard\generated\sample-report.html
+pwsh -NoProfile -File .\scripts\validate-plugin.ps1
+```
+
+Adjacent regression check:
+
+```powershell
 pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1
 ```
 
-The wrapper is the local tool entry point; `scripts/New-ParentPickReport.ps1` remains the JSON-to-HTML implementation detail. The verifier regenerates the sample HTML report and PNG demo screenshot, then checks the required plugin deliverables, PowerShell syntax, wrapper output, malformed input handling, unsafe source URL rejection, and null-only required-list rejection.
+## GitHub Submission URL
 
-## Safety Boundary
+https://github.com/procloudkim/babygear-risk-radar-codex-plugin
 
-The included Avent pacifier case is a public-source case note. ParentPick Guard does not independently claim that a real product is dangerous, does not diagnose medical risk, and does not recommend purchases. It separates official manufacturer statements, regulator guidance, secondary reports, source conflicts, unknowns, and next safe parent actions.
+## Known Limitations
 
-## Evidence Anchors
+- This package has no hooks, MCP server, app connector, backend, telemetry, or external API dependency.
+- The demo case is a public-source case note, not a live recall lookup.
+- It does not scrape YouTube or medical websites.
+- It does not recommend affiliate products.
+- It cannot determine product safety without current authoritative evidence from the user or official sources.
 
-- Philips Avent public response on pacifier BPA news.
-- CPSC pacifier business guidance for U.S. pacifier safety requirements.
-- FDA BPA food-contact application guidance for baby bottles, sippy cups, and infant formula packaging context.
-- User-provided Kormedi article as the motivating secondary case note.
-- User-provided YouTube channel URLs as persona anchors only, not as uncited factual authorities.
+## Safety Disclaimer
+
+BabyGear Risk Radar is decision support, not medical advice. For symptoms, urgent concerns, recalls, product breakage, or uncertainty involving a newborn or infant, consult a pediatrician, clinician, regulator, or official recall channel.
 
 ## Privacy
 
-This plugin runs locally on JSON input files and writes local HTML/PNG artifacts. It does not collect credentials, read secret files, call paid APIs, or send user data to a remote service.
+The plugin package stores no user data and ships no telemetry. Local examples and reports are static repository artifacts.
 
 ## Terms
 
-ParentPick Guard is an evidence-organization aid for caregivers. It is not medical advice, legal advice, a product endorsement, or a recall authority.
+Use this package as a local Codex workflow aid. It does not replace professional medical, legal, regulatory, or product-safety advice.
+
