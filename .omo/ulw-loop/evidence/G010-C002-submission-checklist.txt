@@ -1,0 +1,18 @@
+Criterion: G010-C002 submission checklist
+CriteriaPass: True
+CurrentHeadCommit: ce79672
+CurrentCommitCount: 14
+
+Checks:
+PublicUrl: True
+HeadCommitField: True
+CommitCountField: True
+CurrentHeadCaptured: True
+CurrentCommitCountCaptured: True
+ValidatorCommands: True
+DemoScreenshotPath: True
+GhFallback: True
+AcceptancePassRows: True
+
+
+Submission checklist path: docs/SUBMISSION_CHECKLIST.md

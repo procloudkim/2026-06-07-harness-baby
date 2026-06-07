@@ -1,0 +1,46 @@
+Criterion: G010-C003 submission summary script and validator
+CriteriaPass: True
+SummaryExitCode: 0
+ValidatorExitCode: 0
+
+Checks:
+SummaryExitZero: True
+SummaryReady: True
+SummaryUrl: True
+SummaryHead: True
+SummaryCommitCount: True
+SummaryValidatorCommand: True
+ValidatorExitZero: True
+ValidatorPass: True
+
+
+Summary output:
+
+[32;1mStatus              : [0mREADY
+[32;1mProject             : [0mBabyGear Risk Radar Codex Plugin
+[32;1mPluginName          : [0mbabygear-risk-radar
+[32;1mGitHubUrl           : [0mhttps://github.com/procloudkim/2026-06-07-harness-baby
+[32;1mBranch              : [0mmain
+[32;1mHeadCommit          : [0mce79672
+[32;1mCommitCount         : [0m14
+[32;1mMarketplacePath     : [0m./
+[32;1mSkillPath           : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mDemoScreenshot      : [0massets/demo-screenshot.svg
+[32;1mValidatorCommand    : [0mpwsh -NoProfile -File .\scripts\validate-plugin.ps1
+[32;1mRegressionCommand   : [0mpwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1
+[32;1mSubmissionChecklist : [0mdocs/SUBMISSION_CHECKLIST.md
+[32;1mGhFallback          : [0mgh unavailable; pushed to user-provided origin
+
+
+
+Validator output:
+
+[32;1mStatus            : [0mPASS
+[32;1mPluginName        : [0mbabygear-risk-radar
+[32;1mMarketplacePath   : [0m./
+[32;1mScreenshot        : [0m./assets/demo-screenshot.svg
+[32;1mSkillPath         : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mGitHubUrl         : [0mhttps://github.com/procloudkim/2026-06-07-harness-baby
+[32;1mRequiredFileCount : [0m23
+
+

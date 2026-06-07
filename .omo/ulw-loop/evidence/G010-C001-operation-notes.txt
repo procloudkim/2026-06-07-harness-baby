@@ -1,0 +1,15 @@
+Criterion: G010-C001 operation notes
+CriteriaPass: True
+
+Checks:
+OsTarget: True
+ShellTarget: True
+PcModel: True
+CpuClass: True
+RamClass: True
+BoundedParallelism: True
+NoDependencyPolicy: True
+SafetyBoundaries: True
+
+
+Operation notes path: docs/OPERATION_NOTES.md

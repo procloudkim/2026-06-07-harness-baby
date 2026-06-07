@@ -80,6 +80,7 @@ $requiredFiles = @(
     'examples\avent-pacifier-risk-brief.md',
     'examples\sample-output.md',
     'scripts\validate-plugin.ps1',
+    'scripts\Show-SubmissionSummary.ps1',
     'docs\ASSUMPTIONS.md',
     'docs\MAS_DECISIONS.md',
     'docs\ACCEPTANCE_CRITERIA.md',
@@ -88,6 +89,8 @@ $requiredFiles = @(
     'docs\DEMO_SCRIPT.md',
     'docs\AUTHORITY_SOURCE_MAP.md',
     'docs\MAS_ROUNDS.md',
+    'docs\OPERATION_NOTES.md',
+    'docs\SUBMISSION_CHECKLIST.md',
     'reports\MAS_QA_REPORT.md',
     'reports\FINAL_REPORT.md',
     'README.md',
@@ -128,6 +131,16 @@ Assert-TextContains -Text $skillText -Needle 'CPSC' -Label 'Skill CPSC source'
 Assert-TextContains -Text $skillText -Needle 'AAP/HealthyChildren' -Label 'Skill AAP source'
 Assert-TextContains -Text $skillText -Needle 'FDA BPA' -Label 'Skill FDA source'
 Assert-TextContains -Text $skillText -Needle 'NIEHS BPA' -Label 'Skill NIEHS source'
+
+foreach ($scriptRelativePath in @('scripts\validate-plugin.ps1', 'scripts\Show-SubmissionSummary.ps1')) {
+    $parseTokens = $null
+    $parseErrors = $null
+    [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $root $scriptRelativePath), [ref] $parseTokens, [ref] $parseErrors) | Out-Null
+    if ($parseErrors.Count -gt 0) {
+        $messages = ($parseErrors | ForEach-Object { $_.Message }) -join '; '
+        throw "PowerShell syntax errors found in $scriptRelativePath`: $messages"
+    }
+}
 
 $marketplacePath = Join-Path $root '.agents\plugins\marketplace.json'
 $marketplace = Get-Content -LiteralPath $marketplacePath -Raw | ConvertFrom-Json -Depth 32
@@ -180,6 +193,31 @@ foreach ($needle in @(
     'must not mix chemical context'
 )) {
     Assert-TextContains -Text $masRounds -Needle $needle -Label 'MAS_ROUNDS'
+}
+
+$operationNotes = Get-Content -LiteralPath (Join-Path $root 'docs\OPERATION_NOTES.md') -Raw
+foreach ($needle in @(
+    'PowerShell 7',
+    'ASUS TUF Gaming A14 FA401EA',
+    'AMD RYZEN AI MAX+ 392',
+    '12 cores / 24 logical processors',
+    'about 62.6 GB',
+    'Avoid npm, Python, package installation'
+)) {
+    Assert-TextContains -Text $operationNotes -Needle $needle -Label 'OPERATION_NOTES'
+}
+
+$submissionChecklist = Get-Content -LiteralPath (Join-Path $root 'docs\SUBMISSION_CHECKLIST.md') -Raw
+foreach ($needle in @(
+    'Public URL',
+    'HEAD commit',
+    'Commit count',
+    'assets/demo-screenshot.svg',
+    'scripts\Show-SubmissionSummary.ps1',
+    'GitHub CLI (`gh`) is not installed',
+    'PASS'
+)) {
+    Assert-TextContains -Text $submissionChecklist -Needle $needle -Label 'SUBMISSION_CHECKLIST'
 }
 
 $trackedSecretPatterns = @(

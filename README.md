@@ -21,6 +21,9 @@ Parents often have to decide before evidence is perfectly resolved. A famous bra
 ├── scripts/validate-plugin.ps1
 ├── docs/AUTHORITY_SOURCE_MAP.md
 ├── docs/MAS_ROUNDS.md
+├── docs/OPERATION_NOTES.md
+├── docs/SUBMISSION_CHECKLIST.md
+├── scripts/Show-SubmissionSummary.ps1
 ├── reports/MAS_QA_REPORT.md
 └── reports/FINAL_REPORT.md
 ```
@@ -73,6 +76,12 @@ Adjacent regression check:
 
 ```powershell
 pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1
+```
+
+Submission summary:
+
+```powershell
+pwsh -NoProfile -File .\scripts\Show-SubmissionSummary.ps1
 ```
 
 ## GitHub Submission URL
