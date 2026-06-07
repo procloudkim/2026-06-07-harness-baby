@@ -1,0 +1,12 @@
+Criterion: G013-C001 content safety happy path
+Command: pwsh -NoProfile -File .\scripts\Test-ContentSafety.ps1
+ExitCode: 0
+CriteriaPass: True
+
+Output:
+
+[32;1mStatus[0m[32;1m RootPath                            [0m[32;1m FilesScanned[0m[32;1m Checks[0m
+[32;1m------[0m [32;1m--------                            [0m [32;1m------------[0m [32;1m------[0m
+PASS   D:\KLab\workspace\2026-06-07-harness           24 {affiliate link, affiliate marker, tracking campaign paramete…
+
+

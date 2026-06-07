@@ -97,6 +97,12 @@ Submission summary:
 pwsh -NoProfile -File .\scripts\Show-SubmissionSummary.ps1
 ```
 
+Content safety audit:
+
+```powershell
+pwsh -NoProfile -File .\scripts\Test-ContentSafety.ps1
+```
+
 ## GitHub Submission URL
 
 https://github.com/procloudkim/2026-06-07-harness-baby

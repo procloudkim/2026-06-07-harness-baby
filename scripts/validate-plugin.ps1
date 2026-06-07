@@ -83,6 +83,7 @@ $requiredFiles = @(
     'templates\parent-action-card-template.md',
     'scripts\validate-plugin.ps1',
     'scripts\Show-SubmissionSummary.ps1',
+    'scripts\Test-ContentSafety.ps1',
     'docs\ASSUMPTIONS.md',
     'docs\MAS_DECISIONS.md',
     'docs\ACCEPTANCE_CRITERIA.md',
@@ -136,7 +137,7 @@ Assert-TextContains -Text $skillText -Needle 'NIEHS BPA' -Label 'Skill NIEHS sou
 Assert-TextContains -Text $skillText -Needle 'templates/babygear-mece-report-template.md' -Label 'Skill template reference'
 Assert-TextContains -Text $skillText -Needle 'templates/parent-action-card-template.md' -Label 'Skill action-card template reference'
 
-foreach ($scriptRelativePath in @('scripts\validate-plugin.ps1', 'scripts\Show-SubmissionSummary.ps1')) {
+foreach ($scriptRelativePath in @('scripts\validate-plugin.ps1', 'scripts\Show-SubmissionSummary.ps1', 'scripts\Test-ContentSafety.ps1')) {
     $parseTokens = $null
     $parseErrors = $null
     [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $root $scriptRelativePath), [ref] $parseTokens, [ref] $parseErrors) | Out-Null
@@ -242,6 +243,7 @@ foreach ($needle in @(
     'Commit count',
     'assets/demo-screenshot.svg',
     'scripts\Show-SubmissionSummary.ps1',
+    'scripts\Test-ContentSafety.ps1',
     'GitHub CLI (`gh`) is not installed',
     'PASS'
 )) {

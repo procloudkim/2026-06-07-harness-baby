@@ -1,0 +1,13 @@
+Criterion: G013-C003 unsupported brand danger claim negative fixture
+ExitCode: 1
+ExpectedMessageMatched: True
+FixtureRemoved: True
+CriteriaPass: True
+
+Output:
+Exception: D:\KLab\workspace\2026-06-07-harness\scripts\Test-ContentSafety.ps1:89
+Line |
+  89 |              throw "Content safety violation: $($check.Kind) in $relat …
+     |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Content safety violation: unsupported specific-brand danger/safety claim in README.md
+

@@ -41,6 +41,7 @@ Fields reported by the command:
 | Marketplace entry | PASS | `.agents/plugins/marketplace.json`. |
 | Example inputs and sample output | PASS | `examples/avent-pacifier-risk-brief.md`, `examples/sample-output.md`. |
 | Validation script | PASS | `scripts/validate-plugin.ps1`. |
+| Content safety audit | PASS | `scripts/Test-ContentSafety.ps1`. |
 | MAS-QA report | PASS | `reports/MAS_QA_REPORT.md`. |
 | Final report | PASS | `reports/FINAL_REPORT.md` and `docs/FINAL_REPORT.md`. |
 | Demo script | PASS | `docs/DEMO_SCRIPT.md`. |
@@ -54,6 +55,7 @@ Fields reported by the command:
 
 ```powershell
 pwsh -NoProfile -File .\scripts\validate-plugin.ps1
+pwsh -NoProfile -File .\scripts\Test-ContentSafety.ps1
 pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1
 ```
 
