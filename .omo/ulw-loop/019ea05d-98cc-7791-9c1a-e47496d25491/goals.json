@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T07:22:46.139Z",
+  "updatedAt": "2026-06-07T07:28:27.541Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -318,6 +318,45 @@
       "createdAt": "2026-06-07T07:06:40.256Z",
       "updatedAt": "2026-06-07T07:22:46.139Z",
       "evidence": "Newest user directive names babygear-risk-radar-codex-plugin as the target and states the submission is a Codex CLI plugin package, not an app. Official OpenAI Codex plugin docs confirm .codex-plugin/plugin.json is required and skills/assets are plugin-root components; hooks need user trust review, so excluding hooks is appropriate for this 90-minute package."
+    },
+    {
+      "id": "G009",
+      "title": "Authority source map and MAS debate hardening",
+      "objective": "Improve BabyGear Risk Radar with official-source hierarchy, medical/safety caution protocol, and MAS odd/even debate rounds so parent-facing output is more trustworthy without making medical claims.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Improve BabyGear Risk Radar with official-source hierarchy, medical/safety ca...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 9.",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G009-C001-authority-source-map.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:28:27.119Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Improve BabyGear Risk Radar with official-source hierarchy, medical/safety ca....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G009-C002-mas-rounds.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:28:27.333Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Improve BabyGear Risk Radar with official-source hierarchy, medical/safety ca....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G009-C003-validator-hardening.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:28:27.541Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T07:25:18.945Z",
+      "updatedAt": "2026-06-07T07:28:27.541Z",
+      "evidence": "User requested continued improvement after completion, including MAS debate rounds and authoritative medical/newborn-care information. Current validator passes, so next smallest safe move is documentation and skill hardening."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl as the audit trail.",

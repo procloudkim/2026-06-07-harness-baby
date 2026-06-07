@@ -1,0 +1,36 @@
+Criterion: G009-C001 authority source map and skill source hierarchy
+Command: pwsh -NoProfile -File .\scripts\validate-plugin.ps1
+ValidatorExitCode: 0
+CriteriaPass: True
+
+Checks:
+ValidatorPass: True
+CPSCSource: True
+ECFRSource: True
+RecallsSource: True
+SaferProductsSource: True
+AAPSource: True
+FDASource: True
+NIEHSSource: True
+
+
+Validator output:
+
+[32;1mStatus            : [0mPASS
+[32;1mPluginName        : [0mbabygear-risk-radar
+[32;1mMarketplacePath   : [0m./
+[32;1mScreenshot        : [0m./assets/demo-screenshot.svg
+[32;1mSkillPath         : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mGitHubUrl         : [0mhttps://github.com/procloudkim/2026-06-07-harness-baby
+[32;1mRequiredFileCount : [0m20
+
+
+
+Source URLs:
+https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Pacifiers
+https://www.ecfr.gov/current/title-16/chapter-II/subchapter-C/part-1511
+https://www.cpsc.gov/Recalls
+https://www.saferproducts.gov/
+https://www.healthychildren.org/English/safety-prevention/at-home/Pages/Pacifier-safety.aspx?form=HealthyChildren
+https://www.fda.gov/newsevents/publichealthfocus/ucm064437.htm
+https://www.niehs.nih.gov/health/topics/agents/sya-bpa

@@ -20,6 +20,16 @@ The parent trusted a familiar brand but later saw reporting that a consumer orga
 | Public reporting | Reported dTest findings and brand response | Signal to investigate; not a standalone verdict. |
 | Unknowns | Batch, purchase jurisdiction, primary report, recall status | Must be resolved before a strong conclusion. |
 
+## Authority Source Ladder
+
+| Question | Preferred Source | Parent Impact |
+| --- | --- | --- |
+| Exact recall? | CPSC recalls or local official recall portal | If a matching recall exists, follow official instructions. |
+| Pacifier physical compliance? | CPSC pacifier guidance and 16 CFR Part 1511 | Check structural integrity, shield/ventilation, and no strings/cords/attachments. |
+| Parent use safety? | AAP/HealthyChildren and pediatrician guidance | Inspect deterioration, avoid unsafe attachments, and escalate child-specific concerns. |
+| BPA context? | FDA food-contact BPA page and NIEHS BPA page | Treat as exposure context, not proof about this exact product. |
+| Brand claim? | Manufacturer batch-specific certificate or response | Verify method, lot, jurisdiction, and date. |
+
 ## Safety and Regulatory Risk Matrix
 
 | Risk | Signal | Severity If True | Likelihood From Supplied Evidence | Parent Check |
@@ -31,12 +41,16 @@ The parent trusted a familiar brand but later saw reporting that a consumer orga
 
 ## MAS Debate
 
-- Parent Reality Lens: The parent needs a practical answer today, not a debate that ends in "it depends."
-- Pediatric Safety Lens: Avoid alarm. If the child has symptoms or special risk factors, consult a clinician.
-- Clinician Communicator Lens: Explain uncertainty and next checks in plain language.
+- Round 1 - Visionary: The parent needs a calm action card today, not a debate that ends in "it depends."
+- Round 2 - Critical: Do not turn disputed reporting or a brand response into a definitive safety claim.
+- Round 3 - Visionary: The authority ladder gives Codex a reusable decision path across baby-product categories.
+- Round 4 - Critical: FDA BPA context, CPSC physical rules, AAP use guidance, and manufacturer claims answer different questions and must stay separate.
+- Parent Reality Lens: Prioritize practical next checks.
+- Pediatric Safety Lens: Avoid alarm; consult a clinician for symptoms or child-specific risk.
+- Clinician Communicator Lens: Explain uncertainty in plain language.
 - Product Safety Investigator: Look for recall status, batch labels, primary test data, and manufacturer certificate.
 - Brand Claim Skeptic: "BPA-free" is a claim to verify, not a decision endpoint.
-- Evidence QA Lead: Do not turn disputed reporting into a definitive safety claim.
+- Evidence QA Lead: Keep source gaps and uncertainty visible.
 
 ## Final Parent Action Card
 
@@ -60,4 +74,3 @@ Escalate if:
 ## Uncertainty
 
 This sample does not resolve the primary dTest report, batch-specific evidence, or local regulator status.
-

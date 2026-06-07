@@ -86,6 +86,8 @@ $requiredFiles = @(
     'docs\COMMIT_LOG.md',
     'docs\FINAL_REPORT.md',
     'docs\DEMO_SCRIPT.md',
+    'docs\AUTHORITY_SOURCE_MAP.md',
+    'docs\MAS_ROUNDS.md',
     'reports\MAS_QA_REPORT.md',
     'reports\FINAL_REPORT.md',
     'README.md',
@@ -121,6 +123,11 @@ $skillText = Get-Content -LiteralPath $skillPath -Raw
 Assert-TextContains -Text $skillText -Needle 'name: babygear-risk-radar' -Label 'Skill front matter'
 Assert-TextContains -Text $skillText -Needle 'MAS-QA Checklist' -Label 'Skill workflow'
 Assert-TextContains -Text $skillText -Needle 'not medical advice' -Label 'Skill safety boundary'
+Assert-TextContains -Text $skillText -Needle 'Authority Source Ladder' -Label 'Skill authority ladder'
+Assert-TextContains -Text $skillText -Needle 'CPSC' -Label 'Skill CPSC source'
+Assert-TextContains -Text $skillText -Needle 'AAP/HealthyChildren' -Label 'Skill AAP source'
+Assert-TextContains -Text $skillText -Needle 'FDA BPA' -Label 'Skill FDA source'
+Assert-TextContains -Text $skillText -Needle 'NIEHS BPA' -Label 'Skill NIEHS source'
 
 $marketplacePath = Join-Path $root '.agents\plugins\marketplace.json'
 $marketplace = Get-Content -LiteralPath $marketplacePath -Raw | ConvertFrom-Json -Depth 32
@@ -148,6 +155,32 @@ Assert-TextContains -Text $finalReport -Needle 'Validation: PASS' -Label 'FINAL_
 
 $masQa = Get-Content -LiteralPath (Join-Path $root 'reports\MAS_QA_REPORT.md') -Raw
 Assert-TextContains -Text $masQa -Needle 'MAS-QA Result: PASS' -Label 'MAS_QA_REPORT'
+
+$authoritySourceMap = Get-Content -LiteralPath (Join-Path $root 'docs\AUTHORITY_SOURCE_MAP.md') -Raw
+foreach ($needle in @(
+    'https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Pacifiers',
+    'https://www.ecfr.gov/current/title-16/chapter-II/subchapter-C/part-1511',
+    'https://www.cpsc.gov/Recalls',
+    'https://www.saferproducts.gov/',
+    'https://www.healthychildren.org/English/safety-prevention/at-home/Pages/Pacifier-safety.aspx?form=HealthyChildren',
+    'https://www.fda.gov/newsevents/publichealthfocus/ucm064437.htm',
+    'https://www.niehs.nih.gov/health/topics/agents/sya-bpa'
+)) {
+    Assert-TextContains -Text $authoritySourceMap -Needle $needle -Label 'AUTHORITY_SOURCE_MAP'
+}
+
+$masRounds = Get-Content -LiteralPath (Join-Path $root 'docs\MAS_ROUNDS.md') -Raw
+foreach ($needle in @(
+    'Round 1 - Visionary',
+    'Round 2 - Critical',
+    'Round 3 - Visionary',
+    'Round 4 - Critical',
+    'Round 5 - Visionary',
+    'Round 6 - Critical',
+    'must not mix chemical context'
+)) {
+    Assert-TextContains -Text $masRounds -Needle $needle -Label 'MAS_ROUNDS'
+}
 
 $trackedSecretPatterns = @(
     '\.env($|\.)',

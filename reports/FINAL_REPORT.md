@@ -40,9 +40,16 @@ Hooks, MCP, and app mappings were intentionally excluded.
 ## Evidence Sources Reflected
 
 - U.S. CPSC pacifier guidance: physical safety, certification, tracking labels, and attachment restrictions.
+- eCFR 16 CFR Part 1511: pacifier guard/shield, structural integrity, attachment, and labeling requirements.
+- CPSC recalls and SaferProducts.gov: product-specific recall or incident-report checks.
 - U.S. FDA BPA food-contact guidance: BPA context, not pacifier-specific proof.
-- AAP/HealthyChildren safe-sleep guidance: pacifier use context and warning against sleep attachments.
+- NIEHS BPA page: exposure-route and uncertainty context for BPA.
+- AAP/HealthyChildren pacifier guidance: parent-facing use context and warning against unsafe attachments.
 - Public reporting and manufacturer response are treated as a disputed case note.
+
+Detailed source hierarchy: `docs/AUTHORITY_SOURCE_MAP.md`
+
+MAS debate hardening: `docs/MAS_ROUNDS.md`
 
 ## Validation
 

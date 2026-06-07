@@ -1,0 +1,26 @@
+Criterion: G009-C002 odd/even MAS rounds and overclaiming guard
+CriteriaPass: True
+
+Checks:
+Round1Visionary: True
+Round2Critical: True
+Round3Visionary: True
+Round4Critical: True
+Round5Visionary: True
+Round6Critical: True
+SynthesisDecisions: True
+NoUnsupportedProductDangerClaim: True
+
+
+ForbiddenPatternHits:
+
+
+Round headings:
+## Round 1 - Visionary
+## Round 2 - Critical
+## Round 3 - Visionary
+## Round 4 - Critical
+## Round 5 - Visionary
+## Round 6 - Critical
+## Synthesis Decisions
+

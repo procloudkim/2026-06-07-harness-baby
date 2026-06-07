@@ -11,16 +11,32 @@ This is a decision-support workflow, not medical advice. Do not diagnose, prescr
 
 ## Source Priority
 
-Use this priority order:
+Use this priority order and label each source by tier:
 
-1. Official regulator, recall, standard, or safety-agency source.
-2. Official pediatric or clinician society guidance.
-3. Manufacturer primary statement, FAQ, certificate, batch label, or test response.
-4. Consumer-test organization or lab report.
-5. Reputable journalism that summarizes named evidence.
-6. Retail, forum, influencer, or anecdotal claims.
+1. Official regulator, recall, standard, or safety-agency source, including CPSC, eCFR, official recall portals, and SaferProducts.gov.
+2. Official pediatric or clinician society guidance, including AAP/HealthyChildren for parent-facing pacifier safety context.
+3. Official food-contact or environmental-health agency context, including FDA BPA food-contact guidance and NIEHS BPA exposure context.
+4. Manufacturer primary statement, FAQ, certificate, batch label, or test response.
+5. Consumer-test organization or lab report.
+6. Reputable journalism that summarizes named evidence.
+7. Retail, forum, influencer, or anecdotal claims.
 
 When evidence conflicts, keep the conflict visible instead of forcing a verdict.
+
+## Authority Source Ladder
+
+Before writing conclusions, map the product question to the most relevant official source lane:
+
+| Question | Preferred Source Lane | Output Rule |
+| --- | --- | --- |
+| Is this exact product recalled? | CPSC recalls or the relevant official recall portal. | Product-specific recall status outranks brand trust and articles. |
+| Does a pacifier meet physical safety expectations? | CPSC pacifier guidance and 16 CFR Part 1511. | Separate choking/suffocation/strangulation/structural risks from chemical concerns. |
+| Is the parent using a pacifier safely? | AAP/HealthyChildren and pediatrician escalation. | Discuss one-piece construction, shield/ventilation, deterioration checks, and no tying to crib, neck, hand, or sleep setup. |
+| What does BPA context mean? | FDA food-contact BPA page and NIEHS BPA page. | Treat as chemical-exposure context, not direct proof about a specific pacifier unless product-specific evidence is supplied. |
+| What does the brand claim mean? | Manufacturer primary material plus batch-specific support. | Treat as a claim to verify; ask for certificate, test method, lot, date code, and jurisdiction. |
+| What does public reporting mean? | Primary test report if available, then reputable journalism. | Treat as a signal and conflict record, not a standalone verdict. |
+
+If official sources are not available in the user-provided context, explicitly list the missing source and the decision it would affect.
 
 ## Required Output
 
@@ -47,12 +63,16 @@ Produce these sections in order:
    - Seek official confirmation.
    - Consult pediatrician, clinician, regulator, or recall portal.
 9. `MAS Debate`
-   - Parent Reality Lens.
-   - Pediatric Safety Lens.
-   - Clinician Communicator Lens.
-   - Product Safety Investigator.
-   - Brand Claim Skeptic.
-   - Evidence QA Lead.
+   - Use odd/even round discipline when the user asks for deeper MAS reasoning:
+     - Odd rounds are visionary: parent value, product clarity, and practical decision flow.
+     - Even rounds are critical: overclaiming, source gaps, legal/medical boundaries, and false certainty.
+   - Include these lenses:
+     - Parent Reality Lens.
+     - Pediatric Safety Lens.
+     - Clinician Communicator Lens.
+     - Product Safety Investigator.
+     - Brand Claim Skeptic.
+     - Evidence QA Lead.
 10. `MAS-QA Checklist`
     - Citation gaps.
     - Overclaiming check.
@@ -83,12 +103,13 @@ Additional internal lenses:
 
 When the product is a pacifier or soother:
 
-- Check for official recalls and batch/tracking labels.
+- Check for official recalls, model identifiers, batch/tracking labels, and purchase jurisdiction.
 - Separate chemical claims from physical safety requirements.
 - Ask whether any string, cord, chain, clip, toy, lovey, or attachment is involved.
 - Treat CPSC physical-hazard guidance as high-priority U.S. regulator context.
 - Treat FDA BPA food-contact guidance as BPA context only, not as pacifier-specific proof.
-- Treat AAP/HealthyChildren safe-sleep pacifier guidance as parent-facing use context; avoid neck or clothing attachments during sleep.
+- Treat AAP/HealthyChildren pacifier guidance as parent-facing use context; avoid tying a pacifier to crib, neck, hand, clothing, or sleep setup.
+- Treat SaferProducts.gov as an incident-report search/reporting source, not as automatic proof that a public report is verified.
 
 ## Evidence Wording Rules
 
@@ -117,4 +138,3 @@ I will structure this as decision support, not medical advice. I will separate p
 ```
 
 Then produce the required sections.
-

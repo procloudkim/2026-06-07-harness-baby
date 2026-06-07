@@ -11,6 +11,8 @@ This compatibility copy exists because the initial Ralphthon checklist requested
 - Public GitHub URL: https://github.com/procloudkim/2026-06-07-harness-baby
 - Demo screenshot: `assets/demo-screenshot.svg`
 - Validator: `pwsh -NoProfile -File .\scripts\validate-plugin.ps1`
+- Authority source map: `docs/AUTHORITY_SOURCE_MAP.md`
+- MAS debate rounds: `docs/MAS_ROUNDS.md`
 
 ## Status
 
