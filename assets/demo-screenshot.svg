@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">BabyGear Risk Radar demo screenshot</title>
+  <desc id="desc">Text-only neutral dashboard showing MECE evidence, risk, alternatives, parent action, and MAS-QA for a pacifier safety controversy.</desc>
+  <rect width="1280" height="760" fill="#f8fafc"/>
+  <rect x="48" y="44" width="1184" height="672" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="84" y="104" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">BabyGear Risk Radar</text>
+  <text x="84" y="138" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#475569">Codex plugin package: MECE evidence, safety risk, alternatives, and MAS-QA</text>
+
+  <rect x="84" y="168" width="1096" height="76" rx="6" fill="#ecfeff" stroke="#99f6e4"/>
+  <text x="108" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#134e4a">Case note</text>
+  <text x="108" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#0f172a">Philips Avent Ultra Air soother: BPA-free claim vs reported detection vs manufacturer dispute</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="84" y="278" width="256" height="176" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="108" y="314" font-size="20" font-weight="700" fill="#0f172a">Evidence</text>
+    <text x="108" y="344" font-size="15" fill="#334155">Tier 1: regulator guidance</text>
+    <text x="108" y="370" font-size="15" fill="#334155">Tier 2: manufacturer response</text>
+    <text x="108" y="396" font-size="15" fill="#334155">Tier 3: public reporting</text>
+    <text x="108" y="426" font-size="14" fill="#64748b">Conflict preserved, not flattened</text>
+
+    <rect x="372" y="278" width="256" height="176" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="396" y="314" font-size="20" font-weight="700" fill="#0f172a">Risk</text>
+    <text x="396" y="344" font-size="15" fill="#334155">Chemical/material signal</text>
+    <text x="396" y="370" font-size="15" fill="#334155">Choking and attachment check</text>
+    <text x="396" y="396" font-size="15" fill="#334155">Recall and batch check</text>
+    <text x="396" y="426" font-size="14" fill="#64748b">Severity and uncertainty split</text>
+
+    <rect x="660" y="278" width="256" height="176" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="684" y="314" font-size="20" font-weight="700" fill="#0f172a">Alternatives</text>
+    <text x="684" y="344" font-size="15" fill="#334155">Material disclosure</text>
+    <text x="684" y="370" font-size="15" fill="#334155">Traceability and certificates</text>
+    <text x="684" y="396" font-size="15" fill="#334155">Age fit and cleaning</text>
+    <text x="684" y="426" font-size="14" fill="#64748b">No affiliate recommendations</text>
+
+    <rect x="948" y="278" width="232" height="176" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="972" y="314" font-size="20" font-weight="700" fill="#0f172a">Parent Action</text>
+    <text x="972" y="344" font-size="15" fill="#334155">Do now: inspect product</text>
+    <text x="972" y="370" font-size="15" fill="#334155">Check: recall and batch</text>
+    <text x="972" y="396" font-size="15" fill="#334155">Escalate: clinician/regulator</text>
+    <text x="972" y="426" font-size="14" fill="#64748b">Not medical advice</text>
+  </g>
+
+  <rect x="84" y="492" width="1096" height="104" rx="6" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="108" y="530" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#14532d">MAS-QA: PASS with uncertainty noted</text>
+  <text x="108" y="560" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#166534">Parent Reality Lens + Pediatric Safety Lens + Product Safety Investigator + Brand Claim Skeptic + Evidence QA Lead</text>
+  <text x="108" y="588" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#334155">Final answer separates official guidance, manufacturer response, reporting, unknowns, and next checks.</text>
+
+  <text x="84" y="660" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#64748b">Neutral demo asset. No trademark logos. Public-source case note only.</text>
+</svg>
+
