@@ -39,3 +39,7 @@ The local tool entry point is `tools\Invoke-ParentPickGuard.ps1`. It delegates t
 ### Prompt packet generator for actual plugin use
 
 `scripts\New-BabyGearDemoPrompt.ps1` generates a Korean prompt packet that can be pasted into Codex CLI with the BabyGear Risk Radar plugin enabled. The tool is intentionally local, deterministic, and output-path bounded to the repository so it does not become an app, crawler, API client, or publisher. The validator executes it against a temporary repo-local path and removes `.codex-temp` when validation finishes.
+
+### Prompt packet parity validation
+
+The root validator now compares normalized output from `scripts\New-BabyGearDemoPrompt.ps1` with the checked-in `examples\korean-demo-prompt.md`. This prevents the static example from drifting away from the actual local PowerShell tool and gives judges one deterministic prompt packet for Korean plugin-use demonstrations.

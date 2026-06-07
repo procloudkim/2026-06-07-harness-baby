@@ -1,0 +1,60 @@
+Criterion: G019-C003 regression suite after prompt parity validation
+ValidatorExitCode: 0
+ContentSafetyExitCode: 0
+SummaryExitCode: 0
+ParentPickExitCode: 0
+CriteriaPass: True
+
+Checks:
+ValidatorPass: True
+ContentSafetyPass: True
+SummaryReady: True
+ParentPickPass: True
+CodexTempAbsent: True
+
+Validator output:
+[32;1mStatus            : [0mPASS
+[32;1mPluginName        : [0mbabygear-risk-radar
+[32;1mMarketplacePath   : [0m./
+[32;1mScreenshot        : [0m./assets/demo-screenshot.svg
+[32;1mSkillPath         : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mGitHubUrl         : [0mhttps://github.com/procloudkim/2026-06-07-harness-baby
+[32;1mRequiredFileCount : [0m31
+
+Content safety output:
+[32;1mStatus[0m[32;1m RootPath                            [0m[32;1m FilesScanned[0m[32;1m Checks[0m
+[32;1m------[0m [32;1m--------                            [0m [32;1m------------[0m [32;1m------[0m
+PASS   D:\KLab\workspace\2026-06-07-harness           28 {affiliate link, affiliate marker, tracking campaign paramete…
+
+Summary output:
+[32;1mStatus                 : [0mREADY
+[32;1mProject                : [0mBabyGear Risk Radar Codex Plugin
+[32;1mPluginName             : [0mbabygear-risk-radar
+[32;1mGitHubUrl              : [0mhttps://github.com/procloudkim/2026-06-07-harness-baby
+[32;1mBranch                 : [0mmain
+[32;1mHeadCommit             : [0m2fdb148
+[32;1mCommitCount            : [0m23
+[32;1mMarketplacePath        : [0m./
+[32;1mSkillPath              : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mDemoScreenshot         : [0massets/demo-screenshot.svg
+[32;1mKoreanMockPage         : [0mmockups/korean-parent-risk-radar.html
+[32;1mKoreanPluginOutput     : [0mexamples/korean-plugin-run-output.md
+[32;1mKoreanPromptPacket     : [0mexamples/korean-demo-prompt.md
+[32;1mPromptGeneratorCommand : [0mpwsh -NoProfile -File .\scripts\New-BabyGearDemoPrompt.ps1
+[32;1mValidatorCommand       : [0mpwsh -NoProfile -File .\scripts\validate-plugin.ps1
+[32;1mRegressionCommand      : [0mpwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1
+[32;1mSubmissionChecklist    : [0mdocs/SUBMISSION_CHECKLIST.md
+[32;1mGhFallback             : [0mgh unavailable; pushed to user-provided origin
+
+ParentPick output:
+[32;1mStatus              : [0mPASS
+[32;1mPluginRoot          : [0mD:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard
+[32;1mReportPath          : [0mD:\KLab\workspace\2026-06-07-harness\.codex-temp\parentpick-guard-validation\sample-report.html
+[32;1mScreenshotPath      : [0mD:\KLab\workspace\2026-06-07-harness\.codex-temp\parentpick-guard-validation\demo-screenshot.png
+[32;1mValidationTempPath  : [0mD:\KLab\workspace\2026-06-07-harness\.codex-temp\parentpick-guard-validation
+[32;1mRequiredFileCount   : [0m17
+[32;1mCheckedScriptCount  : [0m5
+[32;1mCheckedToolCount    : [0m1
+[32;1mCheckedFailureCases : [0m{blank-report-title, empty-sources, unsafe-url, blank-source-name…}
+
+cleanup: no spawned process; no tmux session; .codex-temp absent

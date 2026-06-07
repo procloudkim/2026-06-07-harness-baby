@@ -1,0 +1,21 @@
+Criterion: G019-C001 prompt parity validator happy path
+ExitCode: 0
+CriteriaPass: True
+
+Checks:
+ValidatorExitZero: True
+ValidatorOutputPass: True
+HasNormalizeFunction: True
+HasParityFailureMessage: True
+CodexTempAbsent: True
+
+Validator output:
+[32;1mStatus            : [0mPASS
+[32;1mPluginName        : [0mbabygear-risk-radar
+[32;1mMarketplacePath   : [0m./
+[32;1mScreenshot        : [0m./assets/demo-screenshot.svg
+[32;1mSkillPath         : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mGitHubUrl         : [0mhttps://github.com/procloudkim/2026-06-07-harness-baby
+[32;1mRequiredFileCount : [0m31
+
+cleanup: no spawned process; no tmux session; .codex-temp absent

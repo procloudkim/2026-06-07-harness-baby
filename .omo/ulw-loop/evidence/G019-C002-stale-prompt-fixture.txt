@@ -1,0 +1,20 @@
+Criterion: G019-C002 stale Korean demo prompt negative fixture
+NegativeExitCode: 1
+CriteriaPass: True
+
+Checks:
+NegativeExitNonZero: True
+NegativeCaughtPromptDrift: True
+FixtureCreated: True
+FixtureRemoved: True
+CodexTempAbsent: True
+
+Negative validator output:
+Exception: D:\KLab\workspace\2026-06-07-harness\scripts\validate-plugin.ps1:289
+Line |
+ 289 |          throw 'Generated Korean demo prompt differs from examples\kor …
+     |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Generated Korean demo prompt differs from examples\korean-demo-prompt.md
+
+FixtureRoot: D:\KLab\workspace\2026-06-07-harness\.omo\ulw-loop\fixtures\g019-stale-korean-demo-prompt
+cleanup: no spawned process; no tmux session; fixture removed; .codex-temp absent

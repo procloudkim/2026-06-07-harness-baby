@@ -67,6 +67,16 @@ function Assert-TextContains {
     }
 }
 
+function ConvertTo-NormalizedText {
+    param([AllowNull()][string] $Text)
+
+    if ($null -eq $Text) {
+        return ''
+    }
+
+    return ($Text -replace "`r`n?", "`n").TrimEnd("`n")
+}
+
 $root = Resolve-LocalPath $RootPath
 if (-not (Test-Path -LiteralPath $root)) {
     throw "Root path not found: $RootPath"
@@ -274,6 +284,10 @@ try {
     Assert-TextContains -Text $generatedPrompt -Needle 'Use the `babygear-risk-radar` Codex plugin' -Label 'Generated prompt'
     Assert-TextContains -Text $generatedPrompt -Needle 'https://www.youtube.com/watch?v=EJKZ8XXYku0' -Label 'Generated prompt'
     Assert-TextContains -Text $generatedPrompt -Needle 'Fisher-Price CPSC recall context' -Label 'Generated prompt'
+
+    if ((ConvertTo-NormalizedText -Text $generatedPrompt) -ne (ConvertTo-NormalizedText -Text $koreanDemoPrompt)) {
+        throw 'Generated Korean demo prompt differs from examples\korean-demo-prompt.md'
+    }
 }
 finally {
     if (Test-Path -LiteralPath $promptValidationTempRoot) {

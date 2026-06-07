@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T08:09:54.194Z",
+  "updatedAt": "2026-06-07T08:15:21.870Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -708,6 +708,45 @@
       "createdAt": "2026-06-07T08:06:20.735Z",
       "updatedAt": "2026-06-07T08:09:54.194Z",
       "evidence": "After G017, Show-SubmissionSummary exposes Korean mock/output assets, but there is no single PowerShell command that produces a ready-to-use Korean Codex prompt packet for actual plugin use."
+    },
+    {
+      "id": "G019",
+      "title": "Prompt packet parity validation",
+      "objective": "Harden the Korean prompt packet generator by making validate-plugin.ps1 compare the generated prompt output with examples/korean-demo-prompt.md, plus negative fixture evidence for stale prompt detection, so the static example cannot drift from the local PowerShell tool.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Harden the Korean prompt packet generator by making validate-plugin.ps1 compa...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 19.",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G019-C001-prompt-parity-happy.txt: validator PASS and validate-plugin contains normalized prompt parity check | cleanup: no spawned process; no tmux session; .codex-temp absent",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:15:08.697Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Harden the Korean prompt packet generator by making validate-plugin.ps1 compa....",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G019-C002-stale-prompt-fixture.txt: stale examples/korean-demo-prompt.md fixture fails validator with prompt parity drift message; fixture removed | cleanup: no spawned process; no tmux session; fixture removed; .codex-temp absent",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:15:15.811Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Harden the Korean prompt packet generator by making validate-plugin.ps1 compa....",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G019-C003-regression-suite.txt: validator PASS, content safety PASS, summary READY, ParentPick verifier PASS, .codex-temp absent | cleanup: no spawned process; no tmux session; .codex-temp absent",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:15:21.870Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T08:13:44.632Z",
+      "updatedAt": "2026-06-07T08:15:21.870Z",
+      "evidence": "G018 added scripts/New-BabyGearDemoPrompt.ps1 and examples/korean-demo-prompt.md, but the validator only checks both contain expected text; it does not yet prove the checked-in example is exactly reproducible from the generator."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl as the audit trail.",
