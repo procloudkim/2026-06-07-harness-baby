@@ -1,0 +1,17 @@
+Criterion: G015-C001 Korean mock page content
+CriteriaPass: True
+MockPagePath: mockups/korean-parent-risk-radar.html
+
+Checks:
+PageExists: True
+KoreanTitle: True
+PhilipsAventCase1: True
+PhilipsAventYoutubeCase2: True
+PhilipsMonitorContext: True
+FisherPriceContext: True
+MeceEvidenceMap: True
+RiskMatrix: True
+MasRounds: True
+ParentActionCard: True
+SafetyBoundary: True
+

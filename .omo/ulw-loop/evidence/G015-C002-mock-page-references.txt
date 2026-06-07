@@ -1,0 +1,11 @@
+Criterion: G015-C002 mock page references
+CriteriaPass: True
+
+Checks:
+ReadmeReference: True
+QuickstartReference: True
+QuickstartExplainsCases: True
+ChecklistReference: True
+ValidatorCommand: True
+ContentSafetyCommand: True
+

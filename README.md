@@ -12,6 +12,8 @@ Parents often have to decide before evidence is perfectly resolved. A famous bra
 
 Korean quickstart for handoff and judging: `docs/KOREAN_QUICKSTART.md`.
 
+Korean mock page generated from the plugin workflow: `mockups/korean-parent-risk-radar.html`.
+
 ## Plugin Structure
 
 ```text
@@ -28,6 +30,7 @@ Korean quickstart for handoff and judging: `docs/KOREAN_QUICKSTART.md`.
 ├── docs/OPERATION_NOTES.md
 ├── docs/SUBMISSION_CHECKLIST.md
 ├── docs/KOREAN_QUICKSTART.md
+├── mockups/korean-parent-risk-radar.html
 ├── templates/babygear-mece-report-template.md
 ├── templates/parent-action-card-template.md
 ├── scripts/Show-SubmissionSummary.ps1

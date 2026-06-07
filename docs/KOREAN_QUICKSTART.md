@@ -24,6 +24,7 @@ https://github.com/procloudkim/2026-06-07-harness-baby
 | 예시 출력 | `examples/sample-output.md` |
 | 공식 소스 맵 | `docs/AUTHORITY_SOURCE_MAP.md` |
 | MAS 라운드 | `docs/MAS_ROUNDS.md` |
+| 한글 mock page | `mockups/korean-parent-risk-radar.html` |
 | 재사용 템플릿 | `templates/` |
 
 ## 검증 명령
@@ -63,6 +64,14 @@ assets/demo-screenshot.svg
 ```
 
 README에서도 같은 이미지를 참조합니다.
+
+## 한글 Mock Page
+
+```text
+mockups/korean-parent-risk-radar.html
+```
+
+이 mock page는 BabyGear Risk Radar skill 흐름을 실제로 적용한 정적 한글 페이지입니다. Philips Avent BPA 논란, 사용자 제공 YouTube case-2, Philips Avent monitor replacement 맥락, Fisher-Price CPSC recall 맥락을 MECE evidence map, risk matrix, MAS round, parent action card로 정리합니다.
 
 ## 알려진 한계
 

@@ -32,11 +32,11 @@ function Get-CoreTextFiles {
         $relativeFiles.Add($path) | Out-Null
     }
 
-    foreach ($directory in @('docs', 'examples', 'templates')) {
+    foreach ($directory in @('docs', 'examples', 'templates', 'mockups')) {
         $fullDirectory = Join-Path $Root $directory
         if (Test-Path -LiteralPath $fullDirectory) {
             Get-ChildItem -LiteralPath $fullDirectory -File -Recurse |
-                Where-Object { $_.Extension -in @('.md', '.json', '.svg', '.txt') } |
+                Where-Object { $_.Extension -in @('.md', '.html', '.json', '.svg', '.txt') } |
                 ForEach-Object {
                     $relativeFiles.Add([System.IO.Path]::GetRelativePath($Root, $_.FullName)) | Out-Null
                 }

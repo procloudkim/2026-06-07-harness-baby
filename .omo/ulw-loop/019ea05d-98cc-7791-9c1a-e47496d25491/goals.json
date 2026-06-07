@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T07:49:46.194Z",
+  "updatedAt": "2026-06-07T07:56:37.955Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -552,6 +552,45 @@
       "createdAt": "2026-06-07T07:48:21.005Z",
       "updatedAt": "2026-06-07T07:49:46.194Z",
       "evidence": "The user is Korean and requested Ralphthon execution support. Current README is English-heavy; a Korean handoff improves usability without changing the plugin runtime."
+    },
+    {
+      "id": "G015",
+      "title": "Korean mock page with Philips Avent and Fisher-Price cases",
+      "objective": "Use the BabyGear Risk Radar skill workflow to create a Korean static mock page covering Philips Avent issue case 1, user-provided YouTube case 2 as unverified media input, Philips Avent official monitor replacement context, and Fisher-Price official CPSC recall context.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Use the BabyGear Risk Radar skill workflow to create a Korean static mock pag...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 15.",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G015-C001-korean-mock-page.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:56:37.546Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Use the BabyGear Risk Radar skill workflow to create a Korean static mock pag....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G015-C002-mock-page-references.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:56:37.751Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Use the BabyGear Risk Radar skill workflow to create a Korean static mock pag....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G015-C003-mock-validator.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:56:37.955Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T07:53:36.116Z",
+      "updatedAt": "2026-06-07T07:56:37.955Z",
+      "evidence": "User requested actual plugin usage, a Korean mock page, Philips Avent case-1/case-2 with YouTube URL, and Fisher-Price-related content."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl as the audit trail.",

@@ -77,6 +77,7 @@ $requiredFiles = @(
     'skills\babygear-risk-radar\SKILL.md',
     '.agents\plugins\marketplace.json',
     'assets\demo-screenshot.svg',
+    'mockups\korean-parent-risk-radar.html',
     'examples\avent-pacifier-risk-brief.md',
     'examples\sample-output.md',
     'templates\babygear-mece-report-template.md',
@@ -173,6 +174,25 @@ $demoScript = Get-Content -LiteralPath (Join-Path $root 'docs\DEMO_SCRIPT.md') -
 Assert-TextContains -Text $demoScript -Needle 'static README screenshot and sample prompt' -Label 'DEMO_SCRIPT'
 Assert-TextContains -Text $demoScript -Needle 'No app server, deployment, browser automation, or external API is required.' -Label 'DEMO_SCRIPT'
 
+$koreanMockPage = Get-Content -LiteralPath (Join-Path $root 'mockups\korean-parent-risk-radar.html') -Raw
+foreach ($needle in @(
+    '한글 영유아 제품 리스크 레이더',
+    'Case 1 - Philips Avent 쪽쪽이 BPA 논란',
+    'Case 2 - Philips Avent 관련 YouTube 제보 입력',
+    'https://www.youtube.com/watch?v=EJKZ8XXYku0',
+    'Case 3 - Philips Avent 디지털 비디오 베이비모니터 replacement',
+    'Case 4 - Fisher-Price 공식 CPSC 리콜 맥락',
+    'Rock ''n Play',
+    'Snuga Swing',
+    'MECE 근거 맵',
+    '리스크 매트릭스',
+    'MAS Round - 정반합',
+    '부모 행동 카드',
+    '의학적 조언이나 구매 추천이 아닙니다'
+)) {
+    Assert-TextContains -Text $koreanMockPage -Needle $needle -Label 'KOREAN_MOCK_PAGE'
+}
+
 $screenshot = Get-Content -LiteralPath (Join-Path $root 'assets\demo-screenshot.svg') -Raw
 foreach ($needle in @(
     'width="1200"',
@@ -247,6 +267,7 @@ foreach ($needle in @(
     'scripts\Show-SubmissionSummary.ps1',
     'scripts\Test-ContentSafety.ps1',
     'docs/KOREAN_QUICKSTART.md',
+    'mockups/korean-parent-risk-radar.html',
     'GitHub CLI (`gh`) is not installed',
     'PASS'
 )) {
@@ -260,6 +281,7 @@ foreach ($needle in @(
     'pwsh -NoProfile -File .\scripts\validate-plugin.ps1',
     'pwsh -NoProfile -File .\scripts\Test-ContentSafety.ps1',
     'assets/demo-screenshot.svg',
+    'mockups/korean-parent-risk-radar.html',
     'Use BabyGear Risk Radar',
     '알려진 한계',
     '안전 고지',

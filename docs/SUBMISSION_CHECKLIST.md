@@ -46,6 +46,7 @@ Fields reported by the command:
 | Final report | PASS | `reports/FINAL_REPORT.md` and `docs/FINAL_REPORT.md`. |
 | Demo script | PASS | `docs/DEMO_SCRIPT.md`. |
 | Korean quickstart | PASS | `docs/KOREAN_QUICKSTART.md`. |
+| Korean mock page | PASS | `mockups/korean-parent-risk-radar.html`. |
 | Authority source map | PASS | `docs/AUTHORITY_SOURCE_MAP.md`. |
 | MAS rounds | PASS | `docs/MAS_ROUNDS.md`. |
 | Root templates | PASS | `templates/babygear-mece-report-template.md`, `templates/parent-action-card-template.md`. |
