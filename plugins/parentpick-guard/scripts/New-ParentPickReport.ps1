@@ -69,6 +69,96 @@ function ConvertTo-HtmlList {
     return '<ul>{0}</ul>' -f ($listItems -join [Environment]::NewLine)
 }
 
+function Assert-RequiredTextField {
+    param(
+        [Parameter(Mandatory)]
+        [object] $Object,
+        [Parameter(Mandatory)]
+        [string] $Name
+    )
+
+    $property = $Object.PSObject.Properties[$Name]
+    if ($null -eq $property -or $null -eq $property.Value) {
+        throw "Input JSON is missing required field: $Name"
+    }
+
+    if ([string]::IsNullOrWhiteSpace([string] $property.Value)) {
+        throw "Input JSON field must be a non-empty string: $Name"
+    }
+}
+
+function Assert-RequiredListField {
+    param(
+        [Parameter(Mandatory)]
+        [object] $Object,
+        [Parameter(Mandatory)]
+        [string] $Name
+    )
+
+    $property = $Object.PSObject.Properties[$Name]
+    if ($null -eq $property -or $null -eq $property.Value) {
+        throw "Input JSON is missing required field: $Name"
+    }
+
+    $items = @($property.Value)
+    if ($items.Count -eq 0) {
+        throw "Input JSON field must contain at least one item: $Name"
+    }
+
+    $usableItems = @($items | Where-Object { $null -ne $_ })
+    if ($usableItems.Count -eq 0) {
+        throw "Input JSON field must contain at least one usable item: $Name"
+    }
+}
+
+function Assert-SourceUrls {
+    param([AllowNull()][object] $Sources)
+
+    foreach ($source in @($Sources)) {
+        if ($null -eq $source) {
+            continue
+        }
+
+        $property = $source.PSObject.Properties['url']
+        if ($null -eq $property -or $null -eq $property.Value) {
+            continue
+        }
+
+        $url = [string] $property.Value
+        if ([string]::IsNullOrWhiteSpace($url)) {
+            continue
+        }
+
+        [System.Uri] $uri = $null
+        if (-not [System.Uri]::TryCreate($url, [System.UriKind]::Absolute, [ref] $uri)) {
+            throw "Input JSON source URL must be empty or an absolute http/https URL: $url"
+        }
+
+        if ($uri.Scheme -notin @('http', 'https')) {
+            throw "Input JSON source URL uses unsupported scheme: $($uri.Scheme)"
+        }
+    }
+}
+
+function Assert-SourceTextFields {
+    param([AllowNull()][object] $Sources)
+
+    $items = @($Sources)
+    for ($index = 0; $index -lt $items.Count; $index++) {
+        $source = $items[$index]
+        if ($null -eq $source) {
+            continue
+        }
+
+        foreach ($field in @('name', 'type', 'claim', 'use')) {
+            $property = $source.PSObject.Properties[$field]
+            if ($null -eq $property -or $null -eq $property.Value -or -not ($property.Value -is [string]) -or [string]::IsNullOrWhiteSpace($property.Value)) {
+                throw "Input JSON source field must be a non-empty string: sources[$index].$field"
+            }
+        }
+    }
+}
+
 function New-SourceRows {
     param([AllowNull()][object] $Sources)
 
@@ -177,12 +267,16 @@ if (-not (Test-Path -LiteralPath $templateFullPath)) {
 $report = Get-Content -LiteralPath $inputFullPath -Raw | ConvertFrom-Json -Depth 32
 $template = Get-Content -LiteralPath $templateFullPath -Raw
 
-$requiredFields = @('reportTitle', 'productName', 'decisionNeed', 'sources', 'meceSections')
-foreach ($field in $requiredFields) {
-    if ($null -eq $report.PSObject.Properties[$field] -or $null -eq $report.PSObject.Properties[$field].Value) {
-        throw "Input JSON is missing required field: $field"
-    }
+foreach ($field in @('reportTitle', 'productName', 'decisionNeed')) {
+    Assert-RequiredTextField -Object $report -Name $field
 }
+
+foreach ($field in @('sources', 'meceSections')) {
+    Assert-RequiredListField -Object $report -Name $field
+}
+
+Assert-SourceTextFields -Sources $report.sources
+Assert-SourceUrls -Sources $report.sources
 
 $tokens = [ordered] @{
     '{{ReportTitle}}' = ConvertTo-HtmlText (Get-Field $report 'reportTitle')

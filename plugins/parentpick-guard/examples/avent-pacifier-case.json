@@ -23,6 +23,33 @@
       "use": "Highest-priority source for the manufacturer's position; not an independent regulator finding."
     },
     {
+      "tier": "1",
+      "type": "Official manufacturer safety page",
+      "name": "Philips Avent pacifier safety FAQ",
+      "url": "https://www.philips.ca/c-f/XC000022123/are-philips-avent-pacifiers-safe-for-my-baby",
+      "date": "2026-05-28",
+      "claim": "Philips states Avent pacifiers meet or exceed international safety standards, are BPA-free throughout manufacturing, and are quality-checked by batch.",
+      "use": "Official safety and batch-quality framing; still a manufacturer source."
+    },
+    {
+      "tier": "1",
+      "type": "Official public safety regulator guidance",
+      "name": "U.S. CPSC Pacifiers Business Guidance",
+      "url": "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Pacifiers",
+      "date": "Current public guidance checked 2026-06-07",
+      "claim": "CPSC says pacifiers must comply with 16 CFR part 1511 and children's product requirements, including testing, certification, tracking labels, and restrictions on ribbons or similar attachments.",
+      "use": "Regulator context for physical pacifier safety checks and batch or tracking-label documentation."
+    },
+    {
+      "tier": "1",
+      "type": "Official food-contact regulator guidance",
+      "name": "U.S. FDA BPA food-contact application page",
+      "url": "https://www.fda.gov/food/food-packaging-other-substances-come-contact-food-information-consumers/bisphenol-bpa-use-food-contact-application",
+      "date": "Current public guidance checked 2026-06-07",
+      "claim": "FDA explains BPA food-contact context and says regulations were amended to no longer provide for BPA-based materials in baby bottles, sippy cups, and infant formula packaging because those uses were abandoned.",
+      "use": "Regulatory context for BPA discussion; not a pacifier-specific finding."
+    },
+    {
       "tier": "3",
       "type": "Secondary health-news summary",
       "name": "Kormedi article",
@@ -124,13 +151,15 @@
     },
     {
       "name": "Regulatory and standards context",
-      "status": "Needs primary verification",
+      "status": "Official context added",
       "notes": [
-        "Secondary summaries discuss differences between baby bottle BPA restrictions and pacifier rules.",
-        "The report should prefer official regulator or standards text when available."
+        "CPSC guidance emphasizes physical pacifier safety requirements, testing, certification, tracking labels, and attachment restrictions.",
+        "FDA's BPA page gives baby bottle, sippy cup, and infant formula packaging context; it is not a pacifier-specific BPA verdict.",
+        "Secondary summaries discuss differences between baby bottle BPA restrictions and pacifier rules, which should be treated as context until checked against the applicable jurisdiction."
       ],
       "parentActions": [
         "Record which jurisdiction applies to the purchased product.",
+        "Check for tracking labels, batch identifiers, physical damage, and prohibited attachments.",
         "If a recall appears, follow regulator or manufacturer instructions first."
       ]
     },
@@ -150,7 +179,8 @@
   "unknowns": [
     "Primary dTest full report details were not available in this demo.",
     "Batch-specific information for the user's actual product is unknown.",
-    "Current local regulator guidance for the purchase country must be checked before final action."
+    "Current local regulator guidance for the purchase country must be checked before final action.",
+    "FDA BPA guidance cited here is food-contact context and does not resolve the pacifier-specific source conflict."
   ],
   "decisionCriteria": [
     "Replace immediately if an official recall, product breakage, choking hazard, or clinician/regulator instruction applies.",

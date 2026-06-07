@@ -42,13 +42,15 @@ Produce these MECE sections:
 
 ## Local PowerShell Tool
 
-From the repository root:
+Use the local tool wrapper from the repository root:
 
 ```powershell
-pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\New-ParentPickReport.ps1 `
+pwsh -NoProfile -File .\plugins\parentpick-guard\tools\Invoke-ParentPickGuard.ps1 `
   -InputPath .\plugins\parentpick-guard\examples\avent-pacifier-case.json `
   -OutputPath .\plugins\parentpick-guard\generated\sample-report.html
 ```
+
+The report generator under `scripts\New-ParentPickReport.ps1` is the implementation detail behind `tools\Invoke-ParentPickGuard.ps1`.
 
 Verify the plugin demo:
 

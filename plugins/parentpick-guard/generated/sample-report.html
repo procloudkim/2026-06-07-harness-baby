@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avent Pacifier BPA Public-Source Case Note</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #667085;
+      --line: #d6dae3;
+      --soft: #f6f8fb;
+      --brand: #2563eb;
+      --warn: #b45309;
+      --ok: #047857;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+    }
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 36px 28px 56px;
+    }
+    header {
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 22px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 34px;
+      line-height: 1.15;
+      margin: 0 0 12px;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 30px 0 12px;
+      font-size: 21px;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 12px; }
+    ul { margin: 8px 0 0; padding-left: 20px; }
+    li { margin: 5px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px;
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      background: var(--soft);
+      font-weight: 700;
+    }
+    a { color: var(--brand); overflow-wrap: anywhere; }
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .meta div, .panel, .persona, .section-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fff;
+    }
+    .panel {
+      background: var(--soft);
+      margin: 14px 0;
+    }
+    .badge {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 3px 9px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #dbeafe;
+      color: #1d4ed8;
+      margin-right: 6px;
+    }
+    .badge-warn {
+      background: #ffedd5;
+      color: var(--warn);
+    }
+    .badge-ok {
+      background: #d1fae5;
+      color: var(--ok);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .section-card {
+      margin-bottom: 12px;
+    }
+    .muted { color: var(--muted); }
+    .footer {
+      border-top: 1px solid var(--line);
+      margin-top: 34px;
+      padding-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 820px) {
+      main { padding: 24px 16px 40px; }
+      .meta, .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+      table { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p><span class="badge">ParentPick Guard</span><span class="badge badge-warn">Public-source case note</span></p>
+      <h1>Avent Pacifier BPA Public-Source Case Note</h1>
+      <p class="muted">Generated at 2026-06-07 16:01:21 +09:00</p>
+      <div class="meta">
+        <div><strong>Generated for</strong><br>Mini-Ralphthon ParentPick Guard Demo</div>
+        <div><strong>Evidence grade</strong><br>Mixed public-source evidence: official manufacturer response plus secondary summaries of a consumer-test claim.</div>
+        <div><strong>Product</strong><br>Philips Avent Ultra Air SCF085/60 public-source case note</div>
+        <div><strong>Category / stage</strong><br>Pacifier / soother / Newborn and infant care</div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Decision Need</h2>
+      <p>A parent trusted a familiar baby brand, then found public reports about BPA detection claims. The parent needs a structured way to decide whether to verify, monitor, replace, or seek official guidance.</p>
+      <div class="panel">
+        <h3>Public-source case boundary</h3>
+        <p>This demo does not independently claim the product is dangerous. It records public-source case notes and source conflict for parent decision support.</p>
+      </div>
+      <h3>Executive summary</h3>
+      <ul><li>Treat the product as a source-conflict case, not a one-line safe-or-dangerous verdict.</li>
+<li>Confirm exact model, batch, country of purchase, purchase date, and current manufacturer guidance before acting.</li>
+<li>If confidence remains low, select alternatives by transparent material claims, age fit, recall status, and caregiver acceptance rather than by brand trust alone.</li></ul>
+    </section>
+
+    <section>
+      <h2>Source Map</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tier</th>
+            <th>Source</th>
+            <th>Reported claim</th>
+            <th>Use in report</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+  <td>1</td>
+  <td><strong>Philips Avent support page</strong><br>Official manufacturer response<br><span class="muted">2026-05-28</span><br><a href="https://www.usa.philips.com/c-f/XC000022169/i-ve-read-news-about-pacifiers-and-bpa-how-do-you-validate-philips-avent-pacifiers-are-bpa-free">https://www.usa.philips.com/c-f/XC000022169/i-ve-read-news-about-pacifiers-and-bpa-how-do-you-validate-philips-avent-pacifiers-are-bpa-free</a></td>
+  <td>Philips states all Avent pacifier ranges are BPA-free and says DEKRA follow-up tests found no detectable BPA, including the discussed sample.</td>
+  <td>Highest-priority source for the manufacturer&#39;s position; not an independent regulator finding.</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td><strong>Philips Avent pacifier safety FAQ</strong><br>Official manufacturer safety page<br><span class="muted">2026-05-28</span><br><a href="https://www.philips.ca/c-f/XC000022123/are-philips-avent-pacifiers-safe-for-my-baby">https://www.philips.ca/c-f/XC000022123/are-philips-avent-pacifiers-safe-for-my-baby</a></td>
+  <td>Philips states Avent pacifiers meet or exceed international safety standards, are BPA-free throughout manufacturing, and are quality-checked by batch.</td>
+  <td>Official safety and batch-quality framing; still a manufacturer source.</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td><strong>U.S. CPSC Pacifiers Business Guidance</strong><br>Official public safety regulator guidance<br><span class="muted">Current public guidance checked 2026-06-07</span><br><a href="https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Pacifiers">https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Pacifiers</a></td>
+  <td>CPSC says pacifiers must comply with 16 CFR part 1511 and children&#39;s product requirements, including testing, certification, tracking labels, and restrictions on ribbons or similar attachments.</td>
+  <td>Regulator context for physical pacifier safety checks and batch or tracking-label documentation.</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td><strong>U.S. FDA BPA food-contact application page</strong><br>Official food-contact regulator guidance<br><span class="muted">Current public guidance checked 2026-06-07</span><br><a href="https://www.fda.gov/food/food-packaging-other-substances-come-contact-food-information-consumers/bisphenol-bpa-use-food-contact-application">https://www.fda.gov/food/food-packaging-other-substances-come-contact-food-information-consumers/bisphenol-bpa-use-food-contact-application</a></td>
+  <td>FDA explains BPA food-contact context and says regulations were amended to no longer provide for BPA-based materials in baby bottles, sippy cups, and infant formula packaging because those uses were abandoned.</td>
+  <td>Regulatory context for BPA discussion; not a pacifier-specific finding.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><strong>Kormedi article</strong><br>Secondary health-news summary<br><span class="muted">2025-10-22</span><br><a href="https://kormedi.com/2758325/">https://kormedi.com/2758325/</a></td>
+  <td>Article reports dTest found BPA in several pacifier products and reports Philips Avent Ultra Air at 2 ug/kg while noting Philips disputed the result.</td>
+  <td>Useful case trigger and summary; verify against primary test data when available.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><strong>DongA Science English-translated article</strong><br>Secondary science-news summary<br><span class="muted">2025-10-19</span><br><a href="https://m.dongascience.com/en/news/74614">https://m.dongascience.com/en/news/74614</a></td>
+  <td>Article summarizes dTest-reported findings and notes manufacturer responses.</td>
+  <td>Corroborating context only; machine-translated page warns it may contain inaccuracies.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><strong>Momddok_TV</strong><br>Persona anchor<br><span class="muted">User-provided</span><br><a href="https://www.youtube.com/channel/UC-FZjF-oF0Cvq699UNcG5Tg">https://www.youtube.com/channel/UC-FZjF-oF0Cvq699UNcG5Tg</a></td>
+  <td>Used as a practical parent-operations persona anchor.</td>
+  <td>Lens only, not factual evidence for the case.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><strong>Ha Jung-hoon&#39;s BbiBboBbiBbo 119 Pediatrics</strong><br>Persona anchor<br><span class="muted">User-provided</span><br><a href="https://www.youtube.com/channel/UC6t0ees15Lp0gyrLrAyLeJQ">https://www.youtube.com/channel/UC6t0ees15Lp0gyrLrAyLeJQ</a></td>
+  <td>Used as a pediatric evidence-caution persona anchor.</td>
+  <td>Lens only, not factual evidence for the case.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><strong>O2 Brothers TV</strong><br>Persona anchor<br><span class="muted">User-provided</span><br><a href="https://www.youtube.com/@o2brothersTV">https://www.youtube.com/@o2brothersTV</a></td>
+  <td>Used as a family logistics and caregiver-communication persona anchor.</td>
+  <td>Lens only, not factual evidence for the case.</td>
+</tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>MAS Persona Lens</h2>
+      <div class="grid">
+        <article class="persona">
+  <h3>Practical parent operator</h3>
+  <p class="muted">Momddok_TV</p>
+  <ul><li>What to check on the package and product</li>
+<li>How to keep purchase, model, and batch evidence</li>
+<li>How to choose a fallback without panic buying</li></ul>
+</article>
+<article class="persona">
+  <h3>Pediatric evidence caution</h3>
+  <p class="muted">Ha Jung-hoon&#39;s BbiBboBbiBbo 119 Pediatrics</p>
+  <ul><li>Avoid medical diagnosis or unsupported danger claims</li>
+<li>Separate chemical-risk concern from actual exposure assessment</li>
+<li>Escalate to clinician or regulator when symptoms, recall, or product defect is involved</li></ul>
+</article>
+<article class="persona">
+  <h3>Family logistics explainer</h3>
+  <p class="muted">O2 Brothers TV</p>
+  <ul><li>Explain the decision to all caregivers</li>
+<li>Keep a single replacement and cleaning policy</li>
+<li>Reduce repeated debate during nighttime care</li></ul>
+</article>
+      </div>
+    </section>
+
+    <section>
+      <h2>MECE Risk Map</h2>
+      <article class="section-card">
+  <h3>Product identity <span class="badge badge-ok">Must verify</span></h3>
+  <strong>Notes</strong>
+  <ul><li>Match exact model number, age range, package language, country of purchase, batch or lot code, and purchase channel.</li>
+<li>The public case mentions Avent Ultra Air and SCF085/60; parents should not generalize to unrelated models without evidence.</li></ul>
+  <strong>Parent actions</strong>
+  <ul><li>Photograph packaging, product, batch code, and receipt.</li>
+<li>Check the latest official support page for the exact model.</li></ul>
+</article>
+<article class="section-card">
+  <h3>Chemical-risk signal <span class="badge badge-ok">Source conflict</span></h3>
+  <strong>Notes</strong>
+  <ul><li>Secondary summaries report dTest detected BPA in several pacifiers.</li>
+<li>Philips states follow-up DEKRA tests found no detectable BPA across its pacifier ranges.</li></ul>
+  <strong>Parent actions</strong>
+  <ul><li>Do not convert a source conflict into a diagnosis or panic claim.</li>
+<li>Use the conflict to decide whether replacement improves parental confidence.</li></ul>
+</article>
+<article class="section-card">
+  <h3>Regulatory and standards context <span class="badge badge-ok">Official context added</span></h3>
+  <strong>Notes</strong>
+  <ul><li>CPSC guidance emphasizes physical pacifier safety requirements, testing, certification, tracking labels, and attachment restrictions.</li>
+<li>FDA&#39;s BPA page gives baby bottle, sippy cup, and infant formula packaging context; it is not a pacifier-specific BPA verdict.</li>
+<li>Secondary summaries discuss differences between baby bottle BPA restrictions and pacifier rules, which should be treated as context until checked against the applicable jurisdiction.</li></ul>
+  <strong>Parent actions</strong>
+  <ul><li>Record which jurisdiction applies to the purchased product.</li>
+<li>Check for tracking labels, batch identifiers, physical damage, and prohibited attachments.</li>
+<li>If a recall appears, follow regulator or manufacturer instructions first.</li></ul>
+</article>
+<article class="section-card">
+  <h3>Alternatives <span class="badge badge-ok">Criteria-based</span></h3>
+  <strong>Notes</strong>
+  <ul><li>A replacement should be selected by material disclosure, age fit, shape acceptance, recall status, and cleaning instructions.</li>
+<li>Brand familiarity alone is not enough evidence.</li></ul>
+  <strong>Parent actions</strong>
+  <ul><li>Prepare two candidate alternatives that meet the criteria.</li>
+<li>Test acceptance gradually if the child strongly prefers the current shape.</li></ul>
+</article>
+    </section>
+
+    <section>
+      <h2>Unknowns</h2>
+      <ul><li>Primary dTest full report details were not available in this demo.</li>
+<li>Batch-specific information for the user&#39;s actual product is unknown.</li>
+<li>Current local regulator guidance for the purchase country must be checked before final action.</li>
+<li>FDA BPA guidance cited here is food-contact context and does not resolve the pacifier-specific source conflict.</li></ul>
+    </section>
+
+    <section>
+      <h2>Decision Criteria</h2>
+      <ul><li>Replace immediately if an official recall, product breakage, choking hazard, or clinician/regulator instruction applies.</li>
+<li>Replace for confidence if source conflict creates unacceptable caregiver anxiety and a suitable alternative is available.</li>
+<li>Monitor and verify if there is no recall, the exact product differs from the public case, and caregivers can document official guidance.</li>
+<li>Avoid claims such as &#39;dangerous product&#39; unless a cited authority directly supports that wording.</li></ul>
+    </section>
+
+    <section>
+      <h2>Next Smallest Safe Actions</h2>
+      <ul><li>Record exact model, batch, country, purchase date, and seller.</li>
+<li>Check manufacturer support and local regulator recall pages for the exact product.</li>
+<li>Choose alternatives using material, age, recall, fit, and cleaning criteria.</li>
+<li>Share one caregiver note summarizing the decision and uncertainty.</li></ul>
+    </section>
+
+    <p class="footer">ParentPick Guard is an evidence-organization aid for caregivers. It is not medical advice, legal advice, a product endorsement, or a recall authority.</p>
+  </main>
+</body>
+</html>
+

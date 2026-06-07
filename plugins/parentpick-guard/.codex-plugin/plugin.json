@@ -1,7 +1,7 @@
 {
   "name": "parentpick-guard",
   "version": "0.1.0",
-  "description": "Codex Plugin for MECE baby-product trust and safety-risk reports.",
+  "description": "Codex plugin for organizing newborn baby-product trust and safety-risk evidence into MECE reports.",
   "author": {
     "name": "procloudkim",
     "url": "https://github.com/procloudkim"
@@ -10,30 +10,31 @@
   "repository": "https://github.com/procloudkim/2026-06-07-harness-baby",
   "license": "MIT",
   "keywords": [
-    "baby-safety",
     "codex-plugin",
+    "baby-products",
     "parenting",
-    "mece-report",
-    "powershell"
+    "safety",
+    "mece"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "ParentPick Guard",
-    "shortDescription": "MECE baby-product safety-risk reports.",
-    "longDescription": "ParentPick Guard helps newborn parents turn public-source baby-product trust, risk, and alternative-selection notes into a structured MECE report with source conflicts and action criteria.",
+    "shortDescription": "Turn baby-product safety notes into structured parent reports.",
+    "longDescription": "ParentPick Guard helps newborn parents and Codex agents organize public-source baby-product trust signals, risk signals, source conflicts, and next actions into a structured MECE report without making medical diagnoses or unsupported product-danger claims.",
     "developerName": "procloudkim",
     "category": "Productivity",
     "capabilities": [
-      "Write",
-      "Local PowerShell"
+      "Skill",
+      "Local PowerShell tools",
+      "Report generation"
     ],
     "websiteURL": "https://github.com/procloudkim/2026-06-07-harness-baby",
     "privacyPolicyURL": "https://github.com/procloudkim/2026-06-07-harness-baby#privacy",
     "termsOfServiceURL": "https://github.com/procloudkim/2026-06-07-harness-baby#terms",
     "defaultPrompt": [
-      "Create a baby-product MECE safety brief.",
-      "Turn this product case into a source map.",
-      "Generate a ParentPick Guard HTML report."
+      "Use ParentPick Guard to organize this baby-product case.",
+      "Create a MECE trust and risk report from these sources.",
+      "Generate the sample ParentPick Guard HTML report."
     ],
     "brandColor": "#2563EB",
     "composerIcon": "./assets/icon.png",
