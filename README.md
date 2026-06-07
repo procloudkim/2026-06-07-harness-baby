@@ -18,6 +18,8 @@ Korean plugin-run output example: `examples/korean-plugin-run-output.md`.
 
 Korean MAS debate guide and official-source guardrails: `docs/KOREAN_MAS_ROUNDS.md`.
 
+Official source freshness log for Korean demo cases: `docs/SOURCE_FRESHNESS_LOG.md`.
+
 ## Plugin Structure
 
 ```text
@@ -34,6 +36,7 @@ Korean MAS debate guide and official-source guardrails: `docs/KOREAN_MAS_ROUNDS.
 ├── docs/AUTHORITY_SOURCE_MAP.md
 ├── docs/MAS_ROUNDS.md
 ├── docs/KOREAN_MAS_ROUNDS.md
+├── docs/SOURCE_FRESHNESS_LOG.md
 ├── docs/OPERATION_NOTES.md
 ├── docs/SUBMISSION_CHECKLIST.md
 ├── docs/KOREAN_QUICKSTART.md
@@ -89,6 +92,8 @@ The skill now uses a documented source ladder in `docs/AUTHORITY_SOURCE_MAP.md`.
 `docs/MAS_ROUNDS.md` records the MAS debate discipline: odd rounds are visionary and parent-value oriented; even rounds are critical and check for overclaiming, source gaps, medical boundaries, and false certainty.
 
 `docs/KOREAN_MAS_ROUNDS.md` applies the same odd/even MAS discipline in Korean and adds official-source guardrails for Philips Avent, user-provided YouTube input, Philips monitor replacement context, Fisher-Price CPSC recall context, AAP Safe Sleep, CDC Safe Sleep, and CPSC infant sleep product guidance.
+
+`docs/SOURCE_FRESHNESS_LOG.md` records the 2026-06-07 KST current-session official source checks behind those Korean demo guardrails.
 
 ## Templates
 

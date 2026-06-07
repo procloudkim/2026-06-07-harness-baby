@@ -107,6 +107,7 @@ $requiredFiles = @(
     'docs\AUTHORITY_SOURCE_MAP.md',
     'docs\KOREAN_MAS_ROUNDS.md',
     'docs\MAS_ROUNDS.md',
+    'docs\SOURCE_FRESHNESS_LOG.md',
     'docs\OPERATION_NOTES.md',
     'docs\SUBMISSION_CHECKLIST.md',
     'docs\KOREAN_QUICKSTART.md',
@@ -176,6 +177,8 @@ foreach ($needle in @(
     'examples/korean-demo-prompt.md',
     'KoreanMASRounds',
     'docs/KOREAN_MAS_ROUNDS.md',
+    'SourceFreshnessLog',
+    'docs/SOURCE_FRESHNESS_LOG.md',
     'PromptGeneratorCommand',
     'scripts\New-BabyGearDemoPrompt.ps1'
 )) {
@@ -203,6 +206,7 @@ Assert-TextContains -Text $readme -Needle '![Demo screenshot](./assets/demo-scre
 Assert-TextContains -Text $readme -Needle 'https://github.com/procloudkim/2026-06-07-harness-baby' -Label 'README'
 Assert-TextContains -Text $readme -Needle 'docs/KOREAN_QUICKSTART.md' -Label 'README'
 Assert-TextContains -Text $readme -Needle 'docs/KOREAN_MAS_ROUNDS.md' -Label 'README'
+Assert-TextContains -Text $readme -Needle 'docs/SOURCE_FRESHNESS_LOG.md' -Label 'README'
 
 $demoScript = Get-Content -LiteralPath (Join-Path $root 'docs\DEMO_SCRIPT.md') -Raw
 Assert-TextContains -Text $demoScript -Needle 'static README screenshot and sample prompt' -Label 'DEMO_SCRIPT'
@@ -395,6 +399,31 @@ foreach ($needle in @(
     Assert-TextContains -Text $koreanMasRounds -Needle $needle -Label 'KOREAN_MAS_ROUNDS'
 }
 
+$sourceFreshnessLog = Get-Content -LiteralPath (Join-Path $root 'docs\SOURCE_FRESHNESS_LOG.md') -Raw
+foreach ($needle in @(
+    'Source Freshness Log',
+    '2026-06-07 KST',
+    'not a live recall lookup',
+    'Philips Avent pacifier BPA FAQ',
+    'Philips Avent monitor replacement page',
+    'CPSC Rock ''n Play recall page',
+    'CPSC Snuga Swing recall page',
+    'CPSC Infant Sleep Products FAQ',
+    'AAP Safe Sleep page',
+    'CDC Safe Sleep page',
+    'Published on 28 May 2026',
+    'January 09, 2023',
+    'October 10, 2024',
+    'Last Updated 07/07/2025',
+    'September 17, 2024',
+    'https://www.cpsc.gov/FAQ/Infant-Sleep-Products',
+    'https://www.aap.org/en/patient-care/safe-sleep/',
+    'https://www.cdc.gov/sudden-infant-death/sleep-safely/',
+    'YouTube input is unverified media input'
+)) {
+    Assert-TextContains -Text $sourceFreshnessLog -Needle $needle -Label 'SOURCE_FRESHNESS_LOG'
+}
+
 $operationNotes = Get-Content -LiteralPath (Join-Path $root 'docs\OPERATION_NOTES.md') -Raw
 foreach ($needle in @(
     'PowerShell 7',
@@ -416,6 +445,7 @@ foreach ($needle in @(
     'KoreanPluginOutput',
     'KoreanPromptPacket',
     'KoreanMASRounds',
+    'SourceFreshnessLog',
     'PromptGeneratorCommand',
     'assets/demo-screenshot.svg',
     'scripts\Show-SubmissionSummary.ps1',
@@ -423,6 +453,7 @@ foreach ($needle in @(
     'scripts\Test-ContentSafety.ps1',
     'docs/KOREAN_QUICKSTART.md',
     'docs/KOREAN_MAS_ROUNDS.md',
+    'docs/SOURCE_FRESHNESS_LOG.md',
     'mockups/korean-parent-risk-radar.html',
     'examples/korean-demo-prompt.md',
     'examples/korean-plugin-run-output.md',
@@ -444,7 +475,9 @@ foreach ($needle in @(
     'examples/korean-demo-prompt.md',
     'pwsh -NoProfile -File .\scripts\New-BabyGearDemoPrompt.ps1',
     'docs/KOREAN_MAS_ROUNDS.md',
+    'docs/SOURCE_FRESHNESS_LOG.md',
     'CPSC, AAP Safe Sleep, CDC Safe Sleep',
+    '2026-06-07 KST',
     'Use BabyGear Risk Radar',
     '알려진 한계',
     '안전 고지',

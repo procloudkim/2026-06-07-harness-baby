@@ -47,3 +47,7 @@ The root validator now compares normalized output from `scripts\New-BabyGearDemo
 ### Korean MAS source guardrails
 
 The BabyGear skill now points Korean outputs to `docs\KOREAN_MAS_ROUNDS.md` for odd/even MAS debate discipline and official-source hierarchy. The Korean guide treats Philips official pages, CPSC recall/infant-sleep guidance, AAP Safe Sleep, and CDC Safe Sleep as higher-tier sources, while user-provided YouTube input stays an unverified media signal until official or primary evidence is supplied.
+
+### Source freshness log
+
+`docs\SOURCE_FRESHNESS_LOG.md` records the 2026-06-07 KST current-session official-source checks that informed the Korean demo guardrails. It is deliberately a static audit trail, not a live recall lookup or crawler, so the plugin remains safe to install locally while still showing which official URLs and date boundaries shaped the demo cases.

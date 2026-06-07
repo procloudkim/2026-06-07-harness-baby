@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T08:25:10.117Z",
+  "updatedAt": "2026-06-07T08:30:51.468Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -786,6 +786,45 @@
       "createdAt": "2026-06-07T08:18:55.299Z",
       "updatedAt": "2026-06-07T08:25:10.117Z",
       "evidence": "User requested MAS devil's debate with odd visionary and even critical rounds, official newborn-care information, and continuing improvement after Korean plugin-use artifacts. Current plugin has Korean prompt/output/mock assets but the root skill and Korean handoff do not yet explicitly enforce alternating MAS rounds or official-source hierarchy in Korean."
+    },
+    {
+      "id": "G021",
+      "title": "Official source freshness log for Korean plugin demos",
+      "objective": "Add a repository source freshness log that records the 2026-06-07 current-session verification of official Philips, CPSC, AAP, and CDC sources used by the Korean BabyGear MAS demos, expose the log in summary/README/Korean handoff, and enforce it with the root validator.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Add a repository source freshness log that records the 2026-06-07 current-ses...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 21.",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G021-C001-source-freshness-happy.txt: validator PASS with RequiredFileCount 33, summary exposes SourceFreshnessLog, source log includes official URLs/date boundaries and YouTube unverified-media boundary | cleanup: no spawned process; no tmux session; no temp dir",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:30:37.335Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Add a repository source freshness log that records the 2026-06-07 current-ses....",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G021-C002-missing-source-freshness-fixture.txt: validator fails with Required file missing docs\\SOURCE_FRESHNESS_LOG.md when the doc is temporarily absent; fixture restored and .codex-temp absent | cleanup: no spawned process; no tmux session; fixture restored; .codex-temp absent",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:30:45.256Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Add a repository source freshness log that records the 2026-06-07 current-ses....",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G021-C003-regression-suite.txt: validator PASS with RequiredFileCount 33, content safety PASS, submission summary READY with SourceFreshnessLog, ParentPick verifier PASS, .codex-temp absent | cleanup: no spawned process; no tmux session; .codex-temp absent",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:30:51.468Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T08:27:38.035Z",
+      "updatedAt": "2026-06-07T08:30:51.468Z",
+      "evidence": "G020 added Korean MAS source guardrails after current-session web verification, but the repository does not yet have a dedicated freshness log tying official source URLs, checked dates, and claim boundaries to the Korean demo artifacts."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl as the audit trail.",

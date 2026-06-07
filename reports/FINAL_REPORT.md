@@ -53,6 +53,8 @@ MAS debate hardening: `docs/MAS_ROUNDS.md`
 
 Korean MAS debate and official-source guardrails: `docs/KOREAN_MAS_ROUNDS.md`
 
+Source freshness log: `docs/SOURCE_FRESHNESS_LOG.md`
+
 ## Validation
 
 Validation: PASS

@@ -1,0 +1,15 @@
+result: PASS
+goal: G021-C001 source freshness log happy path
+validator: scripts\validate-plugin.ps1 exited 0 with RequiredFileCount 33
+summary: Show-SubmissionSummary exposes SourceFreshnessLog
+checks:
+PASS: validator pass
+PASS: summary exposes SourceFreshnessLog
+PASS: log current-session date
+PASS: Philips official source
+PASS: CPSC Rock n Play source
+PASS: CPSC Snuga source
+PASS: AAP safe sleep source
+PASS: CDC safe sleep source
+PASS: unverified YouTube boundary
+cleanup: no spawned process; no tmux session; no temp dir

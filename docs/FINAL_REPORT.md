@@ -14,6 +14,7 @@ This compatibility copy exists because the initial Ralphthon checklist requested
 - Authority source map: `docs/AUTHORITY_SOURCE_MAP.md`
 - MAS debate rounds: `docs/MAS_ROUNDS.md`
 - Korean MAS debate and source guardrails: `docs/KOREAN_MAS_ROUNDS.md`
+- Source freshness log: `docs/SOURCE_FRESHNESS_LOG.md`
 
 ## Status
 
