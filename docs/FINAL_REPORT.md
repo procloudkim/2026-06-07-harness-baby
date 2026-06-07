@@ -9,9 +9,9 @@
   - Use PowerShell 7 local tools.
   - Put the plugin package under `plugins/parentpick-guard/`.
   - Do not use paid APIs, browser automation, login scraping, affiliate links, medical diagnoses, or unsupported danger claims.
-  - Direct git commits are left to the outer PowerShell runner per AGENTS.md.
+  - Phase-level git commits are required by the mini-Ralphthon submission rule; the outer PowerShell runner handles commits per AGENTS.md.
 - Success criteria:
-  - Valid plugin manifest, skill, marketplace entry, PowerShell generator, example input, generated HTML report, screenshot asset, README, demo script, final report, and documented verification.
+  - Valid plugin manifest, skill, marketplace entry, PowerShell generator, example input, generated HTML report, screenshot asset, README, demo script, final report, documented verification, malformed-input checks, unsafe URL rejection, source row field validation, and null-only required-list rejection.
 - Done when:
   - A local verification command regenerates the sample HTML report and demo screenshot and checks required files.
 
@@ -111,7 +111,7 @@ If screenshot generation fails, keep the generated HTML report as the primary de
 - Promotion rule: move to the next step only after required files for the current step exist.
 - Kill rule: stop any feature that requires credentials, browser login, paid services, or modifying files outside the repo.
 - Stop rule: stop when local PowerShell verification passes and all Definition of Done files exist.
-- Final evaluation rule: run `plugins/parentpick-guard/scripts/Test-ParentPickGuard.ps1` and local plugin manifest validation.
+- Final evaluation rule: run `plugins/parentpick-guard/scripts/Test-ParentPickGuard.ps1`, `skill-creator/scripts/quick_validate.py`, and `plugin-creator/scripts/validate_plugin.py`.
 - Wall-clock estimate: 60 to 90 minutes for MVP completion.
 - RAM estimate: under 512 MB.
 - CPU/GPU/NPU role split: CPU only; no GPU or NPU required.
@@ -123,7 +123,7 @@ If screenshot generation fails, keep the generated HTML report as the primary de
 - Rejected alternatives and why: static-only, web app, and crawler rejected for weak demo value, excessive scope, or rule conflict.
 - Evidence level: mixed; official manufacturer response plus secondary health/science summaries; public-source case note only.
 - Residual risks: source conflict, changing external product statements, and overinterpretation by users.
-- Metric definition: required-file existence, generated HTML existence, expected report sections present, screenshot asset exists, plugin validator exits 0.
-- Evaluator used: local PowerShell verification script plus plugin manifest validator.
+- Metric definition: required-file existence, JSON manifest parse, public URL checks, skill metadata check, marketplace entry check, PowerShell syntax parse, generated HTML existence, expected report sections present, PNG asset existence, malformed-input rejection, unsafe URL rejection, source row field rejection, null-only required-list rejection, skill validator exit 0, and plugin validator exit 0.
+- Evaluator used: local PowerShell verification script plus the official Codex skill and plugin validators. The base Python interpreters lacked `yaml`, so PyYAML was installed into temporary in-repo `.tmp-validator-deps`, used via `PYTHONPATH`, and removed after validation.
 - Variance note: no stochastic component.
-- Next smallest safe move: run local verification, then let the outer runner commit/push phase-level changes.
+- Next smallest safe move: let the outer runner commit the current hardening phase, then continue quality work until the user explicitly says to finish.

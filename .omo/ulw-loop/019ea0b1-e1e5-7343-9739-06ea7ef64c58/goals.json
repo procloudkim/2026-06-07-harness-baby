@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "createdAt": "2026-06-07T06:09:18.568Z",
+  "updatedAt": "2026-06-07T06:09:18.568Z",
+  "briefPath": ".omo/ulw-loop/019ea0b1-e1e5-7343-9739-06ea7ef64c58/brief.md",
+  "goalsPath": ".omo/ulw-loop/019ea0b1-e1e5-7343-9739-06ea7ef64c58/goals.json",
+  "ledgerPath": ".omo/ulw-loop/019ea0b1-e1e5-7343-9739-06ea7ef64c58/ledger.jsonl",
+  "codexGoalMode": "aggregate",
+  "goals": [
+    {
+      "id": "G001-mission-continue-parentpick-guard-co",
+      "title": "Mission: Continue ParentPick Guard Codex Plugin work for mini-Ralphth...",
+      "objective": "Mission: Continue ParentPick Guard Codex Plugin work for mini-Ralphthon inside D:\\KLab\\workspace\\2026-06-07-harness under PowerShell-only AGENTS.md rules.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Mission: Continue ParentPick Guard Codex Plugin work for mini-Ralphthon insid...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 1.",
+          "capturedEvidence": null,
+          "status": "pending"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Mission: Continue ParentPick Guard Codex Plugin work for mini-Ralphthon insid....",
+          "capturedEvidence": null,
+          "status": "pending"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Mission: Continue ParentPick Guard Codex Plugin work for mini-Ralphthon insid....",
+          "capturedEvidence": null,
+          "status": "pending"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T06:09:18.568Z",
+      "updatedAt": "2026-06-07T06:09:18.568Z"
+    }
+  ],
+  "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea0b1-e1e5-7343-9739-06ea7ef64c58/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea0b1-e1e5-7343-9739-06ea7ef64c58/ledger.jsonl as the audit trail."
+}

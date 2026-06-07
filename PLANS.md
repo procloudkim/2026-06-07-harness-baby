@@ -12,7 +12,8 @@ Ship a public-repo-ready Codex Plugin that helps newborn parents transform baby-
 4. Add examples, templates, generated report, and screenshot asset.
 5. Add README, final report, demo script, run log, and decisions.
 6. Verify locally and record results.
+7. Continue hardening cycles while the user has not explicitly requested final completion.
 
 ## Current Method
 
-Static local plugin with deterministic PowerShell tools. No web crawling, no paid APIs, no medical diagnosis.
+Static local plugin with deterministic PowerShell tools. No web crawling, no paid APIs, no medical diagnosis. Current hardening focus: G007 source-map row validation while keeping evidence replay scoped through G006/G005 until new evidence is captured.

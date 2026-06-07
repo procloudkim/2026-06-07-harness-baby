@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "createdAt": "2026-06-07T06:09:22.418Z",
+  "updatedAt": "2026-06-07T06:09:30.977Z",
+  "briefPath": ".omo/ulw-loop/019ea0b1-dcf2-7021-8cb4-26a543a2f92b/brief.md",
+  "goalsPath": ".omo/ulw-loop/019ea0b1-dcf2-7021-8cb4-26a543a2f92b/goals.json",
+  "ledgerPath": ".omo/ulw-loop/019ea0b1-dcf2-7021-8cb4-26a543a2f92b/ledger.jsonl",
+  "codexGoalMode": "aggregate",
+  "goals": [
+    {
+      "id": "G001-parentpick-guard-codex-plugin-mini-r",
+      "title": "ParentPick Guard Codex Plugin mini-Ralphthon continuation. Deliver an...",
+      "objective": "ParentPick Guard Codex Plugin mini-Ralphthon continuation. Deliver and continuously improve the Codex plugin in this repository without marking final completion until the user explicitly says to finish. Requirements: valid plugin under plugins/parentpick-guard with manifest, skill, local PowerShell tools, examples, templates, generated sample HTML, demo screenshot, README, .agents/plugins/marketplace.json, docs/FINAL_REPORT.md, docs/DEMO_SCRIPT.md, documented verification. Constraints: Windows 11, PowerShell 7 only, work only inside current repository, no Bash WSL Git Bash Linux shell syntax rm chmod sed awk grep make, no secrets/env credential reads, no registry/PATH/execution-policy/user-profile changes, no deploy package publish account paid API, no crawling login scraping browser automation Chrome extension, no affiliate links, no medical diagnoses, no unsupported real-product danger claims, real brand demo data only as public-source case notes, no direct git commits because outer PowerShell runner handles commits. Continue useful quality tasks such as UI/UX report polish, structural stability, agent-system accuracy, response quality, edge-case tests, verification evidence, and documentation consistency until explicit finish prompt.",
+      "status": "in_progress",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: ParentPick Guard Codex Plugin mini-Ralphthon continuation. Deliver and contin...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 1.",
+          "capturedEvidence": null,
+          "status": "pending"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: ParentPick Guard Codex Plugin mini-Ralphthon continuation. Deliver and contin....",
+          "capturedEvidence": null,
+          "status": "pending"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: ParentPick Guard Codex Plugin mini-Ralphthon continuation. Deliver and contin....",
+          "capturedEvidence": null,
+          "status": "pending"
+        }
+      ],
+      "attempt": 1,
+      "createdAt": "2026-06-07T06:09:22.418Z",
+      "updatedAt": "2026-06-07T06:09:30.977Z",
+      "startedAt": "2026-06-07T06:09:30.977Z"
+    }
+  ],
+  "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea0b1-dcf2-7021-8cb4-26a543a2f92b/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea0b1-dcf2-7021-8cb4-26a543a2f92b/ledger.jsonl as the audit trail.",
+  "activeGoalId": "G001-parentpick-guard-codex-plugin-mini-r"
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "createdAt": "2026-06-07T06:15:43.227Z",
+  "updatedAt": "2026-06-07T06:16:24.979Z",
+  "briefPath": ".omo/ulw-loop/019ea0b7-c7e4-7ff1-b09f-b3f48d1fb752/brief.md",
+  "goalsPath": ".omo/ulw-loop/019ea0b7-c7e4-7ff1-b09f-b3f48d1fb752/goals.json",
+  "ledgerPath": ".omo/ulw-loop/019ea0b7-c7e4-7ff1-b09f-b3f48d1fb752/ledger.jsonl",
+  "codexGoalMode": "aggregate",
+  "goals": [
+    {
+      "id": "G001-continue-parentpick-guard-codex-plug",
+      "title": "Continue ParentPick Guard Codex Plugin hardening for the mini-Ralphth...",
+      "objective": "Continue ParentPick Guard Codex Plugin hardening for the mini-Ralphthon in D:\\KLab\\workspace\\2026-06-07-harness. Constraints: PowerShell 7 only; work only inside repo; do not commit directly; do not mark final completion until user explicitly says finish. Immediate quality target: verify and fix cleanup correctness for PowerShell verifier so .codex-temp validation artifacts are removed, malformed-input failures leave no stale outputs, and docs/evidence record the result.",
+      "status": "in_progress",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "CLI channel: from repo root run PowerShell command that removes .codex-temp if it exists, executes pwsh -NoProfile -File .\\plugins\\parentpick-guard\\scripts\\Test-ParentPickGuard.ps1, captures stdout/stderr, then asserts .codex-temp does not exist. PASS iff verifier exits 0 and the transcript contains TEMP_CLEANUP_PASS.",
+          "userModel": "happy",
+          "expectedEvidence": ".omo/ulw-loop/evidence/G001-C001-verifier-cleanup-green.txt",
+          "capturedEvidence": null,
+          "status": "pending"
+        },
+        {
+          "id": "C002",
+          "scenario": "CLI channel: from repo root run PowerShell malformed-input check that seeds a stale .codex-temp\\parentpick-guard-validation\\blank-report-title.html file, runs pwsh -NoProfile -File .\\plugins\\parentpick-guard\\scripts\\Test-ParentPickGuard.ps1, then asserts the stale output is absent after the expected generator failure. PASS iff transcript contains STALE_OUTPUT_CLEANUP_PASS and verifier exits 0.",
+          "userModel": "edge",
+          "expectedEvidence": ".omo/ulw-loop/evidence/G001-C002-malformed-stale-output-green.txt",
+          "capturedEvidence": null,
+          "status": "pending"
+        },
+        {
+          "id": "C003",
+          "scenario": "CLI channel: from repo root run pwsh -NoProfile -File .\\plugins\\parentpick-guard\\scripts\\Test-ParentPickGuardEvidence.ps1 and inspect generated report/assets. PASS iff transcript contains evidence replay PASS markers, docs/RUN_LOG.md mentions cleanup hardening, and generated sample report plus demo screenshot paths still exist.",
+          "userModel": "regression",
+          "expectedEvidence": ".omo/ulw-loop/evidence/G001-C003-regression-evidence-replay.txt",
+          "capturedEvidence": null,
+          "status": "pending"
+        }
+      ],
+      "attempt": 1,
+      "createdAt": "2026-06-07T06:15:43.227Z",
+      "updatedAt": "2026-06-07T06:16:24.979Z",
+      "startedAt": "2026-06-07T06:16:02.491Z"
+    }
+  ],
+  "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea0b7-c7e4-7ff1-b09f-b3f48d1fb752/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea0b7-c7e4-7ff1-b09f-b3f48d1fb752/ledger.jsonl as the audit trail.",
+  "activeGoalId": "G001-continue-parentpick-guard-codex-plug"
+}

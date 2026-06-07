@@ -1,40 +1,24 @@
-# ParentPick Guard Experiment Log
+# ParentPick Guard Experiments
 
-Date: 2026-06-07
+## Experiment E1. Local Verification
 
-## Experiment 1: Static Report MVP
+- Objective: Confirm the plugin package can regenerate the sample report and screenshot locally.
+- Evaluator: `plugins/parentpick-guard/scripts/Test-ParentPickGuard.ps1`
+- Metric definition:
+  - Required files exist.
+  - PowerShell scripts parse without syntax errors.
+  - Plugin manifest and marketplace JSON parse.
+  - Generated HTML contains required MECE sections.
+  - Demo screenshot PNG exists and is non-empty.
+- Fixed variables: example JSON, HTML template, output paths.
+- Controllable variables: none for the baseline.
+- Promotion rule: verification exits 0.
+- Kill rule: stop if the script requires credentials, admin privileges, browser automation, or files outside the repo.
+- Variance note: deterministic; no random seed.
 
-Hypothesis: A curated JSON input can be transformed into a useful parent-facing MECE safety/trust report without external services.
+## Result
 
-Evaluator:
-
-- `plugins/parentpick-guard/tools/Test-ParentPickGuard.ps1`
-
-Metric definition:
-
-- Pass if all required files exist, plugin JSON and marketplace JSON parse, the skill metadata exists, the generator creates HTML from example JSON, and the generated HTML contains key report sections.
-
-Fixed variables:
-
-- Example input: `plugins/parentpick-guard/examples/avent-public-case.json`
-- Template: `plugins/parentpick-guard/templates/report.html.template`
-- Output: `plugins/parentpick-guard/generated/sample-report.html`
-
-Controllable variables:
-
-- Section headings.
-- Confidence labels.
-- Evidence item formatting.
-- Screenshot text density.
-
-Variance note:
-
-- No stochastic model or random search is used. Repeated runs should produce identical files except for generated timestamp fields.
-
-Result:
-
-- Pending until PowerShell verification runs.
-
-Next smallest safe move:
-
-- Implement generator and verification script, then run the evaluator.
+- PASS: `pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1` returned `Status = PASS`.
+- PASS: `python3 C:\Users\K\.codex\skills\.system\skill-creator\scripts\quick_validate.py .\plugins\parentpick-guard\skills\parentpick-guard` returned `Skill is valid!`.
+- PASS: `python3 C:\Users\K\.codex\skills\.system\plugin-creator\scripts\validate_plugin.py .\plugins\parentpick-guard` returned `Plugin validation passed`.
+- Environment note: the Python validators needed temporary in-repo PyYAML dependencies because the available base Python interpreters did not include `yaml`.

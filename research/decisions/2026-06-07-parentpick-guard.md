@@ -1,41 +1,25 @@
-# ParentPick Guard Research Decisions
+# ParentPick Guard Decision Log
 
-Date: 2026-06-07
+## D1. Evidence Organizer Instead Of Product Verdict
 
-## D1. Evidence Conflict Handling
+- Decision: The plugin produces MECE reports and next-action checklists, not safe/unsafe product verdicts.
+- Reason: The available public case has source conflict between a secondary report of dTest findings and Philips official follow-up statements.
+- Rejected: A hazard classifier or purchase recommender, because it could imply unsupported safety advice.
 
-Decision: Reports must include both consumer-test claims and manufacturer responses when both are available.
+## D2. PowerShell Tools
 
-Why: The Avent case contains conflicting public evidence. A parent-facing trust report should preserve the conflict instead of collapsing it into a binary "safe" or "unsafe" conclusion.
+- Decision: Implement local tools in PowerShell 7.
+- Reason: AGENTS.md requires PowerShell 7 only on Windows 11.
+- Rejected: Node, Python, Bash, WSL, and browser automation.
 
-## D2. MECE Categories
+## D3. Static HTML Output
 
-Decision: Use these categories for the sample report:
+- Decision: Generate static HTML from JSON input and a local template.
+- Reason: HTML is easy to inspect, archive, and screenshot without a server.
+- Rejected: Full local app, because it adds unnecessary moving parts.
 
-- Product identity
-- Safety signal
-- Manufacturer response
-- Regulatory or standards context
-- Parent-use context
-- Action checklist
-- Evidence gaps
+## D4. Public-Source Case Note
 
-Why: These categories avoid overlap while covering what parents need to inspect before making their own purchase or use decision.
-
-## D3. No Automated Alternatives
-
-Decision: Do not generate product alternatives or rankings.
-
-Why: The prompt asks for baby-item information discovery and organization, but the evidence base in this sprint does not support endorsement or substitution recommendations.
-
-## D4. Demo Data Labeling
-
-Decision: Real brand names are allowed only in a `public_source_case_note` example with source URLs and conflict notes.
-
-Why: This satisfies the user-provided Avent case while honoring the guardrail against unsupported danger claims.
-
-## D5. Verification Surface
-
-Decision: Verify through the local PowerShell tool surface, not browser automation.
-
-Why: The repository instructions explicitly prohibit browser automation. The report is static HTML, so local generation and file-content checks are enough for MVP verification.
+- Decision: Use real brand names only inside the example labeled `Public-source case note`.
+- Reason: The prompt includes the Avent case, but AGENTS.md forbids unsupported claims that a real product is dangerous.
+- Rejected: Synthetic-only example, because it would not demonstrate the user's motivating case.

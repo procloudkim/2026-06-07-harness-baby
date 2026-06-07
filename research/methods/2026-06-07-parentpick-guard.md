@@ -1,117 +1,49 @@
 # ParentPick Guard Method Selection
 
-Date: 2026-06-07
-
 ## Candidate Methods
 
-1. Static MECE report generator
-   - Input: curated JSON evidence notes.
-   - Output: static HTML report.
-   - Strength: fast, auditable, no external service, good screenshot/demo fit.
-   - Weakness: input still requires human or Codex curation.
-
-2. Interactive web application
-   - Input: form fields and source links.
-   - Output: browser-rendered dashboard.
-   - Strength: better UX for repeated manual use.
-   - Weakness: higher implementation and verification cost inside 90 minutes.
-
-3. AI-assisted recommendation engine
-   - Input: product name and source links.
-   - Output: risk score and alternatives.
-   - Strength: useful if enough data and validation exist.
-   - Weakness: high risk of unsupported safety, medical, or purchase claims.
-
-4. Scraper-driven source collector
-   - Input: URLs.
-   - Output: automatically extracted evidence.
-   - Strength: reduces manual data entry.
-   - Weakness: conflicts with the no-crawling and no-browser-automation constraints.
+1. Skill-only plugin: fastest, but weak observable demo value.
+2. Skill plus local PowerShell JSON-to-HTML generator: reproducible and aligned with Windows/PowerShell constraints.
+3. Local web app: richer UI, but unnecessary scope for a 90-minute plugin submission.
+4. Automated retrieval/crawler: broader information intake, but conflicts with no-crawling and safety constraints.
 
 ## Chosen Method
 
-Static MECE report generator.
+Method 2: Codex skill plus local PowerShell report generator.
 
 Why:
 
-- It matches the plugin requirement and the 90-minute public-repo submission target.
-- It keeps evidence, source quality, uncertainty, and action items visible.
-- It avoids scraping, diagnosis, affiliate, and recommendation risks.
-- It can be verified locally with PowerShell only.
+- Satisfies the Codex Plugin requirement.
+- Produces concrete generated output and screenshot asset.
+- Keeps execution local, deterministic, and reviewable.
+- Avoids crawling, browser automation, paid APIs, and medical/safety overreach.
 
 ## Fallback Method
 
-Markdown-only report generator.
-
-Fallback trigger: if HTML generation or PNG screenshot creation fails under PowerShell 7.
+If PNG generation fails, keep the HTML report as the primary demo output and document the failure in `docs/RUN_LOG.md`.
 
 ## Rejection Reasons
 
-- Interactive web app rejected due to time, surface area, and unnecessary server/runtime complexity.
-- AI recommendation engine rejected because it could overstate risk and imply medical or purchase advice.
-- Scraper-driven collector rejected because the repo instructions prohibit crawling and browser automation.
+- Skill-only plugin: insufficient generated artifact for demo.
+- Web app: too much surface area for the time limit.
+- Retrieval crawler: prohibited by project constraints and likely to overstate safety claims.
 
 ## Execution Plan
 
-Baseline:
-
-- Use one curated JSON example based on the user-supplied Avent public-source case.
-- Generate one static HTML report and one PNG demo screenshot asset.
-
-Controllable variables:
-
-- Evidence categories.
-- Source quality labels.
-- Action checklist phrasing.
-- Confidence labels.
-- Report template sections.
-
-Fixed variables:
-
-- Plugin path: `plugins/parentpick-guard/`.
-- Runtime: PowerShell 7.
-- Output format: HTML sample report.
-- Repository: https://github.com/procloudkim/2026-06-07-harness-baby
-
-Budget ladder:
-
-1. Scaffold and manifest: 10 minutes.
-2. Research gate and source map: 15 minutes.
-3. Generator, templates, examples: 30 minutes.
-4. Sample output, screenshot, docs: 20 minutes.
-5. Verification, commits, push: 15 minutes.
-
-Promotion rule:
-
-- Move to docs/demo only after the generator produces an HTML file from the example JSON.
-
-Kill rule:
-
-- Drop optional icon/logo polish if it delays verification.
-
-Stop rule:
-
-- Stop implementation only after local verification passes or all fallback options are exhausted.
-
-Final evaluation rule:
-
-- Run `pwsh -NoProfile -File plugins/parentpick-guard/tools/Test-ParentPickGuard.ps1`.
-- Run the plugin manifest validator from the plugin-creator skill.
-- Confirm required files exist.
-
-Wall-clock estimate:
-
-- 70 to 90 minutes total.
-
-RAM estimate:
-
-- Less than 512 MB; static text and PNG generation only.
-
-CPU / GPU / NPU role split:
-
-- CPU only for PowerShell, JSON parsing, HTML generation, and bitmap drawing.
-- GPU/NPU not used.
-
-Reboot-required resources:
-
-- None.
+- Baseline: validate manifest and marketplace, then generate one sample report.
+- Controllable variables: input JSON, output paths, template copy, screenshot dimensions.
+- Fixed variables: plugin path, public GitHub URL, PowerShell 7, no paid APIs, no browser automation.
+- Budget ladder:
+  1. Manifest and marketplace.
+  2. Skill instructions.
+  3. Report generator.
+  4. Example input and generated output.
+  5. README, demo script, final report, verification.
+- Promotion rule: move to the next rung only when the current rung's required files exist.
+- Kill rule: stop any feature that needs secrets, browser login, paid services, registry changes, or files outside the repo.
+- Stop rule: stop after local verification exits 0 and all Definition of Done files exist.
+- Final evaluation rule: PowerShell verification script checks required files, syntax, manifest JSON, sample report sections, and screenshot asset.
+- Wall-clock estimate: 60 to 90 minutes.
+- RAM estimate: under 512 MB.
+- CPU/GPU/NPU role split: CPU only.
+- Reboot-required resources: none.
