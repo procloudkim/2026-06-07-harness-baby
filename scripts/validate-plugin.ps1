@@ -103,7 +103,7 @@ if ($manifest.name -ne 'babygear-risk-radar') {
     throw "Unexpected plugin name: $($manifest.name)"
 }
 
-if ($manifest.repository -ne 'https://github.com/procloudkim/babygear-risk-radar-codex-plugin') {
+if ($manifest.repository -ne 'https://github.com/procloudkim/2026-06-07-harness-baby') {
     throw "Plugin manifest repository URL is missing or incorrect."
 }
 
@@ -140,10 +140,10 @@ if ($entry.policy.installation -ne 'AVAILABLE' -or $entry.policy.authentication 
 $readme = Get-Content -LiteralPath (Join-Path $root 'README.md') -Raw
 Assert-TextContains -Text $readme -Needle '# BabyGear Risk Radar Codex Plugin' -Label 'README'
 Assert-TextContains -Text $readme -Needle '![Demo screenshot](./assets/demo-screenshot.svg)' -Label 'README'
-Assert-TextContains -Text $readme -Needle 'https://github.com/procloudkim/babygear-risk-radar-codex-plugin' -Label 'README'
+Assert-TextContains -Text $readme -Needle 'https://github.com/procloudkim/2026-06-07-harness-baby' -Label 'README'
 
 $finalReport = Get-Content -LiteralPath (Join-Path $root 'reports\FINAL_REPORT.md') -Raw
-Assert-TextContains -Text $finalReport -Needle 'https://github.com/procloudkim/babygear-risk-radar-codex-plugin' -Label 'FINAL_REPORT'
+Assert-TextContains -Text $finalReport -Needle 'https://github.com/procloudkim/2026-06-07-harness-baby' -Label 'FINAL_REPORT'
 Assert-TextContains -Text $finalReport -Needle 'Validation: PASS' -Label 'FINAL_REPORT'
 
 $masQa = Get-Content -LiteralPath (Join-Path $root 'reports\MAS_QA_REPORT.md') -Raw

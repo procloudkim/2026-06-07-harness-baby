@@ -6,8 +6,8 @@
     "name": "procloudkim",
     "url": "https://github.com/procloudkim"
   },
-  "homepage": "https://github.com/procloudkim/babygear-risk-radar-codex-plugin",
-  "repository": "https://github.com/procloudkim/babygear-risk-radar-codex-plugin",
+  "homepage": "https://github.com/procloudkim/2026-06-07-harness-baby",
+  "repository": "https://github.com/procloudkim/2026-06-07-harness-baby",
   "license": "MIT",
   "keywords": [
     "codex-plugin",
@@ -30,9 +30,9 @@
       "Risk reasoning",
       "MAS QA"
     ],
-    "websiteURL": "https://github.com/procloudkim/babygear-risk-radar-codex-plugin",
-    "privacyPolicyURL": "https://github.com/procloudkim/babygear-risk-radar-codex-plugin#privacy",
-    "termsOfServiceURL": "https://github.com/procloudkim/babygear-risk-radar-codex-plugin#terms",
+    "websiteURL": "https://github.com/procloudkim/2026-06-07-harness-baby",
+    "privacyPolicyURL": "https://github.com/procloudkim/2026-06-07-harness-baby#privacy",
+    "termsOfServiceURL": "https://github.com/procloudkim/2026-06-07-harness-baby#terms",
     "defaultPrompt": [
       "Use BabyGear Risk Radar to evaluate this baby product safety concern.",
       "Create a MECE evidence map and parent action card for this baby product.",
@@ -44,4 +44,3 @@
     ]
   }
 }
-

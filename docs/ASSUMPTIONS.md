@@ -5,7 +5,8 @@
 - The final Ralphthon target is `babygear-risk-radar-codex-plugin`.
 - The plugin itself lives at the repository root, so the repo-scoped marketplace entry points to `./`.
 - Existing `plugins/parentpick-guard` work remains in Git history and as an adjacent regression surface, but the submission README and root plugin metadata should prioritize BabyGear Risk Radar.
-- The public GitHub URL is expected to be `https://github.com/procloudkim/babygear-risk-radar-codex-plugin`.
+- The preferred public GitHub URL was `https://github.com/procloudkim/babygear-risk-radar-codex-plugin`.
+- Because GitHub CLI is not installed locally and the preferred repository does not exist, the actual pushed submission URL is `https://github.com/procloudkim/2026-06-07-harness-baby`.
 - If GitHub publication is unavailable, the failure reason must be documented in `reports/FINAL_REPORT.md`.
 
 ## Safety Assumptions
@@ -19,4 +20,3 @@
 - CPSC pacifier guidance is used for physical and regulatory safety context.
 - FDA BPA food-contact guidance is used only as BPA regulatory context and not as pacifier-specific proof.
 - AAP/HealthyChildren safe-sleep guidance is used for parent-facing pacifier-use boundaries, including avoiding neck or clothing attachments during sleep.
-

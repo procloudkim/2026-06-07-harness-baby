@@ -69,7 +69,9 @@ pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps
 
 ## GitHub Submission URL
 
-https://github.com/procloudkim/babygear-risk-radar-codex-plugin
+https://github.com/procloudkim/2026-06-07-harness-baby
+
+Preferred target repository name was `babygear-risk-radar-codex-plugin`. The local machine does not have GitHub CLI (`gh`) installed, so a new repository could not be created automatically. The committed submission was pushed to the user-provided public origin above.
 
 ## Known Limitations
 
@@ -90,4 +92,3 @@ The plugin package stores no user data and ships no telemetry. Local examples an
 ## Terms
 
 Use this package as a local Codex workflow aid. It does not replace professional medical, legal, regulatory, or product-safety advice.
-

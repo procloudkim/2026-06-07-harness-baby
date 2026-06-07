@@ -8,10 +8,10 @@ This compatibility copy exists because the initial Ralphthon checklist requested
 
 - Project: BabyGear Risk Radar Codex Plugin
 - Plugin name: `babygear-risk-radar`
-- Public GitHub URL: https://github.com/procloudkim/babygear-risk-radar-codex-plugin
+- Public GitHub URL: https://github.com/procloudkim/2026-06-07-harness-baby
 - Demo screenshot: `assets/demo-screenshot.svg`
 - Validator: `pwsh -NoProfile -File .\scripts\validate-plugin.ps1`
 
 ## Status
 
-The root-level Codex plugin package is implemented with a manifest, skill, marketplace entry, examples, screenshot, validator, MAS-QA report, and final report. The package intentionally excludes hooks, MCP servers, apps, scraping, and external APIs.
+The root-level Codex plugin package is implemented with a manifest, skill, marketplace entry, examples, screenshot, validator, MAS-QA report, and final report. The package intentionally excludes hooks, MCP servers, apps, scraping, and external APIs. The preferred target repository name was `babygear-risk-radar-codex-plugin`, but publication used the user-provided origin because GitHub CLI was not installed.

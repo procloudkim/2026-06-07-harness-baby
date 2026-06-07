@@ -6,7 +6,7 @@ BabyGear Risk Radar Codex Plugin
 
 ## GitHub URL
 
-https://github.com/procloudkim/babygear-risk-radar-codex-plugin
+https://github.com/procloudkim/2026-06-07-harness-baby
 
 ## Built
 
@@ -73,9 +73,10 @@ pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps
 
 ## Submission Status
 
-The repository is prepared for public GitHub submission at:
+The repository was pushed to the user-provided public origin:
 
 ```text
-https://github.com/procloudkim/babygear-risk-radar-codex-plugin
+https://github.com/procloudkim/2026-06-07-harness-baby
 ```
 
+The preferred target repository name was `babygear-risk-radar-codex-plugin`. Automatic creation of that new repository was blocked because GitHub CLI (`gh`) is not installed on the machine, and unauthenticated `git ls-remote` confirmed that repository does not exist.
