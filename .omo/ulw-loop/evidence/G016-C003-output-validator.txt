@@ -1,0 +1,26 @@
+Criterion: G016-C003 Korean plugin-run output validator happy path and missing YouTube case-2 negative fixture
+HappyExitCode: 0
+NegativeExitCode: 1
+ExpectedMessageMatched: True
+FixtureRemoved: True
+CriteriaPass: True
+
+Happy output:
+
+[32;1mStatus            : [0mPASS
+[32;1mPluginName        : [0mbabygear-risk-radar
+[32;1mMarketplacePath   : [0m./
+[32;1mScreenshot        : [0m./assets/demo-screenshot.svg
+[32;1mSkillPath         : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mGitHubUrl         : [0mhttps://github.com/procloudkim/2026-06-07-harness-baby
+[32;1mRequiredFileCount : [0m29
+
+
+
+Negative output:
+Exception: D:\KLab\workspace\2026-06-07-harness\scripts\validate-plugin.ps1:66
+Line |
+  66 |          throw "$Label missing expected text: $Needle"
+     |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | KOREAN_PLUGIN_OUTPUT missing expected text: YouTube case-2
+

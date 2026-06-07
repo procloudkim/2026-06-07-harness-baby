@@ -14,6 +14,8 @@ Korean quickstart for handoff and judging: `docs/KOREAN_QUICKSTART.md`.
 
 Korean mock page generated from the plugin workflow: `mockups/korean-parent-risk-radar.html`.
 
+Korean plugin-run output example: `examples/korean-plugin-run-output.md`.
+
 ## Plugin Structure
 
 ```text
@@ -23,6 +25,7 @@ Korean mock page generated from the plugin workflow: `mockups/korean-parent-risk
 ├── .agents/plugins/marketplace.json
 ├── assets/demo-screenshot.svg
 ├── examples/avent-pacifier-risk-brief.md
+├── examples/korean-plugin-run-output.md
 ├── examples/sample-output.md
 ├── scripts/validate-plugin.ps1
 ├── docs/AUTHORITY_SOURCE_MAP.md

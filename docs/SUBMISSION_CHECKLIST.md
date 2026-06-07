@@ -40,6 +40,7 @@ Fields reported by the command:
 | Skill with metadata | PASS | `skills/babygear-risk-radar/SKILL.md`. |
 | Marketplace entry | PASS | `.agents/plugins/marketplace.json`. |
 | Example inputs and sample output | PASS | `examples/avent-pacifier-risk-brief.md`, `examples/sample-output.md`. |
+| Korean plugin-run output | PASS | `examples/korean-plugin-run-output.md`. |
 | Validation script | PASS | `scripts/validate-plugin.ps1`. |
 | Content safety audit | PASS | `scripts/Test-ContentSafety.ps1`. |
 | MAS-QA report | PASS | `reports/MAS_QA_REPORT.md`. |

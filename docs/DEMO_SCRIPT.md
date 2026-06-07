@@ -49,6 +49,10 @@ Optional reusable scaffolds:
 - `templates/babygear-mece-report-template.md`
 - `templates/parent-action-card-template.md`
 
+Korean plugin-run example:
+
+- `examples/korean-plugin-run-output.md`
+
 ## Screenshot
 
 ![Demo screenshot](../assets/demo-screenshot.svg)

@@ -23,3 +23,4 @@ Commit rows are updated as implementation stages land.
 | 95479ae | docs: add babygear report templates | Add reusable root templates for repeatable Codex report output. | Added MECE report and parent action card templates, validator enforcement, and G012 evidence. |
 | 81bd66a | test: add content safety audit | Add static policy checks for affiliate links and unsupported specific-brand claims. | Added `scripts/Test-ContentSafety.ps1`, validator integration, negative fixtures, and G013 evidence. |
 | 33b37d1 | docs: add korean quickstart handoff | Add Korean presentation and judging handoff for the static plugin package. | Added `docs/KOREAN_QUICKSTART.md`, validator enforcement, and G014 evidence. |
+| 9aad4f1 | docs: add korean babygear mock page | Demonstrate the plugin workflow as a Korean static mock page. | Added `mockups/korean-parent-risk-radar.html`, Philips Avent and Fisher-Price case sections, validator enforcement, and G015 evidence. |

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T07:56:37.955Z",
+  "updatedAt": "2026-06-07T07:59:57.834Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -591,6 +591,45 @@
       "createdAt": "2026-06-07T07:53:36.116Z",
       "updatedAt": "2026-06-07T07:56:37.955Z",
       "evidence": "User requested actual plugin usage, a Korean mock page, Philips Avent case-1/case-2 with YouTube URL, and Fisher-Price-related content."
+    },
+    {
+      "id": "G016",
+      "title": "Korean plugin-run output example",
+      "objective": "Add a Korean example output that demonstrates actual BabyGear Risk Radar skill usage over the Philips Avent case-1, YouTube case-2, Avent monitor context, and Fisher-Price CPSC recall context, with MECE sections and MAS-QA.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Add a Korean example output that demonstrates actual BabyGear Risk Radar skil...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 16.",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G016-C001-korean-output.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:59:57.405Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Add a Korean example output that demonstrates actual BabyGear Risk Radar skil....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G016-C002-output-references.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:59:57.617Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Add a Korean example output that demonstrates actual BabyGear Risk Radar skil....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G016-C003-output-validator.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:59:57.834Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T07:58:02.381Z",
+      "updatedAt": "2026-06-07T07:59:57.834Z",
+      "evidence": "The user asked for actual plugin usage and a Korean mock page. The static mock page exists; a Korean plugin-run output example will show the textual result Codex should produce when the skill is used."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl as the audit trail.",

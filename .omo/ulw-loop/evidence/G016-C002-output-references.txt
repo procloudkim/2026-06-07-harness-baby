@@ -1,0 +1,10 @@
+Criterion: G016-C002 Korean plugin-run output references
+CriteriaPass: True
+
+Checks:
+ReadmeReference: True
+QuickstartReference: True
+DemoScriptReference: True
+ChecklistReference: True
+QuickstartMockRelationship: True
+

@@ -79,6 +79,7 @@ $requiredFiles = @(
     'assets\demo-screenshot.svg',
     'mockups\korean-parent-risk-radar.html',
     'examples\avent-pacifier-risk-brief.md',
+    'examples\korean-plugin-run-output.md',
     'examples\sample-output.md',
     'templates\babygear-mece-report-template.md',
     'templates\parent-action-card-template.md',
@@ -193,6 +194,26 @@ foreach ($needle in @(
     Assert-TextContains -Text $koreanMockPage -Needle $needle -Label 'KOREAN_MOCK_PAGE'
 }
 
+$koreanPluginOutput = Get-Content -LiteralPath (Join-Path $root 'examples\korean-plugin-run-output.md') -Raw
+foreach ($needle in @(
+    'BabyGear Risk Radar 실제 사용 예시 출력',
+    'Product and Usage Context',
+    'MECE Evidence Map',
+    'Authority Source Ladder',
+    'Safety and Regulatory Risk Matrix',
+    'MAS Debate',
+    'Final Parent Action Card',
+    'Uncertainty and Citation Gaps',
+    'Philips Avent BPA 논란',
+    'YouTube case-2',
+    'https://www.youtube.com/watch?v=EJKZ8XXYku0',
+    'Philips Avent monitor replacement',
+    'Fisher-Price CPSC recall context',
+    '의학적 조언'
+)) {
+    Assert-TextContains -Text $koreanPluginOutput -Needle $needle -Label 'KOREAN_PLUGIN_OUTPUT'
+}
+
 $screenshot = Get-Content -LiteralPath (Join-Path $root 'assets\demo-screenshot.svg') -Raw
 foreach ($needle in @(
     'width="1200"',
@@ -268,6 +289,7 @@ foreach ($needle in @(
     'scripts\Test-ContentSafety.ps1',
     'docs/KOREAN_QUICKSTART.md',
     'mockups/korean-parent-risk-radar.html',
+    'examples/korean-plugin-run-output.md',
     'GitHub CLI (`gh`) is not installed',
     'PASS'
 )) {
@@ -282,6 +304,7 @@ foreach ($needle in @(
     'pwsh -NoProfile -File .\scripts\Test-ContentSafety.ps1',
     'assets/demo-screenshot.svg',
     'mockups/korean-parent-risk-radar.html',
+    'examples/korean-plugin-run-output.md',
     'Use BabyGear Risk Radar',
     '알려진 한계',
     '안전 고지',

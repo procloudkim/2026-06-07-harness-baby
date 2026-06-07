@@ -1,0 +1,19 @@
+Criterion: G016-C001 Korean plugin-run output sections
+CriteriaPass: True
+OutputPath: examples/korean-plugin-run-output.md
+
+Checks:
+FileExists: True
+ProductUsageContext: True
+MeceEvidenceMap: True
+AuthoritySourceLadder: True
+RiskMatrix: True
+MasRounds: True
+ParentActionCard: True
+UncertaintyGaps: True
+AventCase1: True
+YoutubeCase2: True
+AventMonitor: True
+FisherPrice: True
+MedicalBoundary: True
+
