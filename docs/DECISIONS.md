@@ -35,3 +35,7 @@ The local tool entry point is `tools\Invoke-ParentPickGuard.ps1`. It delegates t
 ### One-command Korean demo discoverability
 
 `scripts\Show-SubmissionSummary.ps1` now reports both `KoreanMockPage` and `KoreanPluginOutput`. This keeps the Korean mock page and actual plugin-run example discoverable from the same PowerShell summary command judges can use for commit count, branch, GitHub URL, validator command, and core plugin paths.
+
+### Prompt packet generator for actual plugin use
+
+`scripts\New-BabyGearDemoPrompt.ps1` generates a Korean prompt packet that can be pasted into Codex CLI with the BabyGear Risk Radar plugin enabled. The tool is intentionally local, deterministic, and output-path bounded to the repository so it does not become an app, crawler, API client, or publisher. The validator executes it against a temporary repo-local path and removes `.codex-temp` when validation finishes.

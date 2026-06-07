@@ -21,6 +21,7 @@ https://github.com/procloudkim/2026-06-07-harness-baby
 | 로컬 marketplace | `.agents/plugins/marketplace.json` |
 | 데모 스크린샷 | `assets/demo-screenshot.svg` |
 | 예시 입력 | `examples/avent-pacifier-risk-brief.md` |
+| 한글 demo prompt packet | `examples/korean-demo-prompt.md` |
 | 한글 plugin 사용 예시 출력 | `examples/korean-plugin-run-output.md` |
 | 예시 출력 | `examples/sample-output.md` |
 | 공식 소스 맵 | `docs/AUTHORITY_SOURCE_MAP.md` |
@@ -36,9 +37,10 @@ PowerShell 7에서 repository root 기준으로 실행합니다.
 pwsh -NoProfile -File .\scripts\validate-plugin.ps1
 pwsh -NoProfile -File .\scripts\Test-ContentSafety.ps1
 pwsh -NoProfile -File .\scripts\Show-SubmissionSummary.ps1
+pwsh -NoProfile -File .\scripts\New-BabyGearDemoPrompt.ps1
 ```
 
-`Show-SubmissionSummary.ps1` 출력에는 `KoreanMockPage`와 `KoreanPluginOutput` 경로가 포함됩니다.
+`Show-SubmissionSummary.ps1` 출력에는 `KoreanMockPage`, `KoreanPluginOutput`, `KoreanPromptPacket`, `PromptGeneratorCommand` 경로가 포함됩니다.
 
 기대 상태:
 
@@ -81,6 +83,14 @@ mockups/korean-parent-risk-radar.html
 ```text
 examples/korean-plugin-run-output.md
 ```
+
+## 한글 Prompt Packet
+
+```text
+examples/korean-demo-prompt.md
+```
+
+이 파일은 `scripts\New-BabyGearDemoPrompt.ps1`로 재생성할 수 있습니다. Codex CLI에서 BabyGear Risk Radar plugin을 실제로 사용할 때 그대로 입력할 한글 prompt packet입니다.
 
 ## 알려진 한계
 

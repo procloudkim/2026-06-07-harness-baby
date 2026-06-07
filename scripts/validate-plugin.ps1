@@ -79,11 +79,13 @@ $requiredFiles = @(
     'assets\demo-screenshot.svg',
     'mockups\korean-parent-risk-radar.html',
     'examples\avent-pacifier-risk-brief.md',
+    'examples\korean-demo-prompt.md',
     'examples\korean-plugin-run-output.md',
     'examples\sample-output.md',
     'templates\babygear-mece-report-template.md',
     'templates\parent-action-card-template.md',
     'scripts\validate-plugin.ps1',
+    'scripts\New-BabyGearDemoPrompt.ps1',
     'scripts\Show-SubmissionSummary.ps1',
     'scripts\Test-ContentSafety.ps1',
     'docs\ASSUMPTIONS.md',
@@ -140,7 +142,7 @@ Assert-TextContains -Text $skillText -Needle 'NIEHS BPA' -Label 'Skill NIEHS sou
 Assert-TextContains -Text $skillText -Needle 'templates/babygear-mece-report-template.md' -Label 'Skill template reference'
 Assert-TextContains -Text $skillText -Needle 'templates/parent-action-card-template.md' -Label 'Skill action-card template reference'
 
-foreach ($scriptRelativePath in @('scripts\validate-plugin.ps1', 'scripts\Show-SubmissionSummary.ps1', 'scripts\Test-ContentSafety.ps1')) {
+foreach ($scriptRelativePath in @('scripts\validate-plugin.ps1', 'scripts\New-BabyGearDemoPrompt.ps1', 'scripts\Show-SubmissionSummary.ps1', 'scripts\Test-ContentSafety.ps1')) {
     $parseTokens = $null
     $parseErrors = $null
     [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $root $scriptRelativePath), [ref] $parseTokens, [ref] $parseErrors) | Out-Null
@@ -155,7 +157,11 @@ foreach ($needle in @(
     'KoreanMockPage',
     'mockups/korean-parent-risk-radar.html',
     'KoreanPluginOutput',
-    'examples/korean-plugin-run-output.md'
+    'examples/korean-plugin-run-output.md',
+    'KoreanPromptPacket',
+    'examples/korean-demo-prompt.md',
+    'PromptGeneratorCommand',
+    'scripts\New-BabyGearDemoPrompt.ps1'
 )) {
     Assert-TextContains -Text $summaryScript -Needle $needle -Label 'Show-SubmissionSummary'
 }
@@ -222,6 +228,67 @@ foreach ($needle in @(
     '의학적 조언'
 )) {
     Assert-TextContains -Text $koreanPluginOutput -Needle $needle -Label 'KOREAN_PLUGIN_OUTPUT'
+}
+
+$koreanDemoPrompt = Get-Content -LiteralPath (Join-Path $root 'examples\korean-demo-prompt.md') -Raw
+foreach ($needle in @(
+    'BabyGear Risk Radar Korean Demo Prompt Packet',
+    'Use the `babygear-risk-radar` Codex plugin',
+    'Case 1 - Philips Avent 쪽쪽이 BPA 논란',
+    'Case 2 - Philips Avent 관련 YouTube 제보 입력',
+    'https://www.youtube.com/watch?v=EJKZ8XXYku0',
+    'Case 3 - Philips Avent monitor replacement context',
+    'Case 4 - Fisher-Price CPSC recall context',
+    'MAS-QA checklist',
+    'Final parent action card',
+    '의학적 조언이 아닙니다',
+    '특정 브랜드나 제품을 안전하다고 또는 위험하다고 단정하지 마세요',
+    '외부 API 호출 없이 작성하세요'
+)) {
+    Assert-TextContains -Text $koreanDemoPrompt -Needle $needle -Label 'KOREAN_DEMO_PROMPT'
+}
+
+$promptGeneratorScript = Get-Content -LiteralPath (Join-Path $root 'scripts\New-BabyGearDemoPrompt.ps1') -Raw
+foreach ($needle in @(
+    'OutputPath must stay inside repository root',
+    'Test-PathInsideRoot',
+    'DirectorySeparatorChar',
+    'CaseCount = 4',
+    'ExternalApiRequired = $false',
+    'BabyGear Risk Radar Korean Demo Prompt Packet'
+)) {
+    Assert-TextContains -Text $promptGeneratorScript -Needle $needle -Label 'New-BabyGearDemoPrompt'
+}
+
+$promptValidationTempRoot = Join-Path $root '.codex-temp\babygear-demo-prompt-validation'
+$promptValidationOutput = Join-Path $promptValidationTempRoot 'prompt.md'
+try {
+    New-Item -ItemType Directory -Force -Path $promptValidationTempRoot | Out-Null
+    $promptGeneratorOutput = & pwsh -NoProfile -File (Join-Path $root 'scripts\New-BabyGearDemoPrompt.ps1') -OutputPath $promptValidationOutput 2>&1 | Out-String
+    if ($LASTEXITCODE -ne 0) {
+        throw "Prompt generator failed: $promptGeneratorOutput"
+    }
+
+    Assert-File -Root $promptValidationTempRoot -RelativePath 'prompt.md'
+    $generatedPrompt = Get-Content -LiteralPath $promptValidationOutput -Raw
+    Assert-TextContains -Text $generatedPrompt -Needle 'Use the `babygear-risk-radar` Codex plugin' -Label 'Generated prompt'
+    Assert-TextContains -Text $generatedPrompt -Needle 'https://www.youtube.com/watch?v=EJKZ8XXYku0' -Label 'Generated prompt'
+    Assert-TextContains -Text $generatedPrompt -Needle 'Fisher-Price CPSC recall context' -Label 'Generated prompt'
+}
+finally {
+    if (Test-Path -LiteralPath $promptValidationTempRoot) {
+        $resolvedTempRoot = [System.IO.Path]::GetFullPath($promptValidationTempRoot)
+        $allowedTempParent = [System.IO.Path]::GetFullPath((Join-Path $root '.codex-temp'))
+        $allowedTempPrefix = $allowedTempParent.TrimEnd([System.IO.Path]::DirectorySeparatorChar, [System.IO.Path]::AltDirectorySeparatorChar) + [System.IO.Path]::DirectorySeparatorChar
+        if (-not ($resolvedTempRoot.Equals($allowedTempParent, [System.StringComparison]::OrdinalIgnoreCase) -or $resolvedTempRoot.StartsWith($allowedTempPrefix, [System.StringComparison]::OrdinalIgnoreCase))) {
+            throw "Unsafe temp cleanup path: $resolvedTempRoot"
+        }
+
+        Remove-Item -LiteralPath $promptValidationTempRoot -Recurse -Force
+        if ((Test-Path -LiteralPath $allowedTempParent) -and -not (Get-ChildItem -LiteralPath $allowedTempParent -Force)) {
+            Remove-Item -LiteralPath $allowedTempParent -Force
+        }
+    }
 }
 
 $screenshot = Get-Content -LiteralPath (Join-Path $root 'assets\demo-screenshot.svg') -Raw
@@ -296,11 +363,15 @@ foreach ($needle in @(
     'Commit count',
     'KoreanMockPage',
     'KoreanPluginOutput',
+    'KoreanPromptPacket',
+    'PromptGeneratorCommand',
     'assets/demo-screenshot.svg',
     'scripts\Show-SubmissionSummary.ps1',
+    'scripts\New-BabyGearDemoPrompt.ps1',
     'scripts\Test-ContentSafety.ps1',
     'docs/KOREAN_QUICKSTART.md',
     'mockups/korean-parent-risk-radar.html',
+    'examples/korean-demo-prompt.md',
     'examples/korean-plugin-run-output.md',
     'GitHub CLI (`gh`) is not installed',
     'PASS'
@@ -317,6 +388,8 @@ foreach ($needle in @(
     'assets/demo-screenshot.svg',
     'mockups/korean-parent-risk-radar.html',
     'examples/korean-plugin-run-output.md',
+    'examples/korean-demo-prompt.md',
+    'pwsh -NoProfile -File .\scripts\New-BabyGearDemoPrompt.ps1',
     'Use BabyGear Risk Radar',
     '알려진 한계',
     '안전 고지',

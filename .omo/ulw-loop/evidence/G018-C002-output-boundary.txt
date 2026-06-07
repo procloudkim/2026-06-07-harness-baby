@@ -1,0 +1,21 @@
+Criterion: G018-C002 prompt generator rejects output outside repo
+ExitCode: 1
+CriteriaPass: True
+OutsidePath: D:\KLab\workspace\2026-06-07-harness-outside-prompt-should-not-exist.md
+
+Checks:
+RawPrefixSiblingPath: True
+ExitNonZero: True
+ErrorMentionsRepoBoundary: True
+OutsideFileAbsent: True
+PrefixSiblingBoundaryCovered: True
+
+Generator output:
+Exception: D:\KLab\workspace\2026-06-07-harness\scripts\New-BabyGearDemoPrompt.ps1:33
+Line |
+  33 |          throw "OutputPath must stay inside repository root: $Path"
+     |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | OutputPath must stay inside repository root:
+     | D:\KLab\workspace\2026-06-07-harness-outside-prompt-should-not-exist.md
+
+cleanup: no spawned process; no tmux session; outside output absent

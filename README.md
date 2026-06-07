@@ -25,6 +25,7 @@ Korean plugin-run output example: `examples/korean-plugin-run-output.md`.
 ├── .agents/plugins/marketplace.json
 ├── assets/demo-screenshot.svg
 ├── examples/avent-pacifier-risk-brief.md
+├── examples/korean-demo-prompt.md
 ├── examples/korean-plugin-run-output.md
 ├── examples/sample-output.md
 ├── scripts/validate-plugin.ps1
@@ -36,6 +37,7 @@ Korean plugin-run output example: `examples/korean-plugin-run-output.md`.
 ├── mockups/korean-parent-risk-radar.html
 ├── templates/babygear-mece-report-template.md
 ├── templates/parent-action-card-template.md
+├── scripts/New-BabyGearDemoPrompt.ps1
 ├── scripts/Show-SubmissionSummary.ps1
 ├── reports/MAS_QA_REPORT.md
 └── reports/FINAL_REPORT.md
@@ -69,6 +71,12 @@ Create a MECE evidence map and parent action card for this baby product.
 
 ```text
 Run MAS-QA on these baby-product safety claims and separate manufacturer claims from regulator guidance.
+```
+
+Generate the Korean demo prompt packet:
+
+```powershell
+pwsh -NoProfile -File .\scripts\New-BabyGearDemoPrompt.ps1
 ```
 
 ## Authority Source Map

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T08:03:57.886Z",
+  "updatedAt": "2026-06-07T08:09:54.194Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -669,6 +669,45 @@
       "createdAt": "2026-06-07T08:00:55.927Z",
       "updatedAt": "2026-06-07T08:03:57.886Z",
       "evidence": "G015 and G016 added Korean demo assets, but Show-SubmissionSummary.ps1 still lists only screenshot, skill, and validator paths."
+    },
+    {
+      "id": "G018",
+      "title": "Korean prompt packet generator for actual plugin use",
+      "objective": "Add a local PowerShell tool that generates a Korean BabyGear Risk Radar prompt packet from the documented Philips Avent and Fisher-Price case contexts, plus a generated example prompt and validator checks, so judges can exercise the Codex plugin workflow without an app, crawler, external API, or browser automation.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Add a local PowerShell tool that generates a Korean BabyGear Risk Radar promp...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 18.",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G018-C001-prompt-generator.txt and .omo\\ulw-loop\\evidence\\G018-C001-generated-prompt.md: prompt generator produced Korean BabyGear Risk Radar prompt packet with 4 cases and safety boundary | cleanup: no spawned process; no tmux session; evidence prompt retained",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:09:40.905Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Add a local PowerShell tool that generates a Korean BabyGear Risk Radar promp....",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G018-C002-output-boundary.txt: prompt generator rejects an output path outside the repository and writes no outside file | cleanup: no spawned process; no tmux session; outside output absent",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:09:48.084Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Add a local PowerShell tool that generates a Korean BabyGear Risk Radar promp....",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G018-C003-validator-regression.txt: root validator PASS, content safety PASS, summary exposes KoreanPromptPacket and PromptGeneratorCommand, .codex-temp absent | cleanup: no spawned process; no tmux session; .codex-temp absent",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:09:54.194Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T08:06:20.735Z",
+      "updatedAt": "2026-06-07T08:09:54.194Z",
+      "evidence": "After G017, Show-SubmissionSummary exposes Korean mock/output assets, but there is no single PowerShell command that produces a ready-to-use Korean Codex prompt packet for actual plugin use."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl as the audit trail.",

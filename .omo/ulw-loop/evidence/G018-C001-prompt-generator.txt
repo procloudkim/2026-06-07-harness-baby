@@ -1,0 +1,23 @@
+Criterion: G018-C001 Korean prompt generator happy path
+ExitCode: 0
+CriteriaPass: True
+
+Checks:
+ExitZero: True
+PromptExists: True
+HasPluginName: True
+HasYoutubeCase: True
+HasFisherPriceContext: True
+HasMasQa: True
+HasSafetyBoundary: True
+
+Generator output:
+[32;1mStatus              : [0mPASS
+[32;1mOutputPath          : [0mD:\KLab\workspace\2026-06-07-harness\.omo\ulw-loop\evidence\G018-C001-generated-prompt.md
+[32;1mBytes               : [0m3511
+[32;1mCaseCount           : [0m4
+[32;1mLanguage            : [0mko
+[32;1mExternalApiRequired : [0mFalse
+
+GeneratedPrompt: .\.omo\ulw-loop\evidence\G018-C001-generated-prompt.md
+cleanup: no spawned process; no tmux session; evidence prompt intentionally retained
