@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T07:06:58.634Z",
+  "updatedAt": "2026-06-07T07:19:53.897Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -291,29 +291,32 @@
           "scenario": "CLI channel: run pwsh -NoProfile -File .\\scripts\\validate-plugin.ps1 from repo root after creating the BabyGear root plugin, capture stdout to .omo\\ulw-loop\\evidence\\G008-C001-babygear-validation.txt. PASS iff exit is 0, stdout contains Status PASS, PluginName babygear-risk-radar, MarketplacePath ./, Screenshot ./assets/demo-screenshot.svg, SkillPath skills/babygear-risk-radar/SKILL.md, and GitHub URL https://github.com/procloudkim/babygear-risk-radar-codex-plugin appears in README and plugin.json.",
           "userModel": "happy",
           "expectedEvidence": ".omo\\ulw-loop\\evidence\\G008-C001-babygear-validation.txt with cleanup receipt: no spawned process, no tmux session, .codex-temp absent.",
-          "capturedEvidence": null,
-          "status": "pending"
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G008-C001-babygear-validation.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:18:12.777Z"
         },
         {
           "id": "C002",
           "scenario": "CLI channel: create a temporary repo-local copy .\\.omo\\ulw-loop\\fixtures\\g008-missing-skill from the BabyGear root files but omit skills\\babygear-risk-radar\\SKILL.md, then run pwsh -NoProfile -File .\\scripts\\validate-plugin.ps1 -RootPath .\\.omo\\ulw-loop\\fixtures\\g008-missing-skill and capture stdout/stderr to .omo\\ulw-loop\\evidence\\G008-C002-missing-skill.txt. PASS iff exit is nonzero, evidence contains Required file missing: skills\\babygear-risk-radar\\SKILL.md, and the temporary fixture directory is removed.",
           "userModel": "edge",
           "expectedEvidence": ".omo\\ulw-loop\\evidence\\G008-C002-missing-skill.txt with cleanup receipt: no spawned process, no tmux session, fixture directory removed.",
-          "capturedEvidence": null,
-          "status": "pending"
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G008-C002-missing-skill.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:18:12.990Z"
         },
         {
           "id": "C003",
           "scenario": "CLI channel: run pwsh -NoProfile -File .\\plugins\\parentpick-guard\\scripts\\Test-ParentPickGuard.ps1 and pwsh -NoProfile -File .\\scripts\\validate-plugin.ps1 from repo root, then capture stdout plus git log to .omo\\ulw-loop\\evidence\\G008-C003-regression-and-commits.txt. PASS iff both commands exit 0, ParentPick verifier still reports PASS, BabyGear validator reports PASS, git log shows at least 8 commits, and .codex-temp is absent.",
           "userModel": "regression",
           "expectedEvidence": ".omo\\ulw-loop\\evidence\\G008-C003-regression-and-commits.txt with cleanup receipt: no spawned process, no tmux session, .codex-temp absent.",
-          "capturedEvidence": null,
-          "status": "pending"
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G008-C003-regression-and-commits.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:19:53.897Z"
         }
       ],
       "attempt": 0,
       "createdAt": "2026-06-07T07:06:40.256Z",
-      "updatedAt": "2026-06-07T07:06:58.634Z",
+      "updatedAt": "2026-06-07T07:19:53.897Z",
       "evidence": "Newest user directive names babygear-risk-radar-codex-plugin as the target and states the submission is a Codex CLI plugin package, not an app. Official OpenAI Codex plugin docs confirm .codex-plugin/plugin.json is required and skills/assets are plugin-root components; hooks need user trust review, so excluding hooks is appropriate for this 90-minute package."
     }
   ],

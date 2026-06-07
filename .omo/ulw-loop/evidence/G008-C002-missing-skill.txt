@@ -1,0 +1,13 @@
+Criterion: G008-C002 missing skill negative fixture
+Command: pwsh -NoProfile -File .\scripts\validate-plugin.ps1 -RootPath .\.omo\ulw-loop\fixtures\g008-missing-skill
+ExitCode: 1
+ExpectedNonZero: True
+ExpectedMessageMatched: True
+FixtureRemoved: True
+
+Exception: D:\KLab\workspace\2026-06-07-harness\scripts\validate-plugin.ps1:27
+Line |
+  27 |          throw "Required file missing: $RelativePath"
+     |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Required file missing: skills\babygear-risk-radar\SKILL.md
+

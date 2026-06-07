@@ -14,3 +14,4 @@ Commit rows are updated as implementation stages land.
 | 916861c | feat: add babygear risk radar skill | Implement the reusable Codex skill workflow. | Added `skills/babygear-risk-radar/SKILL.md` with MECE evidence mapping, MAS personas, risk reasoning, and QA instructions. |
 | f0a9175 | docs: add babygear examples and screenshot | Add reviewable demo artifacts for the submission. | Added public-source case notes, sample output, and neutral SVG demo screenshot. |
 | 456b1d5 | test: add babygear plugin validator | Verify the plugin package without external dependencies. | Added `scripts/validate-plugin.ps1` and captured the first red validator evidence. |
+| 0c5660a | docs: add babygear readme and qa reports | Complete the root submission summary and QA reporting layer. | Added BabyGear README, MAS-QA report, final report, compatibility docs, and expanded validation checks. |

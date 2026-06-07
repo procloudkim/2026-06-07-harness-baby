@@ -1,0 +1,14 @@
+Criterion: G008-C001 babygear root plugin validation
+Command: pwsh -NoProfile -File .\scripts\validate-plugin.ps1
+ExitCode: 0
+
+
+[32;1mStatus            : [0mPASS
+[32;1mPluginName        : [0mbabygear-risk-radar
+[32;1mMarketplacePath   : [0m./
+[32;1mScreenshot        : [0m./assets/demo-screenshot.svg
+[32;1mSkillPath         : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mGitHubUrl         : [0mhttps://github.com/procloudkim/babygear-risk-radar-codex-plugin
+[32;1mRequiredFileCount : [0m18
+
+

@@ -1,0 +1,50 @@
+Criterion: G008-C003 regression verifier, commit count, and temp hygiene
+ParentPick command: pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1
+ParentPickExitCode: 0
+ParentPickPassDetected: True
+BabyGear command: pwsh -NoProfile -File .\scripts\validate-plugin.ps1
+BabyGearExitCode: 0
+BabyGearPassDetected: True
+CommitCount: 11
+CodexTempExists: False
+CriteriaPass: True
+
+ParentPick output:
+
+[32;1mStatus              : [0mPASS
+[32;1mPluginRoot          : [0mD:\KLab\workspace\2026-06-07-harness\plugins\parentpick-guard
+[32;1mReportPath          : [0mD:\KLab\workspace\2026-06-07-harness\.codex-temp\parentpick-guard-validation\sample-report.html
+[32;1mScreenshotPath      : [0mD:\KLab\workspace\2026-06-07-harness\.codex-temp\parentpick-guard-validation\demo-screenshot.png
+[32;1mValidationTempPath  : [0mD:\KLab\workspace\2026-06-07-harness\.codex-temp\parentpick-guard-validation
+[32;1mRequiredFileCount   : [0m17
+[32;1mCheckedScriptCount  : [0m5
+[32;1mCheckedToolCount    : [0m1
+[32;1mCheckedFailureCases : [0m{blank-report-title, empty-sources, unsafe-url, blank-source-name…}
+
+
+
+BabyGear output:
+
+[32;1mStatus            : [0mPASS
+[32;1mPluginName        : [0mbabygear-risk-radar
+[32;1mMarketplacePath   : [0m./
+[32;1mScreenshot        : [0m./assets/demo-screenshot.svg
+[32;1mSkillPath         : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mGitHubUrl         : [0mhttps://github.com/procloudkim/babygear-risk-radar-codex-plugin
+[32;1mRequiredFileCount : [0m18
+
+
+
+Recent commits:
+0c5660a docs: add babygear readme and qa reports
+456b1d5 test: add babygear plugin validator
+f0a9175 docs: add babygear examples and screenshot
+916861c feat: add babygear risk radar skill
+debaa52 feat: scaffold babygear plugin manifest
+c342aa8 docs: add babygear ralphthon spec
+e3c470e docs: record research and ulw audit trail
+ba3c47d test: harden parentpick guard validation evidence
+54dbf2a feat: complete parentpick guard plugin package
+b1483a9 chore: scaffold parentpick guard workspace
+a0b3da8 chore: scaffold parentpick guard plugin
+
