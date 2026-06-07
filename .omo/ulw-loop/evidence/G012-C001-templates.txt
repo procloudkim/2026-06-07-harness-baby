@@ -1,0 +1,18 @@
+Criterion: G012-C001 root report templates
+CriteriaPass: True
+
+Checks:
+MeceTemplateExists: True
+ActionCardTemplateExists: True
+ProductPlaceholder: True
+SourceLadder: True
+EvidenceTiers: True
+RiskMatrix: True
+Alternatives: True
+MasQa: True
+Uncertainty: True
+MedicalBoundary: True
+ActionCardDoNow: True
+ActionCardEscalate: True
+NoSafeDangerousClaim: True
+

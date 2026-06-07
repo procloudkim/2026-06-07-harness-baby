@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T07:35:07.000Z",
+  "updatedAt": "2026-06-07T07:38:07.654Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -435,6 +435,45 @@
       "createdAt": "2026-06-07T07:33:11.447Z",
       "updatedAt": "2026-06-07T07:35:07.000Z",
       "evidence": "User requested continued UI/UX quality improvements. Current package is a static Codex plugin, so the appropriate UI surface is the README/demo screenshot asset rather than a frontend app."
+    },
+    {
+      "id": "G012",
+      "title": "Root report template package hardening",
+      "objective": "Add reusable BabyGear markdown templates for MECE reports and parent action cards, then enforce them with the validator so the plugin package includes templates as expected by the broader brief.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Add reusable BabyGear markdown templates for MECE reports and parent action c...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 12.",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G012-C001-templates.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:38:07.424Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Add reusable BabyGear markdown templates for MECE reports and parent action c....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G012-C002-template-references.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:38:07.260Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Add reusable BabyGear markdown templates for MECE reports and parent action c....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G012-C003-template-validator.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:38:07.654Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T07:36:09.841Z",
+      "updatedAt": "2026-06-07T07:38:07.654Z",
+      "evidence": "Earlier repository requirements asked for templates in the plugin package. The BabyGear root package currently has examples and skill instructions, but no root templates directory."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl as the audit trail.",

@@ -85,6 +85,15 @@ Produce these sections in order:
 12. `Uncertainty and Citation Gaps`
     - State what is unknown and what source would resolve it.
 
+## Template Use
+
+If the user asks for a reusable report, structured handoff, or repeatable output format, use the root templates:
+
+- `templates/babygear-mece-report-template.md` for the full MECE report scaffold.
+- `templates/parent-action-card-template.md` for the final compact parent action card.
+
+Replace placeholders before giving a final answer. Never leave `[placeholder]` text in parent-facing output unless explicitly producing a template.
+
 ## Persona Lenses
 
 Do not scrape or quote YouTube channels. Represent the user-provided channels only as abstract reasoning lenses:

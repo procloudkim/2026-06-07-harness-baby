@@ -79,6 +79,8 @@ $requiredFiles = @(
     'assets\demo-screenshot.svg',
     'examples\avent-pacifier-risk-brief.md',
     'examples\sample-output.md',
+    'templates\babygear-mece-report-template.md',
+    'templates\parent-action-card-template.md',
     'scripts\validate-plugin.ps1',
     'scripts\Show-SubmissionSummary.ps1',
     'docs\ASSUMPTIONS.md',
@@ -131,6 +133,8 @@ Assert-TextContains -Text $skillText -Needle 'CPSC' -Label 'Skill CPSC source'
 Assert-TextContains -Text $skillText -Needle 'AAP/HealthyChildren' -Label 'Skill AAP source'
 Assert-TextContains -Text $skillText -Needle 'FDA BPA' -Label 'Skill FDA source'
 Assert-TextContains -Text $skillText -Needle 'NIEHS BPA' -Label 'Skill NIEHS source'
+Assert-TextContains -Text $skillText -Needle 'templates/babygear-mece-report-template.md' -Label 'Skill template reference'
+Assert-TextContains -Text $skillText -Needle 'templates/parent-action-card-template.md' -Label 'Skill action-card template reference'
 
 foreach ($scriptRelativePath in @('scripts\validate-plugin.ps1', 'scripts\Show-SubmissionSummary.ps1')) {
     $parseTokens = $null
@@ -242,6 +246,32 @@ foreach ($needle in @(
     'PASS'
 )) {
     Assert-TextContains -Text $submissionChecklist -Needle $needle -Label 'SUBMISSION_CHECKLIST'
+}
+
+$meceTemplate = Get-Content -LiteralPath (Join-Path $root 'templates\babygear-mece-report-template.md') -Raw
+foreach ($needle in @(
+    'Product and Usage Context',
+    'Authority Source Ladder',
+    'MECE Evidence Map',
+    'Evidence Tier Table',
+    'Safety and Regulatory Risk Matrix',
+    'Alternative Product Criteria',
+    'MAS-QA Checklist',
+    'Final Parent Action Card',
+    'This report is decision support, not medical advice'
+)) {
+    Assert-TextContains -Text $meceTemplate -Needle $needle -Label 'babygear-mece-report-template'
+}
+
+$actionCardTemplate = Get-Content -LiteralPath (Join-Path $root 'templates\parent-action-card-template.md') -Raw
+foreach ($needle in @(
+    'Do Now',
+    'Check Next',
+    'Compare Alternatives By',
+    'Escalate If',
+    'does not diagnose, prescribe, or declare a real product safe or dangerous'
+)) {
+    Assert-TextContains -Text $actionCardTemplate -Needle $needle -Label 'parent-action-card-template'
 }
 
 $trackedSecretPatterns = @(

@@ -1,0 +1,13 @@
+Criterion: G012-C002 template references in README, skill, and demo script
+CriteriaPass: True
+
+Checks:
+ReadmeMeceTemplate: True
+ReadmeActionCardTemplate: True
+ReadmeNoRuntimeDependency: True
+SkillMeceTemplate: True
+SkillActionCardTemplate: True
+SkillPlaceholderRule: True
+DemoMeceTemplate: True
+DemoActionCardTemplate: True
+

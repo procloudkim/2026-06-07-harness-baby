@@ -25,6 +25,8 @@ Parents often have to decide before evidence is perfectly resolved. A famous bra
 ├── docs/MAS_ROUNDS.md
 ├── docs/OPERATION_NOTES.md
 ├── docs/SUBMISSION_CHECKLIST.md
+├── templates/babygear-mece-report-template.md
+├── templates/parent-action-card-template.md
 ├── scripts/Show-SubmissionSummary.ps1
 ├── reports/MAS_QA_REPORT.md
 └── reports/FINAL_REPORT.md
@@ -65,6 +67,15 @@ Run MAS-QA on these baby-product safety claims and separate manufacturer claims 
 The skill now uses a documented source ladder in `docs/AUTHORITY_SOURCE_MAP.md`. It prioritizes official product-safety and health sources such as CPSC/eCFR for pacifier physical requirements, CPSC recalls and SaferProducts.gov for product-specific signals, AAP/HealthyChildren for parent-use cautions, and FDA/NIEHS for BPA context. Manufacturer claims, consumer tests, journalism, and anecdotes are handled as lower or more limited evidence tiers.
 
 `docs/MAS_ROUNDS.md` records the MAS debate discipline: odd rounds are visionary and parent-value oriented; even rounds are critical and check for overclaiming, source gaps, medical boundaries, and false certainty.
+
+## Templates
+
+Reusable Markdown scaffolds live in `templates/`:
+
+- `templates/babygear-mece-report-template.md`
+- `templates/parent-action-card-template.md`
+
+They are optional aids for Codex output consistency and do not add a runtime dependency.
 
 ## Validation
 

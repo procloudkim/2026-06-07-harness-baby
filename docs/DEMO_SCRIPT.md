@@ -44,6 +44,11 @@ A parent trusted a well-known pacifier brand because the product was marketed as
 - Final parent action card.
 - Uncertainty and citation gaps.
 
+Optional reusable scaffolds:
+
+- `templates/babygear-mece-report-template.md`
+- `templates/parent-action-card-template.md`
+
 ## Screenshot
 
 ![Demo screenshot](../assets/demo-screenshot.svg)

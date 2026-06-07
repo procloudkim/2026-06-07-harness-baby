@@ -46,6 +46,7 @@ Fields reported by the command:
 | Demo script | PASS | `docs/DEMO_SCRIPT.md`. |
 | Authority source map | PASS | `docs/AUTHORITY_SOURCE_MAP.md`. |
 | MAS rounds | PASS | `docs/MAS_ROUNDS.md`. |
+| Root templates | PASS | `templates/babygear-mece-report-template.md`, `templates/parent-action-card-template.md`. |
 | Implementation process commits | PASS | `docs/COMMIT_LOG.md` and `git log --oneline`. |
 | No secret-like files tracked | PASS | Enforced by `scripts/validate-plugin.ps1`. |
 
