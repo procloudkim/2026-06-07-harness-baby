@@ -26,6 +26,7 @@ https://github.com/procloudkim/2026-06-07-harness-baby
 | 예시 출력 | `examples/sample-output.md` |
 | 공식 소스 맵 | `docs/AUTHORITY_SOURCE_MAP.md` |
 | MAS 라운드 | `docs/MAS_ROUNDS.md` |
+| 한글 MAS 라운드/공식 출처 가드레일 | `docs/KOREAN_MAS_ROUNDS.md` |
 | 한글 mock page | `mockups/korean-parent-risk-radar.html` |
 | 재사용 템플릿 | `templates/` |
 
@@ -91,6 +92,14 @@ examples/korean-demo-prompt.md
 ```
 
 이 파일은 `scripts\New-BabyGearDemoPrompt.ps1`로 재생성할 수 있습니다. Codex CLI에서 BabyGear Risk Radar plugin을 실제로 사용할 때 그대로 입력할 한글 prompt packet입니다.
+
+## 한글 MAS 라운드
+
+```text
+docs/KOREAN_MAS_ROUNDS.md
+```
+
+한글 출력에서는 홀수 라운드를 Visionary 관점, 짝수 라운드를 Critical 관점으로 둡니다. Philips Avent BPA 논란, 사용자 제공 YouTube case-2, Philips Avent monitor replacement, Fisher-Price CPSC recall context는 각각 별도 hazard class로 분리하고, CPSC, AAP Safe Sleep, CDC Safe Sleep, Philips official support page 같은 공식 출처를 먼저 확인하는 구조를 사용합니다.
 
 ## 알려진 한계
 

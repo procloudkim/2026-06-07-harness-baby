@@ -1,0 +1,8 @@
+result: PASS
+goal: G020-C003 regression suite
+validator: PASS, RequiredFileCount 32
+content safety: PASS
+submission summary: READY and exposes KoreanMASRounds
+ParentPick regression: PASS
+.codex-temp absent: True
+cleanup: no spawned process; no tmux session; .codex-temp absent

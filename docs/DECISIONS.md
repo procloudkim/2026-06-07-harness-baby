@@ -43,3 +43,7 @@ The local tool entry point is `tools\Invoke-ParentPickGuard.ps1`. It delegates t
 ### Prompt packet parity validation
 
 The root validator now compares normalized output from `scripts\New-BabyGearDemoPrompt.ps1` with the checked-in `examples\korean-demo-prompt.md`. This prevents the static example from drifting away from the actual local PowerShell tool and gives judges one deterministic prompt packet for Korean plugin-use demonstrations.
+
+### Korean MAS source guardrails
+
+The BabyGear skill now points Korean outputs to `docs\KOREAN_MAS_ROUNDS.md` for odd/even MAS debate discipline and official-source hierarchy. The Korean guide treats Philips official pages, CPSC recall/infant-sleep guidance, AAP Safe Sleep, and CDC Safe Sleep as higher-tier sources, while user-provided YouTube input stays an unverified media signal until official or primary evidence is supplied.

@@ -51,6 +51,8 @@ Detailed source hierarchy: `docs/AUTHORITY_SOURCE_MAP.md`
 
 MAS debate hardening: `docs/MAS_ROUNDS.md`
 
+Korean MAS debate and official-source guardrails: `docs/KOREAN_MAS_ROUNDS.md`
+
 ## Validation
 
 Validation: PASS

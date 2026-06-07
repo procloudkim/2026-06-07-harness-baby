@@ -78,6 +78,19 @@ Use the `babygear-risk-radar` Codex plugin.
 
 ## 출력 요구
 
+공식 출처 우선순위:
+
+- CPSC recall pages and CPSC Infant Sleep Products guidance.
+- AAP Safe Sleep and CDC Safe Sleep guidance for infant sleep or soothing product use.
+- Philips official support pages for manufacturer statements and replacement context.
+- Journalism, consumer tests, YouTube, and parent anecdotes only as lower-tier signals unless primary evidence is supplied.
+
+MAS 운영 규칙:
+
+- 홀수 라운드는 Visionary 관점으로 부모 결정 흐름과 실행 가능성을 개선하세요.
+- 짝수 라운드는 Critical 관점으로 과장, 근거 공백, 브랜드 신뢰 편향, 의학/법적 경계 위반을 비판하세요.
+- `docs/KOREAN_MAS_ROUNDS.md`의 구조를 따르세요.
+
 1. Product and usage context.
 2. Parent concern summary.
 3. MECE evidence map.

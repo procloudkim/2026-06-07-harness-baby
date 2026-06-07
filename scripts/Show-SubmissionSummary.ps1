@@ -36,6 +36,7 @@ function Invoke-GitText {
     KoreanMockPage = 'mockups/korean-parent-risk-radar.html'
     KoreanPluginOutput = 'examples/korean-plugin-run-output.md'
     KoreanPromptPacket = 'examples/korean-demo-prompt.md'
+    KoreanMASRounds = 'docs/KOREAN_MAS_ROUNDS.md'
     PromptGeneratorCommand = 'pwsh -NoProfile -File .\scripts\New-BabyGearDemoPrompt.ps1'
     ValidatorCommand = 'pwsh -NoProfile -File .\scripts\validate-plugin.ps1'
     RegressionCommand = 'pwsh -NoProfile -File .\plugins\parentpick-guard\scripts\Test-ParentPickGuard.ps1'

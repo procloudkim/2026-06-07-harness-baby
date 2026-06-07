@@ -13,6 +13,7 @@ This compatibility copy exists because the initial Ralphthon checklist requested
 - Validator: `pwsh -NoProfile -File .\scripts\validate-plugin.ps1`
 - Authority source map: `docs/AUTHORITY_SOURCE_MAP.md`
 - MAS debate rounds: `docs/MAS_ROUNDS.md`
+- Korean MAS debate and source guardrails: `docs/KOREAN_MAS_ROUNDS.md`
 
 ## Status
 

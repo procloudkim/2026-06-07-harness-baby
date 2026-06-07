@@ -105,6 +105,7 @@ $requiredFiles = @(
     'docs\FINAL_REPORT.md',
     'docs\DEMO_SCRIPT.md',
     'docs\AUTHORITY_SOURCE_MAP.md',
+    'docs\KOREAN_MAS_ROUNDS.md',
     'docs\MAS_ROUNDS.md',
     'docs\OPERATION_NOTES.md',
     'docs\SUBMISSION_CHECKLIST.md',
@@ -147,10 +148,13 @@ Assert-TextContains -Text $skillText -Needle 'not medical advice' -Label 'Skill 
 Assert-TextContains -Text $skillText -Needle 'Authority Source Ladder' -Label 'Skill authority ladder'
 Assert-TextContains -Text $skillText -Needle 'CPSC' -Label 'Skill CPSC source'
 Assert-TextContains -Text $skillText -Needle 'AAP/HealthyChildren' -Label 'Skill AAP source'
+Assert-TextContains -Text $skillText -Needle 'CDC safe sleep' -Label 'Skill CDC source'
 Assert-TextContains -Text $skillText -Needle 'FDA BPA' -Label 'Skill FDA source'
 Assert-TextContains -Text $skillText -Needle 'NIEHS BPA' -Label 'Skill NIEHS source'
 Assert-TextContains -Text $skillText -Needle 'templates/babygear-mece-report-template.md' -Label 'Skill template reference'
 Assert-TextContains -Text $skillText -Needle 'templates/parent-action-card-template.md' -Label 'Skill action-card template reference'
+Assert-TextContains -Text $skillText -Needle 'docs/KOREAN_MAS_ROUNDS.md' -Label 'Skill Korean MAS reference'
+Assert-TextContains -Text $skillText -Needle 'Infant Sleep, Swing, Rocker, And Monitor Anchors' -Label 'Skill infant sleep anchors'
 
 foreach ($scriptRelativePath in @('scripts\validate-plugin.ps1', 'scripts\New-BabyGearDemoPrompt.ps1', 'scripts\Show-SubmissionSummary.ps1', 'scripts\Test-ContentSafety.ps1')) {
     $parseTokens = $null
@@ -170,6 +174,8 @@ foreach ($needle in @(
     'examples/korean-plugin-run-output.md',
     'KoreanPromptPacket',
     'examples/korean-demo-prompt.md',
+    'KoreanMASRounds',
+    'docs/KOREAN_MAS_ROUNDS.md',
     'PromptGeneratorCommand',
     'scripts\New-BabyGearDemoPrompt.ps1'
 )) {
@@ -196,6 +202,7 @@ Assert-TextContains -Text $readme -Needle '# BabyGear Risk Radar Codex Plugin' -
 Assert-TextContains -Text $readme -Needle '![Demo screenshot](./assets/demo-screenshot.svg)' -Label 'README'
 Assert-TextContains -Text $readme -Needle 'https://github.com/procloudkim/2026-06-07-harness-baby' -Label 'README'
 Assert-TextContains -Text $readme -Needle 'docs/KOREAN_QUICKSTART.md' -Label 'README'
+Assert-TextContains -Text $readme -Needle 'docs/KOREAN_MAS_ROUNDS.md' -Label 'README'
 
 $demoScript = Get-Content -LiteralPath (Join-Path $root 'docs\DEMO_SCRIPT.md') -Raw
 Assert-TextContains -Text $demoScript -Needle 'static README screenshot and sample prompt' -Label 'DEMO_SCRIPT'
@@ -251,6 +258,10 @@ foreach ($needle in @(
     'Case 4 - Fisher-Price CPSC recall context',
     'MAS-QA checklist',
     'Final parent action card',
+    '공식 출처 우선순위',
+    'CPSC Infant Sleep Products guidance',
+    'AAP Safe Sleep and CDC Safe Sleep guidance',
+    'docs/KOREAN_MAS_ROUNDS.md',
     '의학적 조언이 아닙니다',
     '특정 브랜드나 제품을 안전하다고 또는 위험하다고 단정하지 마세요',
     '외부 API 호출 없이 작성하세요'
@@ -265,6 +276,9 @@ foreach ($needle in @(
     'DirectorySeparatorChar',
     'CaseCount = 4',
     'ExternalApiRequired = $false',
+    'CPSC Infant Sleep Products guidance',
+    'AAP Safe Sleep and CDC Safe Sleep guidance',
+    'docs/KOREAN_MAS_ROUNDS.md',
     'BabyGear Risk Radar Korean Demo Prompt Packet'
 )) {
     Assert-TextContains -Text $promptGeneratorScript -Needle $needle -Label 'New-BabyGearDemoPrompt'
@@ -284,6 +298,7 @@ try {
     Assert-TextContains -Text $generatedPrompt -Needle 'Use the `babygear-risk-radar` Codex plugin' -Label 'Generated prompt'
     Assert-TextContains -Text $generatedPrompt -Needle 'https://www.youtube.com/watch?v=EJKZ8XXYku0' -Label 'Generated prompt'
     Assert-TextContains -Text $generatedPrompt -Needle 'Fisher-Price CPSC recall context' -Label 'Generated prompt'
+    Assert-TextContains -Text $generatedPrompt -Needle 'docs/KOREAN_MAS_ROUNDS.md' -Label 'Generated prompt'
 
     if ((ConvertTo-NormalizedText -Text $generatedPrompt) -ne (ConvertTo-NormalizedText -Text $koreanDemoPrompt)) {
         throw 'Generated Korean demo prompt differs from examples\korean-demo-prompt.md'
@@ -358,6 +373,28 @@ foreach ($needle in @(
     Assert-TextContains -Text $masRounds -Needle $needle -Label 'MAS_ROUNDS'
 }
 
+$koreanMasRounds = Get-Content -LiteralPath (Join-Path $root 'docs\KOREAN_MAS_ROUNDS.md') -Raw
+foreach ($needle in @(
+    'Korean MAS Rounds',
+    '공식 출처 우선순위',
+    'Round 1 - Visionary',
+    'Round 2 - Critical',
+    'Round 3 - Visionary',
+    'Round 4 - Critical',
+    'Philips Avent 쪽쪽이 BPA 논란',
+    'Philips Avent 관련 YouTube 입력',
+    'Philips Avent monitor replacement',
+    'Fisher-Price CPSC recall context',
+    'https://www.youtube.com/watch?v=EJKZ8XXYku0',
+    'https://www.cpsc.gov/FAQ/Infant-Sleep-Products',
+    'https://www.aap.org/en/patient-care/safe-sleep/',
+    'https://www.cdc.gov/sudden-infant-death/sleep-safely/',
+    'unverified media input',
+    '특정 제품을 의학적으로 안전하다고 또는 위험하다고 단정하지 않습니다'
+)) {
+    Assert-TextContains -Text $koreanMasRounds -Needle $needle -Label 'KOREAN_MAS_ROUNDS'
+}
+
 $operationNotes = Get-Content -LiteralPath (Join-Path $root 'docs\OPERATION_NOTES.md') -Raw
 foreach ($needle in @(
     'PowerShell 7',
@@ -378,12 +415,14 @@ foreach ($needle in @(
     'KoreanMockPage',
     'KoreanPluginOutput',
     'KoreanPromptPacket',
+    'KoreanMASRounds',
     'PromptGeneratorCommand',
     'assets/demo-screenshot.svg',
     'scripts\Show-SubmissionSummary.ps1',
     'scripts\New-BabyGearDemoPrompt.ps1',
     'scripts\Test-ContentSafety.ps1',
     'docs/KOREAN_QUICKSTART.md',
+    'docs/KOREAN_MAS_ROUNDS.md',
     'mockups/korean-parent-risk-radar.html',
     'examples/korean-demo-prompt.md',
     'examples/korean-plugin-run-output.md',
@@ -404,6 +443,8 @@ foreach ($needle in @(
     'examples/korean-plugin-run-output.md',
     'examples/korean-demo-prompt.md',
     'pwsh -NoProfile -File .\scripts\New-BabyGearDemoPrompt.ps1',
+    'docs/KOREAN_MAS_ROUNDS.md',
+    'CPSC, AAP Safe Sleep, CDC Safe Sleep',
     'Use BabyGear Risk Radar',
     '알려진 한계',
     '안전 고지',

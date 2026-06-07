@@ -16,6 +16,8 @@ Korean mock page generated from the plugin workflow: `mockups/korean-parent-risk
 
 Korean plugin-run output example: `examples/korean-plugin-run-output.md`.
 
+Korean MAS debate guide and official-source guardrails: `docs/KOREAN_MAS_ROUNDS.md`.
+
 ## Plugin Structure
 
 ```text
@@ -31,6 +33,7 @@ Korean plugin-run output example: `examples/korean-plugin-run-output.md`.
 ├── scripts/validate-plugin.ps1
 ├── docs/AUTHORITY_SOURCE_MAP.md
 ├── docs/MAS_ROUNDS.md
+├── docs/KOREAN_MAS_ROUNDS.md
 ├── docs/OPERATION_NOTES.md
 ├── docs/SUBMISSION_CHECKLIST.md
 ├── docs/KOREAN_QUICKSTART.md
@@ -84,6 +87,8 @@ pwsh -NoProfile -File .\scripts\New-BabyGearDemoPrompt.ps1
 The skill now uses a documented source ladder in `docs/AUTHORITY_SOURCE_MAP.md`. It prioritizes official product-safety and health sources such as CPSC/eCFR for pacifier physical requirements, CPSC recalls and SaferProducts.gov for product-specific signals, AAP/HealthyChildren for parent-use cautions, and FDA/NIEHS for BPA context. Manufacturer claims, consumer tests, journalism, and anecdotes are handled as lower or more limited evidence tiers.
 
 `docs/MAS_ROUNDS.md` records the MAS debate discipline: odd rounds are visionary and parent-value oriented; even rounds are critical and check for overclaiming, source gaps, medical boundaries, and false certainty.
+
+`docs/KOREAN_MAS_ROUNDS.md` applies the same odd/even MAS discipline in Korean and adds official-source guardrails for Philips Avent, user-provided YouTube input, Philips monitor replacement context, Fisher-Price CPSC recall context, AAP Safe Sleep, CDC Safe Sleep, and CPSC infant sleep product guidance.
 
 ## Templates
 

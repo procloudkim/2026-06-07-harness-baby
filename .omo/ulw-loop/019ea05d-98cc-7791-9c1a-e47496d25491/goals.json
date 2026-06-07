@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T08:15:21.870Z",
+  "updatedAt": "2026-06-07T08:25:10.117Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -747,6 +747,45 @@
       "createdAt": "2026-06-07T08:13:44.632Z",
       "updatedAt": "2026-06-07T08:15:21.870Z",
       "evidence": "G018 added scripts/New-BabyGearDemoPrompt.ps1 and examples/korean-demo-prompt.md, but the validator only checks both contain expected text; it does not yet prove the checked-in example is exactly reproducible from the generator."
+    },
+    {
+      "id": "G020",
+      "title": "Korean MAS debate and official-source guardrails",
+      "objective": "Strengthen the BabyGear Risk Radar Codex plugin by adding Korean MAS debate documentation and skill instructions that alternate visionary and critical rounds, prioritize official pediatric/regulatory sources, and keep Philips Avent, user-provided YouTube case input, and Fisher-Price examples framed as evidence-tiered decision support rather than medical certainty.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Strengthen the BabyGear Risk Radar Codex plugin by adding Korean MAS debate d...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 20.",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G020-C001-korean-mas-guardrails.txt: validator PASS, summary exposes KoreanMASRounds, skill and prompt reference docs/KOREAN_MAS_ROUNDS.md, official-source guardrails verified | cleanup: no spawned process; no tmux session; no temp dir",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:24:55.663Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Strengthen the BabyGear Risk Radar Codex plugin by adding Korean MAS debate d....",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G020-C002-missing-korean-mas-fixture.txt: validator fails with Required file missing docs\\KOREAN_MAS_ROUNDS.md when the doc is temporarily absent; fixture restored and .codex-temp absent | cleanup: no spawned process; no tmux session; fixture restored; .codex-temp absent",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:25:02.423Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Strengthen the BabyGear Risk Radar Codex plugin by adding Korean MAS debate d....",
+          "capturedEvidence": ".omo\\ulw-loop\\evidence\\G020-C003-regression-suite.txt: validator PASS with RequiredFileCount 32, content safety PASS, submission summary READY with KoreanMASRounds, ParentPick verifier PASS, .codex-temp absent | cleanup: no spawned process; no tmux session; .codex-temp absent",
+          "status": "pass",
+          "capturedAt": "2026-06-07T08:25:10.117Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T08:18:55.299Z",
+      "updatedAt": "2026-06-07T08:25:10.117Z",
+      "evidence": "User requested MAS devil's debate with odd visionary and even critical rounds, official newborn-care information, and continuing improvement after Korean plugin-use artifacts. Current plugin has Korean prompt/output/mock assets but the root skill and Korean handoff do not yet explicitly enforce alternating MAS rounds or official-source hierarchy in Korean."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl as the audit trail.",

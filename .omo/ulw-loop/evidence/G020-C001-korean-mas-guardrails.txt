@@ -1,0 +1,17 @@
+result: PASS
+goal: G020-C001 Korean MAS official-source guardrails happy path
+validator: scripts\validate-plugin.ps1 exited 0
+summary: Show-SubmissionSummary exposes KoreanMASRounds
+official sources verified in current session: Philips official FAQ/support, CPSC recall pages, CPSC Infant Sleep Products FAQ, AAP Safe Sleep, CDC Safe Sleep
+checks:
+PASS: validator pass
+PASS: summary exposes KoreanMASRounds
+PASS: skill links Korean MAS doc
+PASS: skill has infant sleep anchors
+PASS: doc has Round 1 visionary
+PASS: doc has Round 2 critical
+PASS: doc has official CPSC infant sleep guidance
+PASS: doc has AAP Safe Sleep
+PASS: doc has CDC Safe Sleep
+PASS: prompt references Korean MAS doc
+cleanup: no spawned process; no tmux session; no temp dir
