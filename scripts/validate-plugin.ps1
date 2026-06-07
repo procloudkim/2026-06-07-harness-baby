@@ -162,6 +162,30 @@ Assert-TextContains -Text $readme -Needle '# BabyGear Risk Radar Codex Plugin' -
 Assert-TextContains -Text $readme -Needle '![Demo screenshot](./assets/demo-screenshot.svg)' -Label 'README'
 Assert-TextContains -Text $readme -Needle 'https://github.com/procloudkim/2026-06-07-harness-baby' -Label 'README'
 
+$demoScript = Get-Content -LiteralPath (Join-Path $root 'docs\DEMO_SCRIPT.md') -Raw
+Assert-TextContains -Text $demoScript -Needle 'static README screenshot and sample prompt' -Label 'DEMO_SCRIPT'
+Assert-TextContains -Text $demoScript -Needle 'No app server, deployment, browser automation, or external API is required.' -Label 'DEMO_SCRIPT'
+
+$screenshot = Get-Content -LiteralPath (Join-Path $root 'assets\demo-screenshot.svg') -Raw
+foreach ($needle in @(
+    'width="1200"',
+    'height="800"',
+    'viewBox="0 0 1200 800"',
+    '<title id="title">BabyGear Risk Radar demo screenshot</title>',
+    '<desc id="desc">',
+    'Evidence',
+    'Risk',
+    'Alternatives',
+    'Parent Action',
+    'Authority Ladder',
+    'MAS-QA PASS',
+    'Uncertainty noted',
+    'No app server',
+    'not medical advice'
+)) {
+    Assert-TextContains -Text $screenshot -Needle $needle -Label 'demo-screenshot.svg'
+}
+
 $finalReport = Get-Content -LiteralPath (Join-Path $root 'reports\FINAL_REPORT.md') -Raw
 Assert-TextContains -Text $finalReport -Needle 'https://github.com/procloudkim/2026-06-07-harness-baby' -Label 'FINAL_REPORT'
 Assert-TextContains -Text $finalReport -Needle 'Validation: PASS' -Label 'FINAL_REPORT'

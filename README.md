@@ -4,6 +4,8 @@ BabyGear Risk Radar is a Codex plugin that helps parents and builders evaluate b
 
 ![Demo screenshot](./assets/demo-screenshot.svg)
 
+The screenshot is a static demo of the plugin workflow, not an app UI. It shows how Codex should separate evidence, risk, alternatives, parent action, official source hierarchy, and MAS-QA.
+
 ## What Problem It Solves
 
 Parents often have to decide before evidence is perfectly resolved. A famous brand, a "BPA-free" claim, a public article, a manufacturer response, and regulator guidance may all point in different directions. This plugin makes Codex separate those claims instead of collapsing them into fear or false certainty.

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T07:32:14.930Z",
+  "updatedAt": "2026-06-07T07:35:07.000Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -396,6 +396,45 @@
       "createdAt": "2026-06-07T07:29:48.609Z",
       "updatedAt": "2026-06-07T07:32:14.930Z",
       "evidence": "User asked to commit current branch-wise work and operate variably for current PC spec. Validation now passes, so the next smallest safe move is ops documentation and checklist hardening without new dependencies."
+    },
+    {
+      "id": "G011",
+      "title": "Demo screenshot UI evidence hardening",
+      "objective": "Improve the static demo screenshot and validator checks so the submission visually communicates the plugin workflow clearly without becoming an app.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Improve the static demo screenshot and validator checks so the submission vis...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 11.",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G011-C001-screenshot-content.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:35:06.603Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Improve the static demo screenshot and validator checks so the submission vis....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G011-C002-readme-demo-flow.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:35:06.806Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Improve the static demo screenshot and validator checks so the submission vis....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G011-C003-screenshot-validator.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:35:07.000Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T07:33:11.447Z",
+      "updatedAt": "2026-06-07T07:35:07.000Z",
+      "evidence": "User requested continued UI/UX quality improvements. Current package is a static Codex plugin, so the appropriate UI surface is the README/demo screenshot asset rather than a frontend app."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl as the audit trail.",

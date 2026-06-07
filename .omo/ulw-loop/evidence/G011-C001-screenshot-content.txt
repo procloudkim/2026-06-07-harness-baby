@@ -1,0 +1,18 @@
+Criterion: G011-C001 screenshot content and accessibility
+CriteriaPass: True
+SvgLength: 5076
+
+Checks:
+AccessibleTitle: True
+AccessibleDescription: True
+Width1200: True
+Height800: True
+ViewBox1200x800: True
+EvidenceSection: True
+RiskSection: True
+AlternativesSection: True
+ParentActionSection: True
+AuthorityLadderSection: True
+MasQaPass: True
+UncertaintyNoted: True
+

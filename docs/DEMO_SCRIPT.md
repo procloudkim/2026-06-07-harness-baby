@@ -4,6 +4,8 @@
 
 Show that BabyGear Risk Radar is a Codex CLI plugin package, not an app, and that it helps Codex turn an uncertain baby-product safety controversy into a structured parent decision report.
 
+The demo surface is the static README screenshot and sample prompt. No app server, deployment, browser automation, or external API is required.
+
 ## Local Validation
 
 ```powershell
@@ -45,3 +47,5 @@ A parent trusted a well-known pacifier brand because the product was marketed as
 ## Screenshot
 
 ![Demo screenshot](../assets/demo-screenshot.svg)
+
+The screenshot should show the same core flow the skill produces: evidence, risk, alternatives, parent action, authority ladder, and MAS-QA PASS with uncertainty noted.

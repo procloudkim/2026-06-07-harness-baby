@@ -1,0 +1,28 @@
+Criterion: G011-C003 screenshot validator happy path and negative fixture
+Happy command: pwsh -NoProfile -File .\scripts\validate-plugin.ps1
+HappyExitCode: 0
+Negative command: pwsh -NoProfile -File .\scripts\validate-plugin.ps1 -RootPath .\.omo\ulw-loop\fixtures\g011-screenshot-missing-masqa-pass
+NegativeExitCode: 1
+ExpectedMessageMatched: True
+FixtureRemoved: True
+CriteriaPass: True
+
+Happy output:
+
+[32;1mStatus            : [0mPASS
+[32;1mPluginName        : [0mbabygear-risk-radar
+[32;1mMarketplacePath   : [0m./
+[32;1mScreenshot        : [0m./assets/demo-screenshot.svg
+[32;1mSkillPath         : [0mskills/babygear-risk-radar/SKILL.md
+[32;1mGitHubUrl         : [0mhttps://github.com/procloudkim/2026-06-07-harness-baby
+[32;1mRequiredFileCount : [0m23
+
+
+
+Negative output:
+Exception: D:\KLab\workspace\2026-06-07-harness\scripts\validate-plugin.ps1:66
+Line |
+  66 |          throw "$Label missing expected text: $Needle"
+     |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | demo-screenshot.svg missing expected text: MAS-QA PASS
+
