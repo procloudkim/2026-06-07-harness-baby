@@ -1,0 +1,47 @@
+{
+  "name": "babygear-risk-radar",
+  "version": "0.1.0",
+  "description": "A Codex plugin that helps parents and builders evaluate baby product safety claims with MECE evidence mapping, risk reasoning, alternatives, and MAS-style QA.",
+  "author": {
+    "name": "procloudkim",
+    "url": "https://github.com/procloudkim"
+  },
+  "homepage": "https://github.com/procloudkim/babygear-risk-radar-codex-plugin",
+  "repository": "https://github.com/procloudkim/babygear-risk-radar-codex-plugin",
+  "license": "MIT",
+  "keywords": [
+    "codex-plugin",
+    "baby-products",
+    "safety",
+    "evidence",
+    "mece",
+    "parenting"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "BabyGear Risk Radar",
+    "shortDescription": "MECE baby-product safety evidence workflow.",
+    "longDescription": "BabyGear Risk Radar helps Codex organize baby-product safety claims, evidence tiers, risk signals, alternatives, and MAS-style QA into a parent-friendly decision-support report without making medical diagnoses or unsupported danger claims.",
+    "developerName": "procloudkim",
+    "category": "Productivity",
+    "capabilities": [
+      "Skill",
+      "Evidence mapping",
+      "Risk reasoning",
+      "MAS QA"
+    ],
+    "websiteURL": "https://github.com/procloudkim/babygear-risk-radar-codex-plugin",
+    "privacyPolicyURL": "https://github.com/procloudkim/babygear-risk-radar-codex-plugin#privacy",
+    "termsOfServiceURL": "https://github.com/procloudkim/babygear-risk-radar-codex-plugin#terms",
+    "defaultPrompt": [
+      "Use BabyGear Risk Radar to evaluate this baby product safety concern.",
+      "Create a MECE evidence map and parent action card for this baby product.",
+      "Run MAS-QA on these baby-product safety claims."
+    ],
+    "brandColor": "#0F766E",
+    "screenshots": [
+      "./assets/demo-screenshot.svg"
+    ]
+  }
+}
+

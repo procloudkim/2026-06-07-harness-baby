@@ -1,14 +1,14 @@
 {
-  "name": "personal",
+  "name": "babygear-risk-radar-marketplace",
   "interface": {
-    "displayName": "Personal"
+    "displayName": "BabyGear Risk Radar Plugins"
   },
   "plugins": [
     {
-      "name": "parentpick-guard",
+      "name": "babygear-risk-radar",
       "source": {
         "source": "local",
-        "path": "./plugins/parentpick-guard"
+        "path": "./"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -18,3 +18,4 @@
     }
   ]
 }
+

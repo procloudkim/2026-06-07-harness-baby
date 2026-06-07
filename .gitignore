@@ -1,0 +1,16 @@
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+auth.json
+.sandbox-secrets/
+node_modules/
+dist/
+coverage/
+.codex-temp/
+.tmp-validator-deps/
+.DS_Store
+Thumbs.db
+
