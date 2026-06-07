@@ -21,3 +21,4 @@ Commit rows are updated as implementation stages land.
 | d098992 | docs: add operational readiness checklist | Record PC-aware execution choices and submission audit commands. | Added operation notes, submission checklist, summary script, validator enforcement, and G010 evidence. |
 | 6531563 | docs: polish demo screenshot evidence | Improve README demo comprehension without turning the plugin into an app. | Reworked the SVG screenshot, documented static demo flow, enforced screenshot content, and added G011 evidence. |
 | 95479ae | docs: add babygear report templates | Add reusable root templates for repeatable Codex report output. | Added MECE report and parent action card templates, validator enforcement, and G012 evidence. |
+| 81bd66a | test: add content safety audit | Add static policy checks for affiliate links and unsupported specific-brand claims. | Added `scripts/Test-ContentSafety.ps1`, validator integration, negative fixtures, and G013 evidence. |

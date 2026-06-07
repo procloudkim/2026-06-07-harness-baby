@@ -1,0 +1,13 @@
+Criterion: G014-C001 Korean quickstart fields
+CriteriaPass: True
+
+Checks:
+KoreanSummary: True
+GitHubUrl: True
+ValidatorCommand: True
+ContentSafetyCommand: True
+ScreenshotPath: True
+InstallUsePrompt: True
+KnownLimitations: True
+SafetyDisclaimer: True
+

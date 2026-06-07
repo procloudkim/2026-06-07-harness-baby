@@ -94,6 +94,7 @@ $requiredFiles = @(
     'docs\MAS_ROUNDS.md',
     'docs\OPERATION_NOTES.md',
     'docs\SUBMISSION_CHECKLIST.md',
+    'docs\KOREAN_QUICKSTART.md',
     'reports\MAS_QA_REPORT.md',
     'reports\FINAL_REPORT.md',
     'README.md',
@@ -166,6 +167,7 @@ $readme = Get-Content -LiteralPath (Join-Path $root 'README.md') -Raw
 Assert-TextContains -Text $readme -Needle '# BabyGear Risk Radar Codex Plugin' -Label 'README'
 Assert-TextContains -Text $readme -Needle '![Demo screenshot](./assets/demo-screenshot.svg)' -Label 'README'
 Assert-TextContains -Text $readme -Needle 'https://github.com/procloudkim/2026-06-07-harness-baby' -Label 'README'
+Assert-TextContains -Text $readme -Needle 'docs/KOREAN_QUICKSTART.md' -Label 'README'
 
 $demoScript = Get-Content -LiteralPath (Join-Path $root 'docs\DEMO_SCRIPT.md') -Raw
 Assert-TextContains -Text $demoScript -Needle 'static README screenshot and sample prompt' -Label 'DEMO_SCRIPT'
@@ -244,10 +246,26 @@ foreach ($needle in @(
     'assets/demo-screenshot.svg',
     'scripts\Show-SubmissionSummary.ps1',
     'scripts\Test-ContentSafety.ps1',
+    'docs/KOREAN_QUICKSTART.md',
     'GitHub CLI (`gh`) is not installed',
     'PASS'
 )) {
     Assert-TextContains -Text $submissionChecklist -Needle $needle -Label 'SUBMISSION_CHECKLIST'
+}
+
+$koreanQuickstart = Get-Content -LiteralPath (Join-Path $root 'docs\KOREAN_QUICKSTART.md') -Raw
+foreach ($needle in @(
+    'BabyGear Risk Radar는 Codex CLI용 플러그인 패키지입니다',
+    'https://github.com/procloudkim/2026-06-07-harness-baby',
+    'pwsh -NoProfile -File .\scripts\validate-plugin.ps1',
+    'pwsh -NoProfile -File .\scripts\Test-ContentSafety.ps1',
+    'assets/demo-screenshot.svg',
+    'Use BabyGear Risk Radar',
+    '알려진 한계',
+    '안전 고지',
+    '의학적 조언이 아니라 의사결정 보조 워크플로우'
+)) {
+    Assert-TextContains -Text $koreanQuickstart -Needle $needle -Label 'KOREAN_QUICKSTART'
 }
 
 $meceTemplate = Get-Content -LiteralPath (Join-Path $root 'templates\babygear-mece-report-template.md') -Raw

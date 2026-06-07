@@ -1,0 +1,8 @@
+Criterion: G014-C002 Korean quickstart references
+CriteriaPass: True
+
+Checks:
+ReadmeReference: True
+ChecklistReference: True
+ChecklistPassRow: True
+

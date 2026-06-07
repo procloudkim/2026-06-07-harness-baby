@@ -1,7 +1,7 @@
 {
   "version": 1,
   "createdAt": "2026-06-07T06:04:23.035Z",
-  "updatedAt": "2026-06-07T07:41:29.866Z",
+  "updatedAt": "2026-06-07T07:49:46.194Z",
   "briefPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/brief.md",
   "goalsPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json",
   "ledgerPath": ".omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl",
@@ -513,6 +513,45 @@
       "createdAt": "2026-06-07T07:39:06.127Z",
       "updatedAt": "2026-06-07T07:41:29.866Z",
       "evidence": "The brief prohibits affiliate links, medical certainty, unsupported real-product danger claims, and app-style scope drift. Validator currently checks files and secrets but not these content policy risks."
+    },
+    {
+      "id": "G014",
+      "title": "Korean quickstart and judge handoff",
+      "objective": "Add a Korean quickstart handoff document for the BabyGear Risk Radar submission, with commands, GitHub URL, demo path, safety boundary, and gh fallback explained in Korean.",
+      "status": "pending",
+      "successCriteria": [
+        {
+          "id": "C001",
+          "scenario": "happy path for: Add a Korean quickstart handoff document for the BabyGear Risk Radar submissi...",
+          "userModel": "happy",
+          "expectedEvidence": "Replace via revise_criterion with observable happy-path proof for goal 14.",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G014-C001-korean-quickstart.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:49:45.760Z"
+        },
+        {
+          "id": "C002",
+          "scenario": "edge case (boundary/empty/malformed)",
+          "userModel": "edge",
+          "expectedEvidence": "Replace via revise_criterion with boundary or malformed-input proof for: Add a Korean quickstart handoff document for the BabyGear Risk Radar submissi....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G014-C002-korean-references.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:49:46.194Z"
+        },
+        {
+          "id": "C003",
+          "scenario": "regression: adjacent surface still works",
+          "userModel": "regression",
+          "expectedEvidence": "Replace via revise_criterion with regression proof for neighboring behavior after: Add a Korean quickstart handoff document for the BabyGear Risk Radar submissi....",
+          "capturedEvidence": ".\\.omo\\ulw-loop\\evidence\\G014-C003-korean-validator.txt",
+          "status": "pass",
+          "capturedAt": "2026-06-07T07:49:45.994Z"
+        }
+      ],
+      "attempt": 0,
+      "createdAt": "2026-06-07T07:48:21.005Z",
+      "updatedAt": "2026-06-07T07:49:46.194Z",
+      "evidence": "The user is Korean and requested Ralphthon execution support. Current README is English-heavy; a Korean handoff improves usability without changing the plugin runtime."
     }
   ],
   "codexObjective": "Complete the durable ulw-loop plan in .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/goals.json, including later accepted/appended stories, under the original brief constraints; use .omo/ulw-loop/019ea05d-98cc-7791-9c1a-e47496d25491/ledger.jsonl as the audit trail.",

@@ -10,6 +10,8 @@ The screenshot is a static demo of the plugin workflow, not an app UI. It shows 
 
 Parents often have to decide before evidence is perfectly resolved. A famous brand, a "BPA-free" claim, a public article, a manufacturer response, and regulator guidance may all point in different directions. This plugin makes Codex separate those claims instead of collapsing them into fear or false certainty.
 
+Korean quickstart for handoff and judging: `docs/KOREAN_QUICKSTART.md`.
+
 ## Plugin Structure
 
 ```text
@@ -25,6 +27,7 @@ Parents often have to decide before evidence is perfectly resolved. A famous bra
 ├── docs/MAS_ROUNDS.md
 ├── docs/OPERATION_NOTES.md
 ├── docs/SUBMISSION_CHECKLIST.md
+├── docs/KOREAN_QUICKSTART.md
 ├── templates/babygear-mece-report-template.md
 ├── templates/parent-action-card-template.md
 ├── scripts/Show-SubmissionSummary.ps1
