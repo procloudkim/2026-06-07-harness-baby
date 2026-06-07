@@ -1,18 +1,45 @@
 {
   "name": "parentpick-guard",
   "version": "0.1.0",
-  "description": "Parentpick Guard plugin",
+  "description": "Codex Plugin for MECE baby-product trust and safety-risk reports.",
   "author": {
-    "name": "Local developer"
+    "name": "procloudkim",
+    "url": "https://github.com/procloudkim"
   },
+  "homepage": "https://github.com/procloudkim/2026-06-07-harness-baby",
+  "repository": "https://github.com/procloudkim/2026-06-07-harness-baby",
+  "license": "MIT",
+  "keywords": [
+    "baby-safety",
+    "codex-plugin",
+    "parenting",
+    "mece-report",
+    "powershell"
+  ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Parentpick Guard",
-    "shortDescription": "Use Parentpick Guard in Codex.",
-    "longDescription": "Parentpick Guard adds a local Codex plugin scaffold.",
-    "developerName": "Local developer",
+    "displayName": "ParentPick Guard",
+    "shortDescription": "MECE baby-product safety-risk reports.",
+    "longDescription": "ParentPick Guard helps newborn parents turn public-source baby-product trust, risk, and alternative-selection notes into a structured MECE report with source conflicts and action criteria.",
+    "developerName": "procloudkim",
     "category": "Productivity",
-    "capabilities": [],
-    "defaultPrompt": "Help me use Parentpick Guard."
+    "capabilities": [
+      "Write",
+      "Local PowerShell"
+    ],
+    "websiteURL": "https://github.com/procloudkim/2026-06-07-harness-baby",
+    "privacyPolicyURL": "https://github.com/procloudkim/2026-06-07-harness-baby#privacy",
+    "termsOfServiceURL": "https://github.com/procloudkim/2026-06-07-harness-baby#terms",
+    "defaultPrompt": [
+      "Create a baby-product MECE safety brief.",
+      "Turn this product case into a source map.",
+      "Generate a ParentPick Guard HTML report."
+    ],
+    "brandColor": "#2563EB",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png",
+    "screenshots": [
+      "./assets/demo-screenshot.png"
+    ]
   }
 }
