@@ -1,0 +1,6 @@
+Result: RED
+Command: pwsh -NoProfile -File .\scripts\validate-plugin.ps1 equivalent via invocation before script exists
+Failed: True
+Message: The term '.\scripts\validate-plugin.ps1' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Cleanup: cleanup: no spawned process; no tmux session; no temp dir
